@@ -5,7 +5,7 @@ when insertion sorting the following array:
 
     19 23 31 55 87 40 17 89 11 72 
 Your answer should be a sequence of 10 integers, separated by whitespace.
-*/
+ */
 public class Insertion {
 
 	private static int count;
@@ -16,8 +16,7 @@ public class Insertion {
 				if(less(a[j], a[j-1])){
 					exch(a, j, j - 1);
 					count++; 
-				} 
-				else{
+				} else{
 					break; 
 				}
 			} 
@@ -33,7 +32,7 @@ public class Insertion {
 				System.out.print(a[i1] + " ");
 			}
 			System.out.println();
-			System.out.print(" count = " + count);
+			System.out.print(" count = " + count + "\n");
 		}
 	}
 
@@ -43,5 +42,8 @@ public class Insertion {
 	public static void main(String[] args){
 		Comparable[] a = {19, 23, 31, 55, 87, 40, 17, 89, 11, 72};
 		Insertion.sort(a);
+		for(int i = 0; i < a.length; i++){
+			System.out.print(a[i] + " ");
+		}
 	}
 }

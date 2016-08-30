@@ -30,7 +30,7 @@ public class MergeSort {
 		return isSorted(a, lo, mid);
 	}
 
-	private static boolean less(Comparable v, Comparable w) {
+	private static boolean less(Comparable<Comparable> v, Comparable w) {
 		return v.compareTo(w) < 0;
 	}
 

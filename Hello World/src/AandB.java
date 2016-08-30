@@ -14,5 +14,9 @@ public class AandB {
 		boolean c = true;
 		boolean d = false;
 		System.out.println((d || d || d || d || c));
+		
+		String s1 = "str"; 
+		String s2 = "str"; 
+		System.out.println("Result: "  + "  ______!!!! " + s1 == s2);
 	}
 }
