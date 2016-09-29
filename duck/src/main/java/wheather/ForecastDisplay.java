@@ -1,10 +1,11 @@
 package wheather;
 
-public class ForecastDisplay implements Observer{
+public class ForecastDisplay implements Observer, DisplayElement{
 	
 	private float temperature;
 	private float humidity;
 	private float pressure;
+	
 	private Subject weatherData;
 	private int count;
 	private float currentPressure;

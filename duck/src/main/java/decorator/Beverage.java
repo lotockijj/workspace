@@ -2,9 +2,8 @@ package decorator;
 
 public abstract class Beverage {
 	
-	public static final double TALL = .10;
-	public static final double GRANDE = .15;
-	public static final double VENTI = .20;
+	public enum Size { TALL, GRANDE, VENTI };
+	Size size = Size.TALL;
 	
 	String description = "Unknown Beverage";
 	
@@ -68,31 +67,27 @@ public abstract class Beverage {
 	}
 
 	private boolean hasWhip() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	private boolean hasMocha() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	private boolean hasSoy() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	private boolean hasMilk() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
-	public double getSize() {
-		return setSize(0);
+	public void setSize(Size size){
+		this.size = size;
 	}
-	
-	public double setSize(double size){
-		return cost() + size;
+
+	public Size getSize() {
+		return this.size;
 	}
 
 }

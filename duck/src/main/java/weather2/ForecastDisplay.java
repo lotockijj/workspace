@@ -1,19 +1,18 @@
 package weather2;
 
 import java.util.Observable;
-
 import wheather.DisplayElement;
-import wheather.Observer;
+import java.util.Observer;
 
 public class ForecastDisplay implements Observer, DisplayElement{
 	
-	private Observer observer;
 	private float currentPressure = 29.92f;
 	private float lastPressure;
 	private Observable observable;
 	
-	public ForecastDisplay(Observer observer){
-		observable.addObserver((java.util.Observer) this);
+	public ForecastDisplay(Observable observable){
+		this.observable = observable;
+		observable.addObserver(this);
 	}
 
 	public void update(Observable observable, Object arg) {

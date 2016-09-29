@@ -1,7 +1,6 @@
 package Pizza;
 
 import java.util.ArrayList;
-
 import Pizza.Ingridients.Cheese;
 import Pizza.Ingridients.Clams;
 import Pizza.Ingridients.Dough;
@@ -18,6 +17,7 @@ public abstract class Pizza {
 	Cheese cheese;
 	Pepperoni pepperoni;
 	Clams clam;
+	ArrayList<String> toppings = new ArrayList<String>();
 
 	abstract void prepare();
 
@@ -80,9 +80,16 @@ public abstract class Pizza {
 			result.append(pepperoni);
 			result.append("\n");
 		}
+		if(toppings != null){
+			for(int i = 0; i < toppings.size(); i++){
+				result.append(toppings.get(i));
+				if(i < toppings.size() - 1){
+					result.append(", "); 
+				}
+				result.append("\n");
+			}
+		}
 		return result.toString();
 	}
 
-
-	
 }

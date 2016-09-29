@@ -6,7 +6,8 @@ public class NYStyleCheesePizza extends Pizza {
 		name = "NY Style Sauce and Cheese Pizza";
 		dough.setName("Thin Crust Dough");
 		sauce.setName("Marinara Sauce");
-		//toppings.add("Grated Reggiano Cheese");
+		toppings.add("Grated Reggiano Cheese");
+		toppings.add("My STRONG PEPPER");
 	}
 
 	@Override
