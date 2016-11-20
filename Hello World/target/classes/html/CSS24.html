@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<form action="dosomething" method="post">
+		Username: <input type="text" name="username" size="15" 
+		maxlength="15" value="Enter Name Here">
+		<br/>
+		Male: <input type="radio" name="sex" value="male" />
+		Female: <input type="radio" name="sex" value="female" />
+		<br/>
+		<p>Select the foods that you would like to order:</p>
+		Bacon <input type="checkbox" name="food" value="Bacon"/>
+		Ham <input type="checkbox" name="food"  value="Ham"/>
+		Tuna <input type="checkbox" name="food" value="Tuna" />
+		Soda Pop <input type="checkbox" name="food" value="soda" />
+		<br/>
+		<p>What do you want today? :) </p>
+		<select name="activity">
+			<option value="play">play the guitar</option>
+			<option value="play">comb your hair</option>
+			<option value="play">comb your elses hair</option>
+			<option value="play">teach a opossum</option>
+		</select>
+		<br/>
+		Tell me about yourself:
+		<br/>
+		<textarea name="bio" rows="8" cols="40">
+			Type something here
+		</textarea>
+		<br/>
+		Password: <input type="password" name="power"/>
+		<p>Now submit a file!</p>
+		<input type="file" name="buckys file"/>
+		<br/>
+		Username: <input type="text" name="username" />
+		<br/>
+		Password: <input type="password" name="pass" />
+		<br/>
+		<input type="submit" value="Submit!" />
+	</form>
+</body>
+</html>

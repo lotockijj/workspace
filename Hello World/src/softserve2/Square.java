@@ -44,19 +44,6 @@ public class Square extends Rectangle {
 			}
 		});
 
-		float i = 0;
-		i++;
-		double d = 0;
-		d++;
-		Double d2 = 0d;
-		d2++;
-		long l = 0;
-		l++;
-		char c = 'a';
-		c++;
-
-
-
 		System.out.println("Area sorted list = " + list);
 
 		Collections.sort(list, (rr1, rr2)

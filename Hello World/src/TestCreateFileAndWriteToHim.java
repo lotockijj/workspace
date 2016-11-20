@@ -1,4 +1,5 @@
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,6 +16,9 @@ public class TestCreateFileAndWriteToHim {
 				new FileOutputStream("filename.txt"), "utf-8"))) {
 			writer.write("something");
 		}
+		File f = new File("aaa.txt");
+		System.out.println(f.getPath());
+		System.out.println(f.getAbsolutePath());
 		
 	}
 
