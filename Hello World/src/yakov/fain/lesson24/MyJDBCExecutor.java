@@ -10,7 +10,12 @@ import java.lang.annotation.Target;
 @Inherited
 @Documented
 @Target({ElementType.METHOD, ElementType.CONSTRUCTOR})
-@Retention(RetentionPolicy.SOURCE)
-public @interface MyJDBCExecutor {
+@Retention(RetentionPolicy.RUNTIME)
 
+public @interface MyJDBCExecutor {
+	//String value();
+
+	String sqlStatement();
+	boolean transactionRequired() default false;
+	boolean notifyOnUpdates() default false; 
 }
