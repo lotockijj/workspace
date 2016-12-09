@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -62,11 +63,14 @@ public class FaberlicDAO {
 			
 			//Add audit history
 			stmt = myConn.prepareStatement("insert into audit_history" 
-					+ "(id, last_name, first_name, action, action_date_time) " 
-					+ "values(?, ?, ?, ?, ?)");
+					+ "(id, last_name, action, action_date_time) " 
+					+ "values(?, ?, ?, ?)");
 			stmt.setInt(1, userId);
 			stmt.setString(2, theFaberlicGoods.getName());
-			//stmt.setString(parameterIndex, x);
+			stmt.setString(3, "Update faberlic goods");
+			stmt.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
+			
+			stmt.executeUpdate();
 		} 
 		finally{
 			stmt.close();
@@ -171,6 +175,11 @@ public class FaberlicDAO {
 	
 	public static void main(String[] args) throws Exception {
 		FaberlicDAO f = new FaberlicDAO();
+	}
+
+	public List<AuditHistory> getAuditHistory(int faberlicId) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

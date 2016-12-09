@@ -17,6 +17,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import com.sun.codemodel.JOp;
+
 public class FaberlicSearchApp extends JFrame{
 
 	private static final long serialVersionUID = 1L;
@@ -31,7 +33,7 @@ public class FaberlicSearchApp extends JFrame{
 
 	private JPanel panelCenter, panelSouth;
 
-	private JButton btnAddFaberlicGoods, btnUpdateFaberlicGoods, deleteButton;
+	private JButton btnAddFaberlicGoods, btnUpdateFaberlicGoods, deleteButton, viewHistory;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable(){
@@ -157,6 +159,35 @@ public class FaberlicSearchApp extends JFrame{
 					
 				} catch (Exception exc){
 					JOptionPane.showMessageDialog(FaberlicSearchApp.this, "Error:" + exc, "Error", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+	
+		viewHistory = new JButton("View History");
+		panelSouth.add(viewHistory);
+		viewHistory.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				int row = table.getSelectedRow();
+				
+				if(row < 0){
+					JOptionPane.showMessageDialog(FaberlicSearchApp.this, "You must select an faberlic",
+							"Error", JOptionPane.ERROR_MESSAGE);
+					return;
+				}
+				Faberlic tempFaberlic = (Faberlic) table.getValueAt(row, FaberlicTableModel.OBJECT_COL);
+				try{
+					int faberlicId = tempFaberlic.getId();
+					List<AuditHistory> auditHistory = faberlicDAO.getAuditHistory(faberlicId);
+					UserLoginDialog dialog = new UserLoginDialog();
+					Object auditHistoryList = null;
+					dialog.populate(tempFaberlic, auditHistoryList);
+					dialog.setVisible(true);
+				} 
+				catch(Exception exc){
+					exc.printStackTrace();
+					JOptionPane.showMessageDialog(FaberlicSearchApp.this, 
+							"Error retrieving audit history", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});

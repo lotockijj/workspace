@@ -83,6 +83,7 @@ public class UserLoginDialog extends JDialog{
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
+		
 		GridBagConstraints c3 = new GridBagConstraints();
 		c3.anchor = GridBagConstraints.NORTH;
 		c3.insets = new Insets(0, 0, 5, 5);
@@ -103,6 +104,10 @@ public class UserLoginDialog extends JDialog{
 				System.exit(0);
 			}
 		});
+	}
+
+	public void populate(Faberlic tempFaberlic, Object auditHistoryList) {
+		
 	}
 	
 

@@ -178,7 +178,7 @@ public class FaberlicGoodsDialog extends JDialog{
 		try{
 			//save to database
 			if(updateMode){
-				faberlicDAO.updateFaberlicGoods(tempFaberlic_goods);
+				//faberlicDAO.updateFaberlicGoods(tempFaberlic_goods, amount);
 			} else {
 				faberlicDAO.addFaberlicGoods(tempFaberlic_goods);
 			}

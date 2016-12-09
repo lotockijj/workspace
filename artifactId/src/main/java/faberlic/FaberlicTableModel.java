@@ -10,7 +10,7 @@ public class FaberlicTableModel extends AbstractTableModel {
 
 	private static final long serialVersionUID = 1L;
 	
-	public  static final int OBJECT_COL = -1;
+	static final int OBJECT_COL = -1;
 	private static final int ID_COL = 0;
 	private static final int NAME_COL = 1;
 	private static final int ARTICLE_COL = 2;

@@ -22,7 +22,6 @@ public class MyJDBCAnnotationProcessor {
 					System.out.println("Method: " + m.getName() + 
 							". Parameters of MyJDBCExecutor are: " + 
 							"sqlStatement=" + jdbcAnnotation.sqlStatement() +
-							", notifyOnUpdates=" + jdbcAnnotation.notifyfOnUpdates() +
 							", transactionRequired=" + jdbcAnnotation.transactionRequired());
 				}
 			}
