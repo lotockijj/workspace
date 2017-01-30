@@ -21,7 +21,7 @@ public class WebSiteReader {
 		BufferedReader buff = null;
 		//index.html or index.jsp or some other default URL at google;
 		try{
-			url = new URL("http://www.google.com");
+			url = new URL("http://www.guerlain.com/");
 			urlConn = url.openConnection();
 
 			inStream = new InputStreamReader(urlConn.getInputStream(), "UTF8");

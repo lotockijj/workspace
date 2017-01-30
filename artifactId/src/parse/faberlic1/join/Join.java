@@ -1,13 +1,7 @@
 package parse.faberlic1.join;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
-import java.io.Writer;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.nio.file.Path;
@@ -29,7 +23,7 @@ public class Join {
 	static String sName;
 
 	String discount;
-	int page;
+	String page;
 	String article;
 	String name;
 	BigDecimal priceCatalog;
@@ -45,15 +39,7 @@ public class Join {
 		join.currentGoods = new Goods();
 		listGoods = new ArrayList<>();
 		
-		File file = new File("E:\\Faberlic\\pieces\\join.txt");
-		if(!file.exists()){
-			try {
-				file.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
+		
 		Path fPath = Paths.get("E:\\Faberlic\\pieces\\1.txt");
 		Path fPath2 = Paths.get("E:\\Faberlic\\pieces\\2.txt");
 		
@@ -111,7 +97,7 @@ public class Join {
 			if(i == 1){
 				scaner.useDelimiter("\\s+"); // whitespace;
 				currentGoods.setDiscount(scaner.next()); System.out.println(currentGoods.getDiscount());
-				currentGoods.setPage(Integer.parseInt(scaner.next().trim())); System.out.println(currentGoods.getPage());
+				currentGoods.setPage(scaner.next().trim()); System.out.println(currentGoods.getPage());
 			}
 			if(i == 2){
 				sName = scaner.nextLine(); System.out.print(sName + " ");

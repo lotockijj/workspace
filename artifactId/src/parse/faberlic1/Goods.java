@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class Goods {
 	
 	String discount;
-	int page;
+	String page;
 	String article;
 	String name;
 	
@@ -21,7 +21,7 @@ public class Goods {
 		
 	}
 	
-	public Goods(String discount, int page, String article, String name, 
+	public Goods(String discount, String page, String article, String name, 
 			BigDecimal priceCatalog, BigDecimal theSame, String allowance, 
 			BigDecimal priceStore, float ballConsultant, BigDecimal priceBuyer, 
 			float ballBuyer) {
@@ -42,7 +42,7 @@ public class Goods {
 		return discount;
 	}
 
-	public int getPage() {
+	public String getPage() {
 		return page;
 	}
 
@@ -86,7 +86,7 @@ public class Goods {
 		this.discount = discount;
 	}
 
-	public void setPage(int page) {
+	public void setPage(String page) {
 		this.page = page;
 	}
 

@@ -9,7 +9,6 @@ public class FileDownload {
 	
 	public static void main(String[] args){
 
-
 		if(args.length != 2){
 			System.out.println("Proper Usage: java  File Download URL OutputFileName");
 			System.exit(0);

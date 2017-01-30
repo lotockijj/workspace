@@ -134,7 +134,7 @@ public class Parser1 {
 				//				String s = logWithReturnValue(scaner.next());
 				//				System.out.println(s);
 
-				currentGoods.setPage(scaner.nextInt());
+				currentGoods.setPage(scaner.next());
 				System.out.println(currentGoods.getPage());
 				//				String s2 = logWithReturnValue(scaner.next());
 				//				System.out.println(s2);
