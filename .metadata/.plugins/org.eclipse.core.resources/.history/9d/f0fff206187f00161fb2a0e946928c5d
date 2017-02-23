@@ -1,0 +1,30 @@
+package com.dominyuk.lotoroman2;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
+import javax.swing.SwingUtilities;
+
+import helpfull.AnotherJFrame;
+
+public class TestGame extends Thread{
+	
+	GUIForStartGamePan2 guiGame; 
+	
+	public void run(){
+		
+	}
+
+	public static void main(String[] args) throws IOException, InvocationTargetException, InterruptedException {
+		
+		 
+		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				GUIForStartGamePan2  guiGame = new GUIForStartGamePan2();
+				Table table = new Table(guiGame);
+				
+				GUIForGame guiForGame = new GUIForGame(guiGame);
+			}
+		});
+	}
+}

@@ -14,7 +14,6 @@ import java.lang.annotation.Target;
 
 public @interface MyJDBCExecutor {
 	//String value();
-
 	String sqlStatement();
 	boolean transactionRequired() default false;
 	boolean notifyOnUpdates() default false; 

@@ -1,0 +1,1500 @@
+!SESSION 2017-02-20 14:26:19.540 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+This is a continuation of log file C:\Users\Роман Лотоцький\workspace\.metadata\.bak_0.log
+Created Time: 2017-02-20 15:12:14.845
+
+!ENTRY org.eclipse.ui 4 4 2017-02-20 15:12:14.853
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.part.PageBookView.showPageRec(PageBookView.java:994)
+	at org.eclipse.ui.internal.console.ConsoleView.showPageRec(ConsoleView.java:164)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:773)
+	at org.eclipse.ui.internal.console.ConsoleView.display(ConsoleView.java:505)
+	at org.eclipse.ui.internal.console.ConsoleManager$ShowConsoleViewJob.runInUIThread(ConsoleManager.java:313)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+
+!ENTRY org.eclipse.ui 4 0 2017-02-20 15:13:11.954
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.ui.part.PageBookView.showPageRec(PageBookView.java:994)
+	at org.eclipse.ui.internal.console.ConsoleView.showPageRec(ConsoleView.java:164)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:773)
+	at org.eclipse.ui.internal.console.ConsoleView.display(ConsoleView.java:505)
+	at org.eclipse.ui.internal.console.ConsoleView$5.run(ConsoleView.java:428)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 24 more
+
+!ENTRY org.eclipse.ui 4 0 2017-02-20 15:13:12.352
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.ui.part.PageBookView.showPageRec(PageBookView.java:994)
+	at org.eclipse.ui.internal.console.ConsoleView.showPageRec(ConsoleView.java:164)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:773)
+	at org.eclipse.ui.internal.console.ConsoleView$4.run(ConsoleView.java:398)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 24 more
+
+!ENTRY org.eclipse.ui 4 4 2017-02-20 15:13:12.745
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.part.PageBookView.showPageRec(PageBookView.java:994)
+	at org.eclipse.ui.internal.console.ConsoleView.showPageRec(ConsoleView.java:164)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:773)
+	at org.eclipse.ui.internal.console.ConsoleView.display(ConsoleView.java:505)
+	at org.eclipse.ui.internal.console.ConsoleManager$ShowConsoleViewJob.runInUIThread(ConsoleManager.java:313)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+!SESSION 2017-02-20 15:15:51.333 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-02-20 15:16:54.841
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5006ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [926]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=926] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-20 15:17:22.471
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-20 15:17:44.714
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Роман Лотоцький'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-02-20 15:17:46.837
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-20 15:18:04.488
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+!SESSION 2017-02-20 20:52:33.319 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-02-20 20:55:46.635
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-0,5,main]" timed out waiting (5025ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [926]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=926] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-20 20:56:33.462
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-20 20:57:04.586
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Роман Лотоцький'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-02-20 20:57:06.379
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-20 20:57:13.892
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.getTransport_e3_7(P2TransportService.java:80)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.<init>(P2TransportService.java:52)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.getTransport(HttpUtil.java:151)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.stream(HttpUtil.java:165)
+	at org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob$1.run(AggregateFeedJob.java:145)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-20 20:57:24.029
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.<clinit>(SetupCoreUtil.java:96)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:382)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$3(SetupUIPlugin.java:323)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:223)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-20 20:57:32.995
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+!SESSION 2017-02-21 21:34:04.560 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-02-21 21:36:03.989
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5019ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [926]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=926] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-21 21:36:36.899
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-21 21:36:59.301
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Роман Лотоцький'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-02-21 21:37:01.824
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-21 21:37:30.466
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+!SESSION 2017-02-22 12:37:43.191 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-02-22 12:39:41.995
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5016ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [926]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=926] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-22 12:40:18.170
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-22 12:40:46.886
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Роман Лотоцький'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-02-22 12:40:49.936
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-22 12:41:18.394
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:05:21.175
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:05:36.063
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:08:50.686
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:08:50.918
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:09:11.919
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:09:12.055
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:09:47.317
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:09:47.447
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:19:31.699
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:19:32.003
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:20:53.790
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:20:53.945
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:21:55.618
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:21:55.778
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:22:28.912
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:22:29.047
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:22:46.183
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:22:46.312
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:23:26.308
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:23:26.453
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:25:59.344
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:26:11.002
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:27:19.883
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:27:20.189
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 4 2017-02-22 13:44:13.721
+!MESSAGE JavaBuilder handling CoreException
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: C:\Users\Роман Лотоцький\workspace\Hello World\target\classes\yakov\fain\lesson24\MyJDBCAnnotationProcessor.class.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:49)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:391)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:834)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:269)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsByteArray(Util.java:1135)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileCheck(IncrementalImageBuilder.java:889)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileContents(IncrementalImageBuilder.java:831)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:859)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:190)
+	at org.eclipse.jdt.internal.compiler.Compiler.processCompiledUnits(Compiler.java:589)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:458)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:367)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.compile(IncrementalImageBuilder.java:330)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:304)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.build(IncrementalImageBuilder.java:135)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildDeltas(JavaBuilder.java:267)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:195)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.FileNotFoundException: C:\Users\Роман Лотоцький\workspace\Hello World\target\classes\yakov\fain\lesson24\MyJDBCAnnotationProcessor.class (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:382)
+	... 38 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2017-02-22 13:44:13.723
+!MESSAGE File not found: C:\Users\Роман Лотоцький\workspace\Hello World\target\classes\yakov\fain\lesson24\MyJDBCAnnotationProcessor.class.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Роман Лотоцький\workspace\Hello World\target\classes\yakov\fain\lesson24\MyJDBCAnnotationProcessor.class (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:382)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:834)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:269)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsByteArray(Util.java:1135)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileCheck(IncrementalImageBuilder.java:889)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileContents(IncrementalImageBuilder.java:831)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:859)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:190)
+	at org.eclipse.jdt.internal.compiler.Compiler.processCompiledUnits(Compiler.java:589)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:458)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:367)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.compile(IncrementalImageBuilder.java:330)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:304)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.build(IncrementalImageBuilder.java:135)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildDeltas(JavaBuilder.java:267)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:195)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:44:14.599
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:44:14.785
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:46:28.605
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:46:43.662
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:46:54.073
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:46:54.215
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:49:07.201
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:49:07.380
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:49:16.865
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:49:17.034
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:49:24.493
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:49:24.660
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:56:07.916
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 13:56:08.096
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2017-02-22 15:34:07.464 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-02-22 15:37:48.403
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5010ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [926]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=926] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-22 15:38:33.761
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-22 15:39:04.305
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Роман Лотоцький'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-02-22 15:39:05.742
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 15:39:09.307
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.getTransport_e3_7(P2TransportService.java:80)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.<init>(P2TransportService.java:52)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.getTransport(HttpUtil.java:151)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.stream(HttpUtil.java:165)
+	at org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob$1.run(AggregateFeedJob.java:145)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 15:39:19.493
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.<clinit>(SetupCoreUtil.java:96)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:382)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$3(SetupUIPlugin.java:323)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:223)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 15:39:35.226
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:446)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.getCurrentAgent(AgentManagerImpl.java:188)
+	at org.eclipse.oomph.p2.core.P2Util.getCurrentProvisioningAgent(P2Util.java:68)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.create(SelfProductCatalogURIHandlerImpl.java:183)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.access$0(SelfProductCatalogURIHandlerImpl.java:120)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl$1ProductCatalogInput.loadResource(SelfProductCatalogURIHandlerImpl.java:93)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:196)
+	at org.eclipse.oomph.base.util.BaseResourceImpl.doLoad(BaseResourceImpl.java:99)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:208)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:416)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 15:39:42.546
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:48)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:1)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:55)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:53)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:110)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:94)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:254)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1031)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:65)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:40)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:204)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1024)
+	at com.google.inject.internal.InternalInjectorCreator.loadEagerSingletons(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:179)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:109)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.createInjector(CssDslActivator.java:67)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.getInjector(CssDslActivator.java:55)
+	at org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory.getInjector(CssDslExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:51)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$1.getURI(Storage2UriMapperJavaImpl.java:308)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.handle(SourceAttachmentPackageFragmentRootWalker.java:279)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:107)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:95)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:65)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.traverse(SourceAttachmentPackageFragmentRootWalker.java:168)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.initializeData(Storage2UriMapperJavaImpl.java:321)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.getCachedData(Storage2UriMapperJavaImpl.java:241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.updateCache(Storage2UriMapperJavaImpl.java:457)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$6(Storage2UriMapperJavaImpl.java:450)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$4.run(Storage2UriMapperJavaImpl.java:646)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.doInitializeCache(Storage2UriMapperJavaImpl.java:658)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$2(Storage2UriMapperJavaImpl.java:637)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$3.run(Storage2UriMapperJavaImpl.java:626)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 15:39:45.286
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:447)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.getCurrentAgent(AgentManagerImpl.java:188)
+	at org.eclipse.oomph.p2.core.P2Util.getCurrentProvisioningAgent(P2Util.java:68)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.create(SelfProductCatalogURIHandlerImpl.java:183)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.access$0(SelfProductCatalogURIHandlerImpl.java:120)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl$1ProductCatalogInput.loadResource(SelfProductCatalogURIHandlerImpl.java:93)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:196)
+	at org.eclipse.oomph.base.util.BaseResourceImpl.doLoad(BaseResourceImpl.java:99)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:208)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:416)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 15:39:54.653
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getService(InstanceProcess.java:730)
+	at org.eclipse.equinox.internal.ds.model.ComponentReference.getMethod(ComponentReference.java:119)
+	at org.eclipse.equinox.internal.ds.model.ComponentReference.bind(ComponentReference.java:331)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bindReference(ServiceComponentProp.java:444)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bind(ServiceComponentProp.java:218)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:343)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:48)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:1)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:55)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:53)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:110)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:94)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:254)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1031)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:65)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:40)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:204)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1024)
+	at com.google.inject.internal.InternalInjectorCreator.loadEagerSingletons(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:179)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:109)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.createInjector(CssDslActivator.java:67)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.getInjector(CssDslActivator.java:55)
+	at org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory.getInjector(CssDslExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:51)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$1.getURI(Storage2UriMapperJavaImpl.java:308)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.handle(SourceAttachmentPackageFragmentRootWalker.java:279)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:107)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:95)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:65)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.traverse(SourceAttachmentPackageFragmentRootWalker.java:168)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.initializeData(Storage2UriMapperJavaImpl.java:321)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.getCachedData(Storage2UriMapperJavaImpl.java:241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.updateCache(Storage2UriMapperJavaImpl.java:457)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$6(Storage2UriMapperJavaImpl.java:450)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$4.run(Storage2UriMapperJavaImpl.java:646)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.doInitializeCache(Storage2UriMapperJavaImpl.java:658)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$2(Storage2UriMapperJavaImpl.java:637)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$3.run(Storage2UriMapperJavaImpl.java:626)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 15:39:55.318
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.<init>(AutomaticUpdateScheduler.java:76)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:293)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:288)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:120)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2812)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-22 15:39:55.499
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:57:13.029
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:57:14.173
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:57:51.457
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:57:53.085
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:58:54.017
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:58:54.231
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:59:18.869
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:59:19.076
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:59:56.146
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-22 16:59:56.359
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2017-02-22 21:26:50.916 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-02-22 21:28:38.889
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5020ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [926]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=926] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-22 21:29:07.444
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-22 21:29:27.836
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Роман Лотоцький'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-02-22 21:29:29.282
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 21:29:37.701
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.getTransport_e3_7(P2TransportService.java:80)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.<init>(P2TransportService.java:52)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.getTransport(HttpUtil.java:151)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.stream(HttpUtil.java:165)
+	at org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob$1.run(AggregateFeedJob.java:145)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 21:29:47.769
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.<clinit>(SetupCoreUtil.java:96)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:382)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$3(SetupUIPlugin.java:323)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:223)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 21:30:02.079
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:446)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.getCurrentAgent(AgentManagerImpl.java:188)
+	at org.eclipse.oomph.p2.core.P2Util.getCurrentProvisioningAgent(P2Util.java:68)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.create(SelfProductCatalogURIHandlerImpl.java:183)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.access$0(SelfProductCatalogURIHandlerImpl.java:120)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl$1ProductCatalogInput.loadResource(SelfProductCatalogURIHandlerImpl.java:93)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:196)
+	at org.eclipse.oomph.base.util.BaseResourceImpl.doLoad(BaseResourceImpl.java:99)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:208)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:416)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 21:30:03.919
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:48)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:1)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:55)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:53)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:110)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:94)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:254)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1031)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:65)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:40)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:204)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1024)
+	at com.google.inject.internal.InternalInjectorCreator.loadEagerSingletons(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:179)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:109)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.createInjector(CssDslActivator.java:67)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.getInjector(CssDslActivator.java:55)
+	at org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory.getInjector(CssDslExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:51)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$1.getURI(Storage2UriMapperJavaImpl.java:308)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.handle(SourceAttachmentPackageFragmentRootWalker.java:279)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:107)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:95)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:65)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.traverse(SourceAttachmentPackageFragmentRootWalker.java:168)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.initializeData(Storage2UriMapperJavaImpl.java:321)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.getCachedData(Storage2UriMapperJavaImpl.java:241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.updateCache(Storage2UriMapperJavaImpl.java:457)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$6(Storage2UriMapperJavaImpl.java:450)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$4.run(Storage2UriMapperJavaImpl.java:646)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.doInitializeCache(Storage2UriMapperJavaImpl.java:658)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$2(Storage2UriMapperJavaImpl.java:637)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$3.run(Storage2UriMapperJavaImpl.java:626)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 21:30:12.166
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.<init>(AutomaticUpdateScheduler.java:76)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:293)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:288)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:120)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2812)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 21:30:16.014
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getService(InstanceProcess.java:730)
+	at org.eclipse.equinox.internal.ds.model.ComponentReference.getMethod(ComponentReference.java:119)
+	at org.eclipse.equinox.internal.ds.model.ComponentReference.bind(ComponentReference.java:331)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bindReference(ServiceComponentProp.java:444)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bind(ServiceComponentProp.java:218)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:343)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:48)
+	at org.eclipse.fx.ide.css.extapi.CssExt$OsgiCssExtServiceProvider.get(CssExt.java:1)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:55)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:53)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:110)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:94)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:254)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1031)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:65)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:40)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:204)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1024)
+	at com.google.inject.internal.InternalInjectorCreator.loadEagerSingletons(InternalInjectorCreator.java:198)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:179)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:109)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.createInjector(CssDslActivator.java:67)
+	at org.eclipse.fx.ide.css.ui.internal.CssDslActivator.getInjector(CssDslActivator.java:55)
+	at org.eclipse.fx.ide.css.ui.CssDslExecutableExtensionFactory.getInjector(CssDslExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:51)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.internal.ResourceServiceProviderDescriptor.getExtension(ResourceServiceProviderDescriptor.java:46)
+	at org.eclipse.xtext.internal.AbstractResourceServiceProviderDescriptor.get(AbstractResourceServiceProviderDescriptor.java:20)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl$InternalData.getServiceProvider(ResourceServiceProviderRegistryImpl.java:46)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:109)
+	at org.eclipse.xtext.resource.impl.ResourceServiceProviderRegistryImpl.getResourceServiceProvider(ResourceServiceProviderRegistryImpl.java:129)
+	at org.eclipse.xtext.ui.resource.UriValidator.isValid(UriValidator.java:27)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$1.getURI(Storage2UriMapperJavaImpl.java:308)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.handle(SourceAttachmentPackageFragmentRootWalker.java:279)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:107)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:95)
+	at org.eclipse.xtext.ui.resource.PackageFragmentRootWalker.traverse(PackageFragmentRootWalker.java:65)
+	at org.eclipse.xtext.ui.resource.SourceAttachmentPackageFragmentRootWalker.traverse(SourceAttachmentPackageFragmentRootWalker.java:168)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.initializeData(Storage2UriMapperJavaImpl.java:321)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.getCachedData(Storage2UriMapperJavaImpl.java:241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.updateCache(Storage2UriMapperJavaImpl.java:457)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$6(Storage2UriMapperJavaImpl.java:450)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$4.run(Storage2UriMapperJavaImpl.java:646)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.doInitializeCache(Storage2UriMapperJavaImpl.java:658)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl.access$2(Storage2UriMapperJavaImpl.java:637)
+	at org.eclipse.xtext.ui.resource.Storage2UriMapperJavaImpl$3.run(Storage2UriMapperJavaImpl.java:626)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-22 21:30:22.169
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:447)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.getCurrentAgent(AgentManagerImpl.java:188)
+	at org.eclipse.oomph.p2.core.P2Util.getCurrentProvisioningAgent(P2Util.java:68)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.create(SelfProductCatalogURIHandlerImpl.java:183)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl.access$0(SelfProductCatalogURIHandlerImpl.java:120)
+	at org.eclipse.oomph.setup.internal.core.util.SelfProductCatalogURIHandlerImpl$1ProductCatalogInput.loadResource(SelfProductCatalogURIHandlerImpl.java:93)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:196)
+	at org.eclipse.oomph.base.util.BaseResourceImpl.doLoad(BaseResourceImpl.java:99)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:208)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:416)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-22 21:30:22.248
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+!SESSION 2017-02-23 10:43:57.662 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 2 0 2017-02-23 10:45:51.071
+!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5018ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.2.0.201601211800-r [926]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.2.0.201601211800-r"; singleton:="true" [id=926] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-23 10:46:20.902
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-02-23 10:46:44.513
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Роман Лотоцький'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2017-02-23 10:46:46.274
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-23 10:46:51.669
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.getTransport_e3_7(P2TransportService.java:80)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.<init>(P2TransportService.java:52)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.getTransport(HttpUtil.java:151)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.stream(HttpUtil.java:165)
+	at org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob$1.run(AggregateFeedJob.java:145)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2017-02-23 10:47:01.789
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.<clinit>(SetupCoreUtil.java:96)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:382)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$3(SetupUIPlugin.java:323)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:223)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.ds 1 0 2017-02-23 10:47:11.260
+!MESSAGE Could not bind a reference of component org.eclipse.fx.ide.css.cssext.ui.internal.DefaultCssExtProvider. The reference is: Reference[name = ICSSExtModelProvider, interface = org.eclipse.fx.ide.css.cssext.ICSSExtModelProvider, policy = dynamic, cardinality = 0..n, target = null, bind = bindCssExtensionModelProvider, unbind = unbindCssExtensionModelProvider]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:05:56.430
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:06:10.199
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:12:51.546
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:12:51.823
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:16:58.951
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:16:59.091
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:17:34.790
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-02-23 12:17:34.929
+!MESSAGE Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!

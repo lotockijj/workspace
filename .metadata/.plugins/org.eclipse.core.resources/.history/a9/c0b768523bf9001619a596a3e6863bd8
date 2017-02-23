@@ -1,0 +1,108 @@
+package gui;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+import com.faberlic.Goods;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
+
+public class Login extends Stage {
+
+	Map<String, TextField> mapTextFields;
+	
+	public Login() {
+		
+		mapTextFields  = new HashMap<>();
+		String[] names = new String[]{"User:", "Password:"};
+
+		VBox vBox = new VBox();
+		vBox.setPadding(new Insets(3, 3, 3, 3));
+		vBox.setSpacing(3);
+		for(int i = 0; i < names.length; i++){
+			HBox hBox1 = new HBox();
+			hBox1.setPadding(new Insets(3, 3, 3, 3));
+			hBox1.setSpacing(3);
+			hBox1.setAlignment(Pos.CENTER_LEFT);
+			hBox1.getChildren().add(new Label(names[i]));
+
+			mapTextFields.put(names[i], new TextField());
+
+			HBox hBox2 = new HBox();
+			hBox2.setPadding(new Insets(3, 3, 3, 3));
+			hBox2.setSpacing(3);
+			hBox2.setAlignment(Pos.CENTER_RIGHT);
+			hBox2.getChildren().add(mapTextFields.get(names[i]));
+
+			HBox mainBox = new HBox();
+			mainBox.prefWidth(1000);
+			HBox.setHgrow(hBox1, Priority.ALWAYS);
+			mainBox.getChildren().addAll(hBox1, hBox2);
+
+			vBox.getChildren().addAll(mainBox);
+		}
+		
+		Button btnOK = new Button("Ok");
+		Button btnCancel = new Button("Cancel");
+		HBox btnBox = new HBox();
+		btnBox.setSpacing(10);
+		btnBox.setPadding(new Insets(10, 10, 10, 10));
+		btnBox.setAlignment(Pos.CENTER_RIGHT);
+		btnBox.getChildren().addAll(btnOK, btnCancel);
+
+		BorderPane layout = new BorderPane();/* layout */
+		layout.setCenter(vBox);
+		layout.setBottom(btnBox);
+
+		Scene scene = new Scene(layout, 300, 150);
+		Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+		this.setX((primScreenBounds.getWidth() -  this.getWidth()) / 2);
+		this.setY((primScreenBounds.getHeight() - this.getHeight()) / 2);
+		this.setScene(scene);
+		this.setTitle("User login.");
+		this.centerOnScreen();
+		// this locate you stage title in the center.
+		
+	}
+	
+	private void createConfirmAlert(Goods tempGoods, String title, HBox content){
+		try {
+//			Alert alert = new Alert(AlertType.CONFIRMATION);
+//			alert.setTitle(title);
+//			alert.setContentText(content);
+//			Optional<ButtonType> result = alert.showAndWait();
+//			if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
+//				if(updateMode){
+//					fabDAO.updateGoods(tempGoods, faberlicGoods.selectedId);
+//				} else {
+//					fabDAO.addGoods(tempGoods);
+//				}
+//				this.getScene().getWindow().hide();
+//				close();
+//				faberlicGoods.refreshFaberlicGoods();
+//			} else {
+//				this.getScene().getWindow().hide();
+//				close();
+//			}
+		} catch (Exception e){
+			AlertGui.createAlertError(e);
+		}
+	}
+
+}

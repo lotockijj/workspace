@@ -1,0 +1,252 @@
+лют. 08, 2017 11:16:38 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:16:38 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:16:39 PM org.apache.pdfbox.pdmodel.font.FileSystemFontProvider loadDiskCache
+WARNING: New fonts found, font cache will be re-built
+лют. 08, 2017 11:16:39 PM org.apache.pdfbox.pdmodel.font.FileSystemFontProvider <init>
+WARNING: Building on-disk font cache, this may take a while
+лют. 08, 2017 11:16:57 PM org.apache.pdfbox.pdmodel.font.FileSystemFontProvider <init>
+WARNING: Finished building on-disk font cache, found 360 fonts
+лют. 08, 2017 11:17:07 PM org.apache.pdfbox.pdmodel.common.PDNumberTreeNode getValue
+WARNING: NumberTreeNode does not have "nums" nor "kids" objects.
+лют. 08, 2017 11:17:08 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:08 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:08 PM org.apache.pdfbox.pdmodel.font.PDCIDFontType2 <init>
+SEVERE: OpenType Layout tables used in font LiberationSans are not implemented in PDFBox and will be ignored
+лют. 08, 2017 11:17:10 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:10 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:10 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:18 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Opening: AcroFormsRotation.pdf
+лют. 08, 2017 11:17:18 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Rendering: AcroFormsRotation.pdf
+лют. 08, 2017 11:17:18 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Writing: C:\Users\Роман Лотоцький\workspace\artifactId\pdfbox\target\test-output/AcroFormsRotation.pdf-1.png
+лют. 08, 2017 11:17:19 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Writing: C:\Users\Роман Лотоцький\workspace\artifactId\pdfbox\target\test-output/AcroFormsRotation.pdf-2.png
+лют. 08, 2017 11:17:19 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Comparing: AcroFormsRotation.pdf
+лют. 08, 2017 11:17:19 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: *** TEST OK *** for file: AcroFormsRotation.pdf-1.png
+лют. 08, 2017 11:17:19 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Deleting: AcroFormsRotation.pdf-1.png
+лют. 08, 2017 11:17:20 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: *** TEST OK *** for file: AcroFormsRotation.pdf-2.png
+лют. 08, 2017 11:17:20 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Deleting: AcroFormsRotation.pdf-2.png
+лют. 08, 2017 11:17:20 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Opening: AlignmentTests.pdf
+лют. 08, 2017 11:17:20 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Rendering: AlignmentTests.pdf
+лют. 08, 2017 11:17:20 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:22 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Writing: C:\Users\Роман Лотоцький\workspace\artifactId\pdfbox\target\test-output/AlignmentTests.pdf-1.png
+лют. 08, 2017 11:17:22 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Comparing: AlignmentTests.pdf
+лют. 08, 2017 11:17:23 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+WARNING: *** TEST FAILURE *** Input and output not identical for file: AlignmentTests.pdf-1.png
+лют. 08, 2017 11:17:23 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Opening: MultilineFields.pdf
+лют. 08, 2017 11:17:23 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Rendering: MultilineFields.pdf
+лют. 08, 2017 11:17:24 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Writing: C:\Users\Роман Лотоцький\workspace\artifactId\pdfbox\target\test-output/MultilineFields.pdf-1.png
+лют. 08, 2017 11:17:25 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Comparing: MultilineFields.pdf
+лют. 08, 2017 11:17:25 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+WARNING: *** TEST FAILURE *** Input and output not identical for file: MultilineFields.pdf-1.png
+лют. 08, 2017 11:17:25 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Opening: AlignmentTests-flattened.pdf
+лют. 08, 2017 11:17:25 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Rendering: AlignmentTests-flattened.pdf
+лют. 08, 2017 11:17:26 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Writing: C:\Users\Роман Лотоцький\workspace\artifactId\pdfbox\target\test-output/AlignmentTests-flattened.pdf-1.png
+лют. 08, 2017 11:17:26 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Comparing: AlignmentTests-flattened.pdf
+лют. 08, 2017 11:17:26 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: *** TEST OK *** for file: AlignmentTests-flattened.pdf-1.png
+лют. 08, 2017 11:17:26 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Deleting: AlignmentTests-flattened.pdf-1.png
+лют. 08, 2017 11:17:26 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Opening: AlignmentTests-flattened-noRef.pdf
+лют. 08, 2017 11:17:26 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Rendering: AlignmentTests-flattened-noRef.pdf
+лют. 08, 2017 11:17:27 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:27 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Writing: C:\Users\Роман Лотоцький\workspace\artifactId\pdfbox\target\test-output/AlignmentTests-flattened-noRef.pdf-1.png
+лют. 08, 2017 11:17:27 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Comparing: AlignmentTests-flattened-noRef.pdf
+лют. 08, 2017 11:17:27 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: *** TEST OK *** for file: AlignmentTests-flattened-noRef.pdf-1.png
+лют. 08, 2017 11:17:27 PM org.apache.pdfbox.rendering.TestPDFToImage doTestFile
+INFO: Deleting: AlignmentTests-flattened-noRef.pdf-1.png
+лют. 08, 2017 11:17:28 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:28 PM org.apache.pdfbox.pdmodel.interactive.form.AppearanceGeneratorHelper setAppearanceValue
+WARNING: widget of field TextField-DefaultValue has no rectangle, no appearance stream created
+лют. 08, 2017 11:17:28 PM org.apache.pdfbox.pdmodel.PDDocument setVersion
+SEVERE: It's not allowed to downgrade the version of a pdf.
+лют. 08, 2017 11:17:33 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:33 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:33 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:33 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:33 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:33 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:33 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+лют. 08, 2017 11:17:39 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse BidiSample.pdf for sorted test
+лют. 08, 2017 11:17:39 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse BidiSample.pdf for standard test
+лют. 08, 2017 11:17:39 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse cweb.pdf for standard test
+лют. 08, 2017 11:17:39 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for circlecopyrt (13) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:39 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for visiblespace (32) in font QEJSSK+CMTT10
+лют. 08, 2017 11:17:40 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for angbracketleft (104) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:40 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for angbracketright (105) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:43 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for negationslash (54) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:43 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse cweb.pdf for sorted test
+лют. 08, 2017 11:17:43 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for circlecopyrt (13) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:43 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for visiblespace (32) in font QEJSSK+CMTT10
+лют. 08, 2017 11:17:44 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for angbracketleft (104) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:44 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for angbracketright (105) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:44 PM org.apache.pdfbox.pdmodel.font.PDSimpleFont toUnicode
+WARNING: No Unicode mapping for negationslash (54) in font KVUGCP+CMSY10
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse data-000001.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse data-000001.pdf for sorted test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse FC60_Times.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse FC60_Times.pdf for sorted test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse hello3.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse hello3.pdf for sorted test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse Liste732004001452_001_0.pdf_0_.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse Liste732004001452_001_0.pdf_0_.pdf for sorted test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse openoffice-test-document.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse openoffice-test-document.pdf for sorted test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-2984-rotations.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-2984-rotations.pdf for sorted test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3025.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3025.pdf for sorted test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3038-001033-p2.pdf for standard test
+лют. 08, 2017 11:17:46 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3038-001033-p2.pdf for sorted test
+лют. 08, 2017 11:17:47 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3042-003177-p2.pdf for standard test
+лют. 08, 2017 11:17:47 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3042-003177-p2.pdf for sorted test
+лют. 08, 2017 11:17:47 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3044-010197-p5-ligatures.pdf for standard test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3044-010197-p5-ligatures.pdf for sorted test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3053-reduced.pdf for standard test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3053-reduced.pdf for sorted test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3061-092465-reduced.pdf for standard test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3061-092465-reduced.pdf for sorted test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3062-002207-p1.pdf for standard test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3062-002207-p1.pdf for sorted test
+лют. 08, 2017 11:17:48 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3062-005717-p1.pdf for standard test
+лют. 08, 2017 11:17:49 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3062-005717-p1.pdf for sorted test
+лют. 08, 2017 11:17:49 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3062-N2MOQ7YZICIYGTPLQJAWJ4HLN6CCEMHZ-reduced.pdf for standard test
+лют. 08, 2017 11:17:49 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3062-N2MOQ7YZICIYGTPLQJAWJ4HLN6CCEMHZ-reduced.pdf for sorted test
+лют. 08, 2017 11:17:49 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3067-negativeTf.pdf for standard test
+лют. 08, 2017 11:17:49 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3067-negativeTf.pdf for sorted test
+лют. 08, 2017 11:17:49 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3110-poems-beads-cropbox.pdf for standard test
+лют. 08, 2017 11:17:49 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3110-poems-beads-cropbox.pdf for sorted test
+лют. 08, 2017 11:17:50 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3110-poems-beads.pdf for standard test
+лют. 08, 2017 11:17:50 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3110-poems-beads.pdf for sorted test
+лют. 08, 2017 11:17:50 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3123-ADSFWTRB3HBZBZKEVESVTBRZC2MNKZF5_reduced.pdf for standard test
+лют. 08, 2017 11:17:50 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3123-ADSFWTRB3HBZBZKEVESVTBRZC2MNKZF5_reduced.pdf for sorted test
+лют. 08, 2017 11:17:50 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3127-RAU4G6QMOVRYBISJU7R6MOVZCRFUO7P4-VFont.pdf for standard test
+лют. 08, 2017 11:17:50 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3127-RAU4G6QMOVRYBISJU7R6MOVZCRFUO7P4-VFont.pdf for sorted test
+лют. 08, 2017 11:17:50 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3195.pdf for standard test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse PDFBOX-3195.pdf for sorted test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse rotation.pdf for standard test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse rotation.pdf for sorted test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse sampleForSpec.pdf for standard test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse sampleForSpec.pdf for sorted test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse sample_fonts_solidconvertor.pdf for standard test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.pdmodel.font.PDFont <init>
+WARNING: Invalid ToUnicode CMap in font Verdana
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.pdmodel.font.PDFont <init>
+WARNING: Invalid ToUnicode CMap in font MSReferenceSansSerif
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse sample_fonts_solidconvertor.pdf for sorted test
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.pdmodel.font.PDFont <init>
+WARNING: Invalid ToUnicode CMap in font Verdana
+лют. 08, 2017 11:17:51 PM org.apache.pdfbox.pdmodel.font.PDFont <init>
+WARNING: Invalid ToUnicode CMap in font MSReferenceSansSerif
+лют. 08, 2017 11:17:52 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse simple-openoffice.pdf for standard test
+лют. 08, 2017 11:17:52 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse simple-openoffice.pdf for sorted test
+лют. 08, 2017 11:17:52 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse yaddatest.pdf for standard test
+лют. 08, 2017 11:17:52 PM org.apache.pdfbox.text.TestTextStripper doTestFile
+INFO: Preparing to parse yaddatest.pdf for sorted test
+лют. 08, 2017 11:17:54 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document

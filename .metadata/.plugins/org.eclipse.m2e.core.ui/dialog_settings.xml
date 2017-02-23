@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="549" key="x"/>
+		<item value="0" key="y"/>
+		<item value="667" key="height"/>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="E:\WebServicesStub\src\com\mkyong\client"/>
+			<item value="E:\WebServicesStub"/>
+			<item value="E:\tutorial"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[groupId].[artifactId]"/>
+			<item value="a"/>
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="HelloWorld"/>
+		</list>
+		<list key="name">
+			<item value="HelloWorldName"/>
+		</list>
+		<list key="artifactId">
+			<item value="HelloWorld"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Роман Лотоцький\workspace\artifactId"/>
+			<item value="C:\Users\Роман Лотоцький\workspace\artifactId\lib\mysql-connector-java-5.1.40-bin.jar"/>
+			<item value="C:\Users\Роман Лотоцький\workspace\MyFirst"/>
+			<item value="E:\WebServicesStub"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.faberlic"/>
+			<item value="order.artificialId"/>
+			<item value="order.JDBSTutorial"/>
+			<item value="order.JDBCTutorial"/>
+			<item value="order.artifactId"/>
+			<item value="order.testorder"/>
+			<item value="duck.duck"/>
+			<item value="duck.template"/>
+			<item value="MyFirst.MyFirst"/>
+			<item value="MyFirst.Coursera"/>
+			<item value="WebServicesStub"/>
+			<item value="WebServicesStub.web"/>
+			<item value="WebServicesStub.newer"/>
+			<item value="new.a"/>
+			<item value="new.n"/>
+		</list>
+		<list key="groupId">
+			<item value="com"/>
+			<item value="order"/>
+			<item value="duck"/>
+			<item value="MyFirst"/>
+			<item value="WebServicesStub"/>
+			<item value="new"/>
+			<item value="robot5"/>
+			<item value="third"/>
+			<item value="fadsfasf"/>
+			<item value="robot"/>
+		</list>
+		<list key="artifactId">
+			<item value="faberlic"/>
+			<item value="artificialId"/>
+			<item value="JDBSTutorial"/>
+			<item value="JDBCTutorial"/>
+			<item value="artifactId"/>
+			<item value="testorder"/>
+			<item value="duck"/>
+			<item value="template"/>
+			<item value="MyFirst"/>
+			<item value="Coursera"/>
+			<item value="WebServicesSt"/>
+			<item value="web"/>
+			<item value="newer"/>
+			<item value="a"/>
+			<item value="n"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.editor.dialogs.ManageDependenciesDialog">
+		<item value="755" key="width"/>
+		<item value="306" key="x"/>
+		<item value="59" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+</section>

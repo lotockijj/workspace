@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.pdfbox.pdmodel.graphics.image.LosslessFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.769 sec - in org.apache.pdfbox.pdmodel.graphics.image.LosslessFactoryTest

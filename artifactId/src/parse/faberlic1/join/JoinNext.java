@@ -1,5 +1,6 @@
 package parse.faberlic1.join;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.nio.file.Path;
@@ -150,13 +151,14 @@ public class JoinNext {
 	}
 
 	public static void main(String[] args) {
-		JoinNext myJoin = new JoinNext();
-		myJoin.createPathAndScanner();
+//		JoinNext myJoin = new JoinNext();
+//		myJoin.createPathAndScanner();
+		
 //		myJoin.createPathAndScanner2();
-				for(Goods goods : myJoin.listGoods){
-					System.out.println(goods);
-				}
-				System.out.println(myJoin.listGoods.size());
+//				for(Goods goods : myJoin.listGoods){
+//					System.out.println(goods);
+//				}
+//				System.out.println(myJoin.listGoods.size());
 //		JoinNext myJoin2 = new JoinNext();
 //		try{
 //			myJoin2.createPathAndScanner2();
@@ -166,5 +168,13 @@ public class JoinNext {
 //		for(Goods goods: myJoin2.listGoods){
 //			System.out.println(goods);
 //		}
+				JoinNext2 join = new JoinNext2();
+				try {
+					join.createPathAndScanner();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				join.writeListTestIntoFile();
 	}
 }

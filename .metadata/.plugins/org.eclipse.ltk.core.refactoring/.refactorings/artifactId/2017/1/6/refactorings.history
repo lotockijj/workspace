@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;parse.faberlic1.join.JoinNext2.checkIfLastSevenElementIsnumber(...)&apos; to &apos;checkIfLastSevenElementIsNumber&apos;&#x0D;&#x0A;- Original project: &apos;artifactId&apos;&#x0D;&#x0A;- Original element: &apos;parse.faberlic1.join.JoinNext2.checkIfLastSevenElementIsnumber(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;parse.faberlic1.join.JoinNext2.checkIfLastSevenElementIsNumber(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;checkIfLastSevenElementIsnumber&apos;" flags="589826" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;parse.faberlic1.join{JoinNext2.java[JoinNext2~checkIfLastSevenElementIsnumber~QList\&lt;QString;&gt;;" name="checkIfLastSevenElementIsNumber" references="true" stamp="1485867242551" version="1.0"/>
+</session>

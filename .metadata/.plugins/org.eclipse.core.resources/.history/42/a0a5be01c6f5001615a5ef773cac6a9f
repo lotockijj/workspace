@@ -1,0 +1,145 @@
+package gui;
+
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.controlsfx.dialog.Dialogs;
+
+import com.dao.FabDao;
+import com.faberlic.Goods;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class AddDialogFX extends Stage {
+
+	Map<String, TextField> mapTextFields = new HashMap<>();
+
+	private FabDao fabDao;
+	private FaberlicGoods faberlicGoods;
+
+	public AddDialogFX(FaberlicGoods theFaberlicGoods, FabDao theFabDao){
+		this();
+		fabDao = theFabDao;
+		faberlicGoods = theFaberlicGoods;
+	}
+
+	public AddDialogFX() {
+
+		String[] names = Goods.getNamesGoods();
+
+		BorderPane layout = new BorderPane();/* layout */
+
+		VBox vBoxTF = new VBox();
+		vBoxTF.setPadding(new Insets(3, 3, 3, 3));
+		vBoxTF.setSpacing(3);
+		//vBoxTF.setAlignment(Pos.TOP_LEFT);
+		for(int i = 0; i < names.length; i++){
+			HBox hBox1 = new HBox();
+			hBox1.setPadding(new Insets(3, 3, 3, 3));
+			hBox1.setSpacing(3);
+			hBox1.setAlignment(Pos.CENTER_LEFT);
+			hBox1.getChildren().add(new Label(names[i]));
+
+			mapTextFields.put(names[i], new TextField());
+
+			HBox hBox2 = new HBox();
+			hBox2.setPadding(new Insets(3, 3, 3, 3));
+			hBox2.setSpacing(3);
+			hBox2.setAlignment(Pos.CENTER_RIGHT);
+			hBox2.getChildren().add(mapTextFields.get(names[i]));
+
+			HBox mainBox = new HBox();
+			mainBox.prefWidth(1000);
+			HBox.setHgrow(hBox1, Priority.ALWAYS);
+			mainBox.getChildren().addAll(hBox1, hBox2);
+
+			vBoxTF.getChildren().addAll(mainBox);
+		}
+
+		Button btnSave = new Button("Save");
+		Button btnCancel = new Button("Cancel");
+		HBox hBoxForButton = new HBox();
+		hBoxForButton.setSpacing(10);
+		hBoxForButton.setPadding(new Insets(3, 3, 3, 3));
+		hBoxForButton.getChildren().addAll(btnSave, btnCancel);
+		hBoxForButton.setAlignment(Pos.CENTER);
+
+		btnSave.setOnAction(e -> saveGoods());
+		layout.setCenter(vBoxTF);
+		layout.setBottom(hBoxForButton);
+
+		Scene scene = new Scene(layout, 300, 500);
+		this.setScene(scene);
+		this.setTitle("Add goods");
+		this.centerOnScreen();
+	}
+
+	private void saveGoods() {
+		Goods tempGoods = createGoods(mapTextFields);
+		try {
+			badMethod();
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("title");
+			alert.setHeaderText("Information Alert");
+			String s ="This is an example of JavaFX 8 Dialogs... ";
+			alert.setContentText(s);
+			alert.showAndWait();
+
+			fabDao.addGoods(tempGoods);
+			this.getScene().getWindow().hide();
+			close();
+			faberlicGoods.refreshFaberlicGoods();
+		} catch (Exception e){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error!" );
+			alert.setContentText(e.toString());
+			alert.showAndWait();
+		}
+	}
+
+	private void badMethod() throws Exception {
+		int size = 0;
+		if (size == 0) {
+			throw new Exception();
+		}
+
+	}
+
+	private Goods createGoods(Map<String, TextField> map) {
+		Goods tempGoods = new Goods();
+		try{
+			tempGoods.setDiscount(map.get("discount").getText());
+			tempGoods.setPage(map.get("page").getText());
+			tempGoods.setArticle(map.get("article").getText());
+			tempGoods.setName(map.get("name").getText());
+
+			tempGoods.setPriceCatalog(new BigDecimal(map.get("price catalog").getText()));
+			tempGoods.setTheSame(new BigDecimal(map.get("the same").getText()));
+			tempGoods.setAllowance(map.get("allowance").getText());
+			tempGoods.setPriceStore(new BigDecimal(map.get("price store").getText()));
+			tempGoods.setBallConsultant(Float.valueOf(map.get("ball consultant").getText()));
+			tempGoods.setPriceBuyer(new BigDecimal(map.get("price buyer").getText()));
+			tempGoods.setBallBuyer(Float.parseFloat(map.get("ball buyer").getText()));
+		} catch (NumberFormatException e){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error!" );
+			alert.setContentText(e.toString());
+			alert.showAndWait();
+		}
+		return tempGoods;
+	}
+
+}

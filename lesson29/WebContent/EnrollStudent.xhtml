@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="StudentTemplate.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<h:outputText value="Student Name:" />
+			<h:inputText value="#{student.name}" title="name" id="name" />
+			<br />
+			<h:outputText value="Student ID:" />
+			<h:inputText value="#{student.studentId}" title="id" id="studentId" />
+			<br />
+			<h:outputText value="Class ID:" />
+			<h:inputText value="#{student.Id}" title="classId" id="classId" />
+			<br />
+			<h:commandButton action="enrolled" value="submit" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+h1 {
+	color: maroon;
+	border-bottom: 3px solid yellow;
+}
+h6 {
+	color: #F033FF;
+	border-top: 5px solid #33FF90;
+}
+p {
+	color: #9FCB40;
+	border-left: 5px solid #CB40C5;
+}
+
+em{
+	color: #CDA82B;
+	border-top: 3px solid #F0910F;
+}
+.greentea{
+	color: black;
+	border-bottom: 15px solid red; 
+}
+p.purpletea{
+	color: purple;
+	border-top: 3px solid black;
+}
+p.bluetea{
+	color: blue;
+	border-right: 4px solid green;
+}

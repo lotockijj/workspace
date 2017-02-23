@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.pdfbox.pdmodel.font.TestTTFParser
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.pdfbox.pdmodel.font.TestTTFParser

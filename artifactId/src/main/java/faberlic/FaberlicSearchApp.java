@@ -17,8 +17,6 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import com.sun.codemodel.JOp;
-
 public class FaberlicSearchApp extends JFrame{
 
 	private static final long serialVersionUID = 1L;

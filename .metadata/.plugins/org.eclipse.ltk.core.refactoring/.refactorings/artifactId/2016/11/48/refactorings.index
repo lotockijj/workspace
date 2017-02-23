@@ -1,0 +1,16 @@
+1479845138843	Rename type 'AddFaberlicGoodsdialog'
+1479846653512	Rename local variable 'date_expiration'
+1479920438651	Rename field 'panel'
+1479920688536	Rename local variable 'theFablerlicGoods'
+1479921277585	Rename type 'AddFaberlicGoodsDialog'
+1479990318000	Rename method 'searchEmployees'
+1479994840156	Rename method 'delateFaberlicGoods'
+1480001819256	Rename local variable 'gridBagLayout'
+1480001846186	Rename local variable 'gbc_lblUser'
+1480001866360	Rename local variable 'gbc_textField'
+1480001898572	Rename local variable 'gbc_lblPassword'
+1480001910694	Rename local variable 'gbc_textField_1'
+1480001947449	Rename local variable 'gbc_btnNewButton'
+1480001986164	Rename local variable 'gbc_btnCancel'
+1480081551346	Delete element
+1480108671253	Delete elements

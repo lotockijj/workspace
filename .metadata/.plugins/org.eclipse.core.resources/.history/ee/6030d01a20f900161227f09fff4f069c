@@ -1,0 +1,58 @@
+package gui;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
+
+public class Login extends Stage {
+
+	public Login() {
+
+		Label labelUser = new Label("User:");
+		labelUser.setAlignment(Pos.CENTER_LEFT);
+		Label labelPassword = new Label("Password:");
+		labelPassword.setAlignment(Pos.CENTER_LEFT);
+		TextField textFieldUser = new TextField();
+		textFieldUser.setAlignment(Pos.CENTER_RIGHT);
+		TextField textFieldPassword = new TextField();
+		textFieldPassword.setAlignment(Pos.CENTER_RIGHT);
+		
+		HBox userHB = new HBox();
+		userHB.setPadding(new Insets(3, 3, 3, 3));
+		userHB.setSpacing(3);
+		userHB.getChildren().addAll(labelUser, textFieldUser);
+		
+		HBox passwordHB = new HBox();
+		passwordHB.setPadding(new Insets(3, 3, 3, 3));
+		passwordHB.setSpacing(3);
+		passwordHB.getChildren().addAll(labelPassword, textFieldPassword);
+
+		VBox mainBox = new VBox();
+		mainBox.prefWidth(1000);
+		mainBox.getChildren().addAll(userHB, passwordHB);
+
+
+		BorderPane layout = new BorderPane();/* layout */
+		layout.setCenter(mainBox);
+		//		layout.setBottom(hBoxForButton);
+
+		Scene scene = new Scene(layout, 300, 250);
+		this.setScene(scene);
+		this.setTitle("User login.");
+		this.centerOnScreen();
+		// this locate you stage title in the center.
+		Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+		this.setX((primScreenBounds.getWidth() -  this.getWidth()) / 2);
+		this.setY((primScreenBounds.getHeight() - this.getHeight()) / 2);
+	}
+
+}

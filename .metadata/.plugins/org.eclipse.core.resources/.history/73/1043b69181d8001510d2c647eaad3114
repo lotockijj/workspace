@@ -1,0 +1,20 @@
+import java.util.Locale;
+
+class HelloWorld {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello World!!!");
+		int i = 461012;
+		System.out.format("The value of i is: %d%n", i);
+		Object floatVar = null;
+		Object intVar = null;
+		Object stringVar = null;
+		System.out.format(Locale.FRANCE,
+			    "The value of the float " + "variable is %f, while the " +
+			    "value of the integer variable " + "is %d, and the string is %s%n", 
+			    floatVar, intVar, stringVar); 
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Inline local variable &apos;parse.faberlic1.join.JoinNext2.createPathAndScanner().bw&apos; in &apos;parse.faberlic1.join.JoinNext2.createPathAndScanner()&apos;&#x0D;&#x0A;- Original project: &apos;artifactId&apos;&#x0D;&#x0A;- Original element: &apos;parse.faberlic1.join.JoinNext2.createPathAndScanner().bw&apos;" description="Inline local variable &apos;bw&apos;" id="org.eclipse.jdt.ui.inline.temp" input="/src&lt;parse.faberlic1.join{JoinNext2.java" selection="852 27" stamp="1481814566301" version="1.0"/>
+</session>

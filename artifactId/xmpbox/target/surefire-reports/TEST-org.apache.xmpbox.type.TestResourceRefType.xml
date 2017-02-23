@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.apache.xmpbox.type.TestResourceRefType" time="0.313" tests="105" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
+    <property name="java.vm.version" value="25.73-b02"/>
+    <property name="user.country.format" value="UA"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Роман Лотоцький\workspace\artifactId"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Роман Лотоцький\workspace\artifactId"/>
+    <property name="java.runtime.version" value="1.8.0_73-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\A6BF~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.3.9\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_73\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_73;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_73\db\bin;C:\Program Files\Java\jdk1.8.0_73\bin;C:\Users\Роман Лотоцький\AppData\Local\Microsoft\WindowsApps;C:\Program Files\apache-maven-3.3.9\bin;C:\Program Files\Java\1.8.0_73\db\bin;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Роман Лотоцький"/>
+    <property name="user.timezone" value="Europe/Helsinki"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="user.name" value="Роман Лотоцький"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_73\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -U"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ru"/>
+    <property name="user.language.format" value="uk"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_73"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_73\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testPropertyType[0]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0"/>
+  <testcase name="testRandomPropertyType[0]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0"/>
+  <testcase name="testRandomSetter[0]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0"/>
+  <testcase name="testInitializedToNull[0]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0"/>
+  <testcase name="testSettingValue[0]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0"/>
+  <testcase name="testRandomSettingValue[0]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0"/>
+  <testcase name="testSetter[0]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0"/>
+  <testcase name="testPropertyType[1]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.001"/>
+  <testcase name="testRandomPropertyType[1]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.004"/>
+  <testcase name="testRandomSetter[1]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.006"/>
+  <testcase name="testInitializedToNull[1]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.005"/>
+  <testcase name="testSettingValue[1]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[1]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[1]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[2]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[2]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.007"/>
+  <testcase name="testRandomSetter[2]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.006"/>
+  <testcase name="testInitializedToNull[2]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[2]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[2]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[2]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[3]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.004"/>
+  <testcase name="testRandomPropertyType[3]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomSetter[3]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.005"/>
+  <testcase name="testInitializedToNull[3]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[3]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[3]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[3]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[4]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomPropertyType[4]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.006"/>
+  <testcase name="testRandomSetter[4]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.009"/>
+  <testcase name="testInitializedToNull[4]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSettingValue[4]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomSettingValue[4]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.007"/>
+  <testcase name="testSetter[4]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testPropertyType[5]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[5]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomSetter[5]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.005"/>
+  <testcase name="testInitializedToNull[5]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[5]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[5]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[5]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[6]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[6]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomSetter[6]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.004"/>
+  <testcase name="testInitializedToNull[6]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[6]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[6]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[6]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[7]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[7]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSetter[7]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.004"/>
+  <testcase name="testInitializedToNull[7]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[7]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[7]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[7]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.001"/>
+  <testcase name="testPropertyType[8]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[8]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSetter[8]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.004"/>
+  <testcase name="testInitializedToNull[8]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[8]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[8]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[8]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[9]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[9]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.004"/>
+  <testcase name="testRandomSetter[9]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.009"/>
+  <testcase name="testInitializedToNull[9]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[9]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomSettingValue[9]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.018"/>
+  <testcase name="testSetter[9]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[10]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[10]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSetter[10]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.007"/>
+  <testcase name="testInitializedToNull[10]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[10]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[10]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSetter[10]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.001"/>
+  <testcase name="testPropertyType[11]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[11]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomSetter[11]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.004"/>
+  <testcase name="testInitializedToNull[11]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[11]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[11]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[11]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[12]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomPropertyType[12]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSetter[12]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.005"/>
+  <testcase name="testInitializedToNull[12]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[12]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[12]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.007"/>
+  <testcase name="testSetter[12]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[13]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[13]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testRandomSetter[13]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.007"/>
+  <testcase name="testInitializedToNull[13]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testSettingValue[13]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[13]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[13]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testPropertyType[14]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomPropertyType[14]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSetter[14]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.007"/>
+  <testcase name="testInitializedToNull[14]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSettingValue[14]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+  <testcase name="testRandomSettingValue[14]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.003"/>
+  <testcase name="testSetter[14]" classname="org.apache.xmpbox.type.TestResourceRefType" time="0.002"/>
+</testsuite>

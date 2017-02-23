@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;TicTacToe&apos; to &apos;com.practicaljava.lesson11&apos;&#x0D;&#x0A;- Original project: &apos;Applet&apos;&#x0D;&#x0A;- Original element: &apos;Applet/src/TicTacToe&apos;&#x0D;&#x0A;- Renamed element: &apos;Applet/src/com.practicaljava.lesson11&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;TicTacToe&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;TicTacToe" name="com.practicaljava.lesson11" qualified="false" references="true" stamp="1465391277533" textual="false" version="1.0"/>
+</session>

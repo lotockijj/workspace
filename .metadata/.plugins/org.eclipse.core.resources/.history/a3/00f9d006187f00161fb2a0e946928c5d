@@ -1,0 +1,14 @@
+package com.dominyuk.lotoroman2;
+
+import javax.sound.midi.ControllerEventListener;
+import javax.sound.midi.ShortMessage;
+
+public class Controller implements ControllerEventListener {
+
+	@Override
+	public void controlChange(ShortMessage event) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

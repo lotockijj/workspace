@@ -1,0 +1,29 @@
+package yakov.fain.lesson24.wolkthrough;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+
+public class DBParamProcessor {
+	
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		String processingClass = "yakov.fain.lesson24.wolkthrough.MyDBWorker";
+		
+		Class<?> loadedClass = Class.forName(processingClass);
+		Method methods[] = loadedClass.getMethods();
+		for(Method m : methods){
+			if(m.isAnnotationPresent(extracted())){
+				DBParams dbAnnotation = m.getAnnotation(DBParams.class);
+				System.out.println("Method: " + m.getName() + 
+				"\nParams of MyDBWorker are: " + "dbName= " + dbAnnotation.dbName() + "\t "	+
+				"uid= " + dbAnnotation.uid() + "\t" + "password= " + dbAnnotation.password());
+				
+			}
+		}
+	}
+
+	private static Class<? extends Annotation> extracted() {
+		return (Class<? extends Annotation>) MyDBWorker.class;
+	}
+
+}

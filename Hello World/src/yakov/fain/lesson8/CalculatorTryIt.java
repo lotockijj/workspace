@@ -28,7 +28,8 @@ public class CalculatorTryIt implements ActionListener{
     boolean function;
     State state = State.ZERO;
 
-    public CalculatorTryIt() {
+    @SuppressWarnings("static-access")
+	public CalculatorTryIt() {
         pane.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
 
@@ -335,6 +336,7 @@ public class CalculatorTryIt implements ActionListener{
     }
 
     public static void main(String[] args){
-        CalculatorTryIt calc = new CalculatorTryIt();
+        @SuppressWarnings("unused")
+		CalculatorTryIt calc = new CalculatorTryIt();
     }
 }

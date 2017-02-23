@@ -1,0 +1,20 @@
+package com.dominyuk.lotoroman;
+
+import java.util.LinkedList;
+
+public class TestCompareTo {
+
+	public static void main(String[] args) {
+		Deck cardDeck = new Deck(true);
+		LinkedList<Card> deckCompare = cardDeck.shuffledSet;
+		for(Card e : deckCompare){
+			System.out.println(deckCompare.getFirst() + " " + e + " = " 
+					+ deckCompare.getFirst().compareTo(e));
+		}
+		System.out.println();
+		for(Card e : deckCompare){
+			System.out.println(deckCompare.getLast() + " " + e + " = " 
+					+ deckCompare.getLast().compareTo(e));
+		}
+	}
+}

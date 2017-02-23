@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Algorithms.InsertionSort&apos; to &apos;MergeSort&apos;&#x0D;&#x0A;- Original project: &apos;Hello World&apos;&#x0D;&#x0A;- Original element: &apos;Algorithms.InsertionSort&apos;&#x0D;&#x0A;- Renamed element: &apos;Algorithms.MergeSort&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;InsertionSort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Algorithms{InsertionSort.java[InsertionSort" matchStrategy="1" name="MergeSort" qualified="false" references="true" similarDeclarations="false" stamp="1471946763957" textual="false" version="1.0"/>
+</session>

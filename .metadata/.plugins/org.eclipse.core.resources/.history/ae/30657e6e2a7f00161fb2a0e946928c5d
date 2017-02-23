@@ -1,0 +1,18 @@
+package com.dominyuk.lotoroman2;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+public interface ModelTable {
+
+	public void createPlayersAndDevideDeck(String... args) throws IOException;
+	public void playGame() throws IOException;
+	public int getPlayerChoose() throws IOException;
+	public String getPlayerNameChoose() throws IOException;
+	
+	void registerObserver(Observer observer);
+	void removeObserver(int o);
+	void registerObserver(ArrayList<Card> o);
+	void removeObserver(ArrayList<Card> o);
+	
+}

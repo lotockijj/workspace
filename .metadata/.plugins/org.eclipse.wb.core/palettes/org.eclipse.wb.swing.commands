@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<moveEntry
+		id="org.eclipse.wb.swing.layouts java.awt.GridBagLayout"
+		category="org.eclipse.wb.swing.layouts"
+		nextEntry="org.eclipse.wb.swing.layouts com.jgoodies.forms.layout.FormLayout"/>
+	<addCategory
+		id="custom_1480001350482"
+		name="jjj"
+		description=""
+		visible="true"
+		open="true"
+		nextCategory="org.eclipse.wb.swing.components"/>
+	<addCategory
+		id="custom_1480001445155"
+		name="passwordJTextField"
+		description=""
+		visible="true"
+		open="true"
+		nextCategory="org.eclipse.wb.swing.components"/>
+</commands>

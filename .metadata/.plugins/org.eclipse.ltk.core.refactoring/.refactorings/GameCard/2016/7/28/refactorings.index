@@ -1,0 +1,8 @@
+1467743798850	Rename local variable 'choosePlayers'
+1467744104760	Rename type 'ScannerPlayerChoose'
+1467797465080	Rename local variable 'playerChoosePlayerNumber'
+1467799535511	Delete element
+1467981987462	Rename method 'putAllCardWithRankNinthOnNinthHeart'
+1467982277076	Rename method 'checkForNumberCardWithRankNinth'
+1467982501921	Rename local variable 'countNumberRankNinth'
+1467982887690	Rename method 'search9Hearts'

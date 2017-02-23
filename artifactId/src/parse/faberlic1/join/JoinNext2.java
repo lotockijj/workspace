@@ -1,5 +1,6 @@
 package parse.faberlic1.join;
 
+//Completely work for cosmetics after JoinNext to clothes... 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,20 +18,19 @@ public class JoinNext2 {
 	int i = 0; 
 	int count = 0;
 	private Goods currentGoods;;
-	List<Goods> listGoods; List<String> listTest;
+	List<Goods> listGoods; List<String> listTest = new ArrayList<>();
 	List<String> goods;
 	String sName;
 	String ss = new String();
 	int m = 0;
 
 	public void createPathAndScanner() throws IOException{
-		//Path fPath = Paths.get("E:\\Faberlic\\15_2016adapter22.txt");
-		Path fPath = Paths.get("E:\\Faberlic\\test2.txt");
+		Path fPath = Paths.get("E:\\Faberlic\\15_2016adapter22.txt");
+		//Path fPath = Paths.get("E:\\Faberlic\\test2.txt");
 		currentGoods = new Goods();
 		listGoods = new ArrayList<>();
 		goods = new ArrayList<>();
 
-		FileWriter fw = new FileWriter("E://Faberlic//testNext.txt", true);
 		try(Scanner scanner = new Scanner(fPath, "windows-1251")){
 			while(scanner.hasNextLine()){
 				if(goods.size() == 0){
@@ -41,19 +41,31 @@ public class JoinNext2 {
 			for(String sL : listTest){
 				parseAndCreateListOfGoods(sL);
 			}
-			for(String sL : listTest){
-				System.out.println(sL);
-				new BufferedWriter(fw).write(sL);
-				new BufferedWriter(fw).newLine();
-			}
-			new BufferedWriter(fw).close();
+//			for(String sL : listTest){
+//				System.out.println(sL);
+//			}
+//			System.out.println(listTest.size()); 
 			scanner.close();
 		} catch(Exception e){
 			e.printStackTrace();
 		}
 	}
+	
+	void writeListTestIntoFile(){
+		try (BufferedWriter bw = new BufferedWriter(
+				new FileWriter("E:\\Faberlic\\testNext.txt", true))) {
+			for(int i = 0; i < listTest.size(); i++){
+				bw.write(listTest.get(i));
+				bw.newLine();
+			}
+			System.out.println("Size: " + listTest.size());
+		} catch (IOException e) {
+			e.printStackTrace();
 
-	private void parseAndCreateListOfGoods(String sL) {
+		}
+	}
+
+	 void parseAndCreateListOfGoods(String sL) {
 		Scanner scanner = new Scanner(sL);
 		List<String> goodsString = new ArrayList<>();
 		currentGoods = new Goods();
@@ -77,7 +89,7 @@ public class JoinNext2 {
 		}
 		currentGoods.setName(name.toString()); //System.out.println(currentGoods.getName());
 		listGoods.add(currentGoods);
-		System.out.println(currentGoods);
+		//System.out.println(currentGoods);
 		currentGoods = null;
 		scanner.close();
 	}
@@ -101,7 +113,6 @@ public class JoinNext2 {
 		goodsString.remove(goodsString.size() - 1);
 		currentGoods2.setPriceCatalog(new BigDecimal(goodsString.get(goodsString.size() - 1)));//System.out.println(currentGoods.getPriceCatalog());
 		goodsString.remove(goodsString.size() - 1);
-
 	}
 
 	private void processLine(String aLine) {
@@ -111,7 +122,7 @@ public class JoinNext2 {
 		while(scanner.hasNext()){
 			goods.add(scanner.next());
 		}
-		if(checkIfLastSevenElementIsnumber(goods)){
+		if(checkIfLastSevenElementIsNumber(goods)){
 			for(int j = 0; j < goods.size(); j++){
 				ss += goods.get(j) + " ";
 			}
@@ -122,7 +133,7 @@ public class JoinNext2 {
 		scanner.close();
 	}
 
-	private boolean checkIfLastSevenElementIsnumber(List<String> goods2) {
+	private boolean checkIfLastSevenElementIsNumber(List<String> goods2) {
 		int countNumbers = 0;
 		for(int i = goods2.size() - 1; i >= 0; i--){
 			char c = goods.get(i).charAt(0);
@@ -141,5 +152,6 @@ public class JoinNext2 {
 	public static void main(String[] args) throws IOException {
 		JoinNext2 join = new JoinNext2();
 		join.createPathAndScanner();
+		join.writeListTestIntoFile();
 	}
 }

@@ -1,0 +1,82 @@
+package gui;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.faberlic.Goods;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+/**
+	Sample of use:
+
+	int option = 0;
+	String[] buttons = {"Yes", "No"};
+	ChooseStage window = new ChooseStage(buttons, "Question",
+	"Are you sure you want to close The Application?", 350, 100);
+	window.showAndWait();
+	option = window.getOption();
+	if (option == 1) {
+		System.exit(-1);
+	}
+ */
+
+public class AddDialogFX extends Stage {
+
+	Map<String, TextField> mapTextFields = new HashMap<>();
+
+	public AddDialogFX() {
+
+		String[] names = Goods.getNamesGoods();
+
+		BorderPane layout = new BorderPane();/* layout */
+
+		VBox vBoxTF = new VBox();
+		vBoxTF.setPadding(new Insets(3, 3, 3, 3));
+		vBoxTF.setSpacing(3);
+		//vBoxTF.setAlignment(Pos.TOP_LEFT);
+		for(int i = 0; i < names.length; i++){
+			HBox hBox1 = new HBox();
+			hBox1.setPadding(new Insets(3, 3, 3, 3));
+			hBox1.setSpacing(3);
+			hBox1.setAlignment(Pos.CENTER_LEFT);
+			hBox1.getChildren().add(new Label(names[i]));
+			
+			mapTextFields.put(names[i], new TextField());
+			
+			HBox hBox2 = new HBox();
+			hBox2.setPadding(new Insets(3, 3, 3, 3));
+			hBox2.setSpacing(3);
+			hBox2.setAlignment(Pos.CENTER_RIGHT);
+			hBox2.getChildren().add(mapTextFields.get(names[i]));
+			
+			HBox mainBox = new HBox();
+			mainBox.prefWidth(1000);
+			mainBox.setHgrow(hBox1, Priority.ALWAYS);
+			mainBox.getChildren().addAll(hBox1, hBox2);
+			
+			vBoxTF.getChildren().addAll(mainBox);
+		}
+
+		layout.setCenter(vBoxTF);
+
+		Scene scene = new Scene(layout, 400, 600);
+		this.setScene(scene);
+		this.setTitle("add application");
+		this.centerOnScreen();
+		//this.setResizable(false);
+	}
+
+}

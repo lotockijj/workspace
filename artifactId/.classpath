@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="E:/Arxive/javax.ejb-3.1.2.2-sources.jar.zip"/>
+	<classpathentry kind="lib" path="jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.29-bin.jar"/>
+	<classpathentry kind="lib" path="pdfbox-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/JDBCTutorial.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.29-bin.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="lib/pdfbox-app-1.8.10-sources.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.4.1212.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

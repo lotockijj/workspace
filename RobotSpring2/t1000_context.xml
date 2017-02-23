@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-lazy-init="true"
+	>
+	
+	<import resource="toshiba_context.xml" />
+	<import resource="sony_context.xml" />
+	<import resource="db_context.xml" />
+	
+
+	<bean id="t1000" class="ru.javabegin.training.spring.impls.robot.ModelT1000"
+	parent="baseModel" scope="prototype">
+		<constructor-arg value="silwer" index="0" type="String"/>
+		<constructor-arg value="2006" index="1" type="int"/>
+		<constructor-arg value="true" index="2" type="boolean"/>
+		
+	</bean>
+	
+	<bean id="baseModel" abstract="true">
+	</bean>
+	
+</beans>

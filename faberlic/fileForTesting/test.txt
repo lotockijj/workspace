@@ -1,0 +1,66 @@
+﻿mysql> PREPARE stmt1 FROM 'SELECT SQRT(POW(?,2) + POW(?,2)) AS hypotenuse';
+mysql> SET @a = 3;
+mysql> SET @b = 4;
+mysql> EXECUTE stmt1 USING @a, @b;
++------------+
+| hypotenuse |
++------------+
+|          5 |
++------------+
+mysql> DEALLOCATE PREPARE stmt1;
+
+
+mysql> SET @s = 'SELECT SQRT(POW(?,2) + POW(?,2)) AS hypotenuse';
+mysql> PREPARE stmt2 FROM @s;
+mysql> SET @a = 6;
+mysql> SET @b = 8;
+mysql> EXECUTE stmt2 USING @a, @b;
++------------+
+| hypotenuse |
++------------+
+|         10 |
++------------+
+mysql> DEALLOCATE PREPARE stmt2;
+
+
+mysql> USE test;
+mysql> CREATE TABLE t1 (a INT NOT NULL);
+mysql> INSERT INTO t1 VALUES (4), (8), (11), (32), (80);
+
+mysql> SET @table = 't1';
+mysql> SET @s = CONCAT('SELECT * FROM ', @table);
+
+mysql> PREPARE stmt3 FROM @s;
+mysql> EXECUTE stmt3;
++----+
+| a  |
++----+
+|  4 |
+|  8 |
+| 11 |
+| 32 |
+| 80 |
++----+
+
+mysql> DEALLOCATE PREPARE stmt3;
+
+
+
+If the tables are innodb you can create it like this:
+
+CREATE TABLE accounts(
+    account_id INT NOT NULL AUTO_INCREMENT,
+    customer_id INT( 4 ) NOT NULL ,
+    account_type ENUM( 'savings', 'credit' ) NOT NULL,
+    balance FLOAT( 9 ) NOT NULL,
+    PRIMARY KEY ( account_id ), 
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) 
+) ENGINE=INNODB;
+CREATE TABLE customers(
+    customer_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL,
+    address VARCHAR(20) NOT NULL,
+    city VARCHAR(20) NOT NULL,
+    state VARCHAR(20) NOT NULL,
+)
+

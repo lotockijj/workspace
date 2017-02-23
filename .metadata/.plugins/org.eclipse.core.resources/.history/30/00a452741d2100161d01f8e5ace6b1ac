@@ -1,0 +1,17 @@
+package com.dominyuk.lotoroman;
+
+import java.util.LinkedList;
+
+public class testMethodCompareTo {
+	public static void main(String[] args) {
+		Deck cardDeck = new Deck(true);
+		LinkedList<Card> tableCardDeck = cardDeck.shuffledSet;
+		for(Card e: tableCardDeck){ //test all cards in play deck q.
+			//System.out.println(e + "  " );
+		}
+		for(int i = 0; i < 9; i++){
+		System.out.println("Last and " + i  + " = " 
+		+ tableCardDeck.getLast().compareTo(tableCardDeck.get(i)));
+		}
+	}
+}

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.pdfbox.multipdf.PDFMergerUtilityTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.777 sec - in org.apache.pdfbox.multipdf.PDFMergerUtilityTest

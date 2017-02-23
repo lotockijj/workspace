@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JoinNext.java&apos; to &apos;faberlic/src/main/java/com.faberlic&apos;&#x0D;&#x0A;- Original project: &apos;artifactId&apos;&#x0D;&#x0A;- Destination element: &apos;faberlic/src/main/java/com.faberlic&apos;&#x0D;&#x0A;- Original element: &apos;parse.faberlic1.join.JoinNext.java&apos;" description="Copy compilation unit" destination="=faberlic/src\/main\/java&lt;com.faberlic" element1="/src&lt;parse.faberlic1.join{JoinNext.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1486997684493" units="1" version="1.0"/>
+</session>

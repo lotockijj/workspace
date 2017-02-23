@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.pdfbox.encryption.TestPublicKeyEncryption
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.259 sec <<< FAILURE! - in org.apache.pdfbox.encryption.TestPublicKeyEncryption
+testMultipleRecipients(org.apache.pdfbox.encryption.TestPublicKeyEncryption)  Time elapsed: 0.192 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: JCE unlimited strength jurisdiction policy files are not installed
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.TestCase.fail(TestCase.java:227)
+	at org.apache.pdfbox.encryption.TestPublicKeyEncryption.setUp(TestPublicKeyEncryption.java:74)
+
+testProtection(org.apache.pdfbox.encryption.TestPublicKeyEncryption)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: JCE unlimited strength jurisdiction policy files are not installed
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.TestCase.fail(TestCase.java:227)
+	at org.apache.pdfbox.encryption.TestPublicKeyEncryption.setUp(TestPublicKeyEncryption.java:74)
+
+testProtectionError(org.apache.pdfbox.encryption.TestPublicKeyEncryption)  Time elapsed: 0 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: JCE unlimited strength jurisdiction policy files are not installed
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.TestCase.fail(TestCase.java:227)
+	at org.apache.pdfbox.encryption.TestPublicKeyEncryption.setUp(TestPublicKeyEncryption.java:74)
+

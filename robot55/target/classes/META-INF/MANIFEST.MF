@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: robot55
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: ￐ﾠ￐ﾾ￐ﾼ￐ﾰ￐ﾽ ￐ﾛ￐ﾾ￑ﾂ￐ﾾ￑ﾆ￑ﾌ￐ﾺ￐ﾸ￐ﾹ
+Implementation-Vendor-Id: com.example
+Build-Jdk: 1.8.0_73
+Implementation-URL: http://projects.spring.io/spring-boot/demo/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

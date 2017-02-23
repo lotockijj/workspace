@@ -1,0 +1,5 @@
+package com.dominyuk.lotoroman2;
+
+public interface ControllerInterface {
+
+}

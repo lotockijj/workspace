@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1486588511948
+Build-Jdk: 1.8.0_73
+Built-By: ￐ﾠ￐ﾾ￐ﾼ￐ﾰ￐ﾽ ￐ﾛ￐ﾾ￑ﾂ￐ﾾ￑ﾆ�
+ ��ﾌ￐ﾺ￐ﾸ￐ﾹ
+Bundle-Description: The Apache XmpBox library is an open source Java too
+ l that implements Adobe's XMP(TM)    specification. It can be used to p
+ arse, validate and create xmp contents.    It is mainly used by subproj
+ ect preflight of Apache PDFBox.     XmpBox is a subproject of Apache PD
+ FBox.
+Bundle-DocURL: http://pdfbox.apache.org
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache XmpBox
+Bundle-SymbolicName: org.apache.pdfbox.xmpbox
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 2.0.3
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.xmpbox;version="2.0.3";uses:="org.apache.xmpb
+ ox.schema,org.apache.xmpbox.type",org.apache.xmpbox.schema;version="2.0
+ .3";uses:="org.apache.xmpbox,org.apache.xmpbox.type",org.apache.xmpbox.
+ type;version="2.0.3";uses:="javax.xml.namespace,org.apache.xmpbox,org.a
+ pache.xmpbox.schema",org.apache.xmpbox.xml;version="2.0.3";uses:="javax
+ .xml.namespace,javax.xml.transform,org.apache.xmpbox,org.apache.xmpbox.
+ schema,org.apache.xmpbox.type,org.w3c.dom"
+Implementation-Title: Apache XmpBox
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.pdfbox
+Implementation-Version: 2.0.3
+Import-Package: javax.xml.bind,javax.xml.namespace,javax.xml.parsers,jav
+ ax.xml.transform,javax.xml.transform.dom,javax.xml.transform.stream,org
+ .w3c.dom,org.xml.sax
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Specification-Title: Apache XmpBox
+Specification-Vendor: The Apache Software Foundation
+Specification-Version: 2.0.3
+Tool: Bnd-2.4.1.201501161923

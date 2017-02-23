@@ -1,20 +1,16 @@
 package yakov.fain.lesson24;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import yakov.fain.lesson24.MyJDBCExecutor;
 
 public class MyJDBCAnnotationProcessor {
 	
 	public static void main(String[] args) {
-		//TODO add a check for the number of command line arguments
-		// has to be the name of the class to load.
-		String classWithAnnotation = args[0];
+		String classWithAnnotation = "yakov.fain.lesson24.HRBrowser";
 		try{
-			// Load provided on the command line class
-			Class loadedClass = Class.forName(classWithAnnotation);
-			//Get references to class methods
+			Class<?> loadedClass = Class.forName(classWithAnnotation);
 			Method[] methods = loadedClass.getMethods();
-			//Check every method of the class. If the annotation is present, 
-			//print the values of its parameters
 			for(Method m : methods){
 				if(m.isAnnotationPresent(MyJDBCExecutor.class)){
 					MyJDBCExecutor jdbcAnnotation = 
@@ -25,8 +21,29 @@ public class MyJDBCAnnotationProcessor {
 							", transactionRequired=" + jdbcAnnotation.transactionRequired());
 				}
 			}
+			
+			Class parameterTypes[] = new Class[]{String.class};
+			Method myMethod = loadedClass.getMethod("changeAddress", parameterTypes);
+			Object arguments[] = new Object[1];
+			arguments[0] = "250 Broadway";
+			myMethod.invoke(loadedClass.newInstance(), arguments);
+			arguments[0] = "c. Belz";
+			myMethod.invoke(loadedClass.newInstance(), arguments);
+			myMethod.invoke(loadedClass.newInstance(), "SOS");
 		} catch (ClassNotFoundException e){
 			e.printStackTrace();
+		} catch(NoSuchMethodException e1){
+			e1.printStackTrace();
+		} catch(SecurityException e2){
+			e2.printStackTrace();
+		} catch(IllegalAccessException e3){
+			e3.printStackTrace();
+		} catch (IllegalArgumentException e4){
+			e4.printStackTrace();
+		} catch (InvocationTargetException e5){
+			e5.printStackTrace();
+		} catch (InstantiationException e6){
+			e6.printStackTrace();
 		}
 	}
 

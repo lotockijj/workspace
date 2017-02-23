@@ -1,0 +1,12 @@
+package com.dominyuk.lotoroman;
+
+import java.util.ArrayList;
+
+public class Player {
+	public final String name; 
+	ArrayList<Card> cardsOnHands = new ArrayList<>();
+	
+	public Player(String name){
+		this.name = name; 
+	}
+}

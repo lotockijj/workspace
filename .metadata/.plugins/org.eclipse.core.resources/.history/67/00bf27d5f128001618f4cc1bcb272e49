@@ -1,0 +1,33 @@
+package com.dominyuk.lotoroman;
+
+import java.util.Scanner;
+
+public class TakeCardFromTable {
+
+	@SuppressWarnings("unused")
+	public void takeCardFromTable(boolean myChoose){
+		Table table = new Table(); 
+		if(table.cardsOnTable.size() >= 0){
+			if(myChoose){
+				System.out.println("You must take 3 or more card, but less then "
+						+ (table.cardsOnTable.size() - 1) + " card.");
+
+				Scanner numberToTakeCard = new Scanner(System.in);
+				while(true){
+					int myChooseToTakeCard = numberToTakeCard.nextInt();
+					if(myChooseToTakeCard >= 3 && myChooseToTakeCard < table.cardsOnTable.size()){
+						for(int j = 0; j < myChooseToTakeCard; j++){
+							table.takeCardFromTable(table.currentPlayer);
+							numberToTakeCard.close();
+							break; 
+						}
+					} else {
+						continue; 
+					}
+				}
+			}
+		} else {
+			System.out.println("you ");
+		}
+	}
+}

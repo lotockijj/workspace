@@ -1,0 +1,11 @@
+package com.dominyuk.lotoroman;
+
+public class TestDeckCard {
+
+	public static void main(String[] args) {
+		Table test = new Table(); 
+		test.createPlayersAndDevideDeck();
+		test.search9Hearts();
+		test.playGame();
+	}
+}

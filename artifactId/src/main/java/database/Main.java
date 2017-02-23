@@ -15,7 +15,10 @@ public class Main {
 	public static void createTable() throws Exception{
 		try{
 			Connection con = getConnection();
-			PreparedStatement create = (PreparedStatement) con.prepareStatement("CREATE TABLE IF NOT EXISTS tablename(id int NOT NULL AUTO_INCREMENT, first varchar(255), last varchar(255), PRIMARY KEY(id))");
+			PreparedStatement create = (PreparedStatement) 
+					con.prepareStatement("CREATE TABLE IF NOT EXISTS tablename(id int "
+							+ "NOT NULL AUTO_INCREMENT, first varchar(255), "
+							+ "last varchar(255), PRIMARY KEY(id))");
 			create.executeUpdate();
 
 		} catch (Exception e){

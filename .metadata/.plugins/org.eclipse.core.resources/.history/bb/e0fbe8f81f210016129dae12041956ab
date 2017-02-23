@@ -1,0 +1,30 @@
+package com.dominyuk.lotoroman;
+
+import java.util.Arrays;
+
+/*to do: move fields to private, use getters*/
+public class Card implements Comparable<Card>{
+	private final String suit; 
+	private final String rank; 
+	
+	public Card(String suit, String rank){
+		this.suit = suit;
+		this.rank = rank; 
+	}
+	public String getSuit(){
+		return suit;
+	}
+	
+	public String getRank(){
+		return rank; 
+	}
+	@Override
+	public int compareTo(Card c) {
+		return Arrays.binarySearch(Deck.rank, this.getRank()) - Arrays.binarySearch(Deck.rank, c.getRank());
+		//return (new String().indexOf(this.getRank()) - (new String().indexOf(c.getRank())));
+	}
+	@Override
+	public String toString() {
+		return this.rank + " " + this.suit;
+	}
+}

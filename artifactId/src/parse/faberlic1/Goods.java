@@ -128,10 +128,10 @@ public class Goods {
 
 	@Override
 	public String toString() {
-		return "Goods [discount= " + discount + ", page= " + page + ", article= " + article + ", name= " + name
-				+ ", priceCatalog= " + priceCatalog + ", theSame= " + theSame + ", allowance= " + allowance
-				+ ", priceStore= " + priceStore + ", ballConsultant= " + ballConsultant + ", priceBuyer= " + priceBuyer
-				+ ", ballBuyer= " + ballBuyer + "]";
+		return discount + " " + page + " " + article + " " + name
+				+ " " + priceCatalog + " " + theSame + " " + allowance
+				+ " " + priceStore +   " " + ballConsultant + " " + priceBuyer
+				+ " " + ballBuyer;
 	}
 
 }

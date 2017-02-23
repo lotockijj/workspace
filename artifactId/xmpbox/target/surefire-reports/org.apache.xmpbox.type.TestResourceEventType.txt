@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.xmpbox.type.TestResourceEventType
+-------------------------------------------------------------------------------
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec - in org.apache.xmpbox.type.TestResourceEventType

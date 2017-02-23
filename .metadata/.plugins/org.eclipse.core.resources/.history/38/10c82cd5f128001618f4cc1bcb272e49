@@ -1,0 +1,28 @@
+package com.dominyuk.lotoroman;
+
+import java.util.Scanner;
+
+public class PutOrTakeCard {
+	int myChoose; 
+	
+	public boolean putOrTake(){
+		try (Scanner putOrTakePlayerCard = new Scanner(System.in)){
+			while(true){
+				System.out.println("If you want to put, choose 1. "
+						+ "If you want to take card, choose 0. ");
+				myChoose = putOrTakePlayerCard.nextInt(); 
+				if(myChoose != 0 && myChoose != 1){
+					continue; 
+				} else {
+					putOrTakePlayerCard.close();
+					break; 
+				}
+			}
+		}
+		if(myChoose == 0){
+			return true; 
+		} else { 
+			return false; 
+		}
+	}
+}

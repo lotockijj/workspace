@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+h1 {
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	font-size: 14px;
+	color: silver;
+	font-weight: bold;
+}
+
+p {
+	text-decoration: underline;
+}
+
+h2 {
+	text-decoration: blink;
+}
+
+h3 {
+	font-family: Verdana, Geneva, Arial, sans-serif;
+}
+h4 {
+	font-size: 200%;
+}
+h5 {
+	font-size: 1.2em;
+	border-bottom: thin dotted #888888;
+}
+blockquote {
+	font-size: xx-large;
+	font-style: italic;
+	background-color: rgb(80%, 40%, 0%);
+	text-decoration: line-through;
+}
+h6{
+	font-size: 300%;
+	text-decoration: underline overline;
+}

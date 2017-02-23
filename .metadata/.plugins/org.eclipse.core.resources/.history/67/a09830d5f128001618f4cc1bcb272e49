@@ -1,0 +1,126 @@
+package com.dominyuk.lotoroman;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Table {
+	String[] playersNames = {"Василь", "Леся", "Іра", "Оля"};
+	int numberPlayers = playersNames.length;
+	boolean isShortDeck = true;
+	LinkedList<Player> playersInGame = new LinkedList<Player>(); // I change ArrayList to LinkedList because ArrayList don't sort players in order to step. 
+	int startPlayer; 
+	int startCard;
+	LinkedList<Card> cardsOnTable = new LinkedList<Card>(); 
+	Deck cardDeck = new Deck(isShortDeck); 
+	int currentPlayer; 
+
+	public void createPlayersAndDevideDeck(String... args){
+		LinkedList<Card> tableCardDeck = cardDeck.shuffledSet;
+		int sizeDeck = tableCardDeck.size(); 
+		for(int i = 0; i < numberPlayers; i++){
+			Player player = new Player(playersNames[i]);
+			for(int j = 0; j < sizeDeck/numberPlayers; j++){
+				Card s = tableCardDeck.poll();
+				player.cardsOnHands.add(s);
+				System.out.print(s + "  ");
+			}
+			System.out.println();
+			playersInGame.add(player); 
+		}
+	}
+
+	public void search9Hearts(){ // in class Deck I commented method shuffle in order to simplify further develop. 
+		for(int i = 0; i < playersInGame.size(); i++){ // in this method I try to find place "Hearts 9". 
+			for(int j = 0; j < playersInGame.get(i).cardsOnHands.size(); j++){
+				if(playersInGame.get(i).cardsOnHands.get(j).getSuit() == "Hearts" 
+						&& playersInGame.get(i).cardsOnHands.get(j).getRank() == "9"){
+					currentPlayer = i; 
+					startCard = j; 
+				}
+			}
+		}
+	}
+
+	public void playGame(){
+		for(int j = 0; j < playersInGame.size(); j++){
+			System.out.println(playersInGame.get(j).name);
+		}
+		takeCardFromPlayer(currentPlayer, startCard); 
+		// add 9 Hearts (card we start play) to play deck q.  
+		for(int j = 0; j < playersInGame.get(currentPlayer).cardsOnHands.size(); j++){
+			if(playersInGame.get(currentPlayer).cardsOnHands.get(j).getRank() == "9"){ //it concerns only first step.
+				takeCardFromPlayer(currentPlayer, j);
+			}
+		}
+		System.out.println("currentPlayer= " + currentPlayer);
+		currentPlayer = nextPlayer(currentPlayer); 
+		System.out.println("currentPlayer= " + currentPlayer);
+		while(true){
+			for(int j = 0; j < playersInGame.get(currentPlayer).cardsOnHands.size(); j++){
+				System.out.println("№=" + j + " " + checkCard(currentPlayer, j));
+			}
+			for(Card e: cardsOnTable){ //test all cards in play deck q.
+				System.out.println("play deck before - " + e);
+			}
+
+			// myMethodTakeOrPut(); 
+
+			PutOrTakeCard putOrTake = new PutOrTakeCard();
+			TakeCardFromTable take = new TakeCardFromTable(); 
+			take.takeCardFromTable(putOrTake.putOrTake());
+
+			// myMethodTakeOrPut(); 
+
+			System.out.println("Input position of your card: ");
+
+			try (Scanner input = new Scanner(System.in)){
+				System.out.println("Input= " + input);
+				while(true){
+					int playerInput = input.nextInt(); //java.util.InputMismatchException
+					if(checkCard(currentPlayer, playerInput).compareTo(cardsOnTable.getLast()) >= 0){
+						takeCardFromPlayer(currentPlayer, playerInput);
+						if(playersInGame.size() == 1) ;
+						for(Card e: cardsOnTable){ //All cards in play deck q after player put cards. 
+							System.out.println("After - " + e);
+						}
+						break; 
+					} else {
+						System.out.println("Wrong number! Try again!!!");
+						continue; 
+					}
+				}
+				for(int j = 0; j < playersInGame.size(); j++){ // if player already havn't card, we remove him from game. 
+					if(playersInGame.get(j).cardsOnHands.isEmpty()){
+						playersInGame.remove(j);
+						currentPlayer--;
+					}
+				}
+				currentPlayer = nextPlayer(currentPlayer);
+				if(playersInGame.size() == 1){ // when we have only one player with card, game just have finished, p.get(0) lost(defeated). 
+					System.out.println("Player " + playersInGame.get(0).name + " lost!!!");
+					break;  // we exit from game. 
+				}
+			}
+		}
+	}
+
+	private void takeCardFromPlayer(int playerNumber, int cardPosition){
+		cardsOnTable.add(playersInGame.get(playerNumber).cardsOnHands.get(cardPosition)); 
+		playersInGame.get(playerNumber).cardsOnHands.remove(cardPosition);
+	}
+
+	private int nextPlayer(int currentPlayerId){
+		return (currentPlayerId == playersInGame.size() - 1) // if we have last player's step in p(our array that hold players), we give step to first player.   
+				?  0 : ++currentPlayerId;
+	}
+
+	private Card checkCard(int playerNumber, int cardPosition ){
+		return playersInGame.get(playerNumber).cardsOnHands.get(cardPosition);  
+	}
+
+	void takeCardFromTable(int playerNumber){
+		playersInGame.get(playerNumber).cardsOnHands.add(cardsOnTable.poll()); 
+	}
+}
+
+

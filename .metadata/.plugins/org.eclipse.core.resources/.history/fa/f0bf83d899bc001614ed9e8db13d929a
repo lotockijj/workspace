@@ -1,0 +1,61 @@
+package parse.faberlic1.join;
+
+import java.io.UnsupportedEncodingException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import parse.faberlic1.Goods;
+
+public class JoinTest {
+
+	static int i = 1; 
+	static int count = 0;
+	private static Goods currentGoods;;
+	List<Goods> listGoods;
+	static String sName;
+	
+	public static void main(String[] args) {
+		
+		Path fPath2 = Paths.get("E:\\Faberlic\\pieces\\2.txt");
+		try(Scanner scanner2 = new Scanner(fPath2, "windows-1251")){
+			while(scanner2.hasNextLine()){
+				processLine2(scanner2.nextLine());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	private static void processLine2(String aLine) throws UnsupportedEncodingException{
+		Scanner scaner = new Scanner(aLine);
+		scaner.useDelimiter("\n\r");// 
+
+		while(scaner.hasNext()){
+
+			if(i == 1){
+				scaner.useDelimiter("\\s+"); // whitespace;
+				currentGoods.setDiscount(scaner.next());
+				System.out.println(currentGoods.getDiscount());
+				currentGoods.setPage(Integer.parseInt(scaner.nextLine().trim()));
+				System.out.println(currentGoods.getPage());
+			}
+			if(i == 2){
+				sName = scaner.nextLine();
+				System.out.print(sName + " ");
+				String ss = ""; 
+				Pattern pattern = Pattern.compile("(\\d\\d\\d\\d)");
+				Matcher matcher = pattern.matcher(sName); 
+				while(matcher.find()){
+					ss = matcher.group();
+					System.out.print(ss + " ");
+				}
+				currentGoods.setArticle(ss);
+			}
+			if(i == 3) currentGoods.setName(sName + ": " + scaner.next()); //System.out.println("\n" + sName);
+		}
+		scaner.close();
+	}
+}
