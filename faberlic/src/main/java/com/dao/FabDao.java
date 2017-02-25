@@ -13,17 +13,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.jasypt.util.password.StrongPasswordEncryptor;
+
 import com.faberlic.Goods;
 
 import gui.AlertGui;
 import gui.User;
+import gui.UsersHistory;
 
 public class FabDao {
 
 	private Connection myConn;
+	StrongPasswordEncryptor passwordEncryptor;
 
 	public FabDao() throws Exception{
-		// get db properties
 		Properties props = new Properties();
 		props.load(new FileInputStream("demo.properties"));
 		String user = props.getProperty("user");
@@ -32,6 +35,7 @@ public class FabDao {
 		//connect to database
 		myConn = DriverManager.getConnection(dburl, user, password);
 		System.out.println("DB connection successful to: " + dburl);
+		passwordEncryptor = new StrongPasswordEncryptor();
 	}
 
 	public List<Goods> getAllGoods(){
@@ -51,17 +55,12 @@ public class FabDao {
 
 	public List<Goods> searchGoods(String article){
 		List<Goods> list = new ArrayList<>();
-
 		ResultSet myRs = null;
-
 		article += "%";
 		try(PreparedStatement myStmt = myConn.prepareStatement("select *from fab "
 				+ "where article like ?;")){
-
 			myStmt.setString(1, article);
-
 			myRs = myStmt.executeQuery();
-
 			while(myRs.next()){
 				Goods tempGoods = convertRowToGoods(myRs);
 				list.add(tempGoods);
@@ -104,11 +103,10 @@ public class FabDao {
 		}
 	}
 
-	public void updateGoods(Goods newGoods, int id, User tempUser){
+	public void updateGoods(Goods newGoods, int id, User user){
 		try(PreparedStatement myStmt = myConn.prepareStatement("update fab set discount=?, "
 				+ "page=?, article=?, name=?, priceCatalog=?, theSame=?, allowance=?, "
 				+ "priceStore=?, ballconsultant=?, priceBuyer=?, ballBuyer=? where id=?;")){
-
 			myStmt.setString(1, newGoods.getDiscount());
 			myStmt.setString(2, newGoods.getPage());
 			myStmt.setString(3, newGoods.getArticle());
@@ -125,34 +123,41 @@ public class FabDao {
 			myStmt.setInt(12, id);
 
 			myStmt.executeUpdate();
+			System.out.println("Inside updating***");
 			alignDataBase();
-			
-			updateAuditHistory(tempUser);
+
+			updateAuditHistory(user, "Updating table");
 		} catch (SQLException e){
 			AlertGui.createAlertError(e);
 		}
 	}
 
-	private void updateAuditHistory(User tempUser) {
-		try(PreparedStatement myStmt = myConn.prepareStatement("insert into audit_history "
-				+ "(id, last_name, first_name, action, action_date_time)"
-				+ " values(?, ?, ?, ?, ?);")){
-
-			myStmt.setInt(1, tempUser.getId());
-			myStmt.setString(2, tempUser.getLast_name());
-			myStmt.setString(3, tempUser.getFirst_name());
-			myStmt.setString(4, "Update goods");
-			myStmt.setTimestamp(5, new Timestamp(System.currentTimeMillis()));
-			
+	public void setPasswordForUsers(String password, int id){
+		try(PreparedStatement myStmt = myConn.prepareStatement("update users set password=? "
+				+ "where id=?;")){
+			String encryptedPassword = passwordEncryptor.encryptPassword("java");
+			myStmt.setString(1, encryptedPassword);
+			myStmt.setInt(2, id);
 			myStmt.executeUpdate();
 		} catch (SQLException e){
 			AlertGui.createAlertError(e);
 		}
-		
 	}
-	
-	public void confirmPassword(){
-		
+
+	private void updateAuditHistory(User user, String action) {
+		try(PreparedStatement myStmt = myConn.prepareStatement("insert into audit_history "
+				+ "(last_name, first_name, action, action_date_time)"
+				+ " values(?, ?, ?, ?);")){
+			System.out.println(user);
+			myStmt.setString(1, user.getFirst_name());
+			myStmt.setString(2, user.getLast_name());
+			myStmt.setString(3, action);
+			myStmt.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
+			myStmt.executeUpdate();
+		} catch (SQLException e){
+			AlertGui.createAlertError(e);
+		}
+
 	}
 
 	public void deleteGoods(int id){
@@ -201,6 +206,71 @@ public class FabDao {
 			AlertGui.createAlertError(e);
 		}
 		return tempGoods;
+	}
+
+	public boolean validateUsersPassword(final String user, final String password) {
+		List<User> list = new ArrayList<>();
+		boolean result = false;
+		ResultSet myRs = null;
+		try(PreparedStatement myStmt = myConn.prepareStatement(""
+				+ "select *from users where first_name=?;")){
+			myStmt.setString(1, user);
+			myRs = myStmt.executeQuery();
+			while(myRs.next()){
+				User tempUser = convertRowToUser(myRs);
+				list.add(tempUser);
+			}
+			System.out.println(list.get(0));
+			result = passwordEncryptor.checkPassword(password, list.get(0).getPassword());
+		} catch (SQLException e){
+			AlertGui.createAlertError(e);
+		}
+		return result;
+	}
+
+
+	private User convertRowToUser(ResultSet myRs){
+		User user = new User();
+		try{
+			int id = myRs.getInt("id");
+			String last_name = myRs.getString("last_name");
+			String first_name = myRs.getString("first_name");
+			String email = myRs.getString("email");
+			String password = myRs.getString("password");
+			user = new User(id, last_name, first_name, email, password);
+		} catch (SQLException e){
+			e.printStackTrace();
+		}
+		return user;
+	}
+
+	public User createNewUser(String userFirstName) {
+		User user = new User();
+		ResultSet myRs = null;
+		try(PreparedStatement myStmt = myConn.prepareStatement("select *from users "
+				+ "where first_name = ?;")){
+			myStmt.setString(1, userFirstName);
+			myRs = myStmt.executeQuery();
+			while(myRs.next()){
+				int id = myRs.getInt("id");
+				String last_name = myRs.getString("last_name");
+				String first_name = myRs.getString("first_name");
+				String email = myRs.getString("email");
+				String password = myRs.getString("password");
+				user = new User(id, last_name, first_name, email, password);
+			}
+			//user = convertRowToUser(myRs);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			AlertGui.createAlertError(e);
+		} finally {
+			try {
+				myRs.close();
+			} catch (SQLException e) {
+				AlertGui.createAlertError(e);
+			}
+		}
+		return user;
 	}
 
 }

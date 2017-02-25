@@ -1,20 +1,21 @@
 package gui;
 
-import java.sql.Date;
-
 public class User {
 	int id;
 	String last_name;
 	String first_name;
-	String action;
-	Date action_date_time;
+	String email;
+	String password;
 	
-	public User(int id, String last_name, String first_name, String action, Date action_date_time) {
+	public User(){
+	}
+	
+	public User(int id, String last_name, String first_name, String email, String password) {
 		this.id = id;
 		this.last_name = last_name;
 		this.first_name = first_name;
-		this.action = action;
-		this.action_date_time = action_date_time;
+		this.email = email;
+		this.password = password;
 	}
 	
 	public int getId() {
@@ -26,11 +27,11 @@ public class User {
 	public String getFirst_name() {
 		return first_name;
 	}
-	public String getAction() {
-		return action;
+	public String getEmail() {
+		return email;
 	}
-	public Date getAction_date_time() {
-		return action_date_time;
+	public String getPassword() {
+		return password;
 	}
 	public void setId(int id) {
 		this.id = id;
@@ -41,11 +42,16 @@ public class User {
 	public void setFirst_name(String first_name) {
 		this.first_name = first_name;
 	}
-	public void setAction(String action) {
-		this.action = action;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public void setAction_date_time(Date action_date_time) {
-		this.action_date_time = action_date_time;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", last_name=" + last_name + ", first_name=" + first_name + ", email=" + email
+				+ ", password=" + password + "]";
+	}
 }

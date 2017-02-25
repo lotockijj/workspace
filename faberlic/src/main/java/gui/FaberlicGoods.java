@@ -36,9 +36,11 @@ public class FaberlicGoods extends Stage{
 	TableView<Goods> tableView;
 	ObservableList<Goods> goods;
 	int selectedId;
+	User user; 
 
-	public FaberlicGoods() throws Exception {
+	public FaberlicGoods(User user) throws Exception {
 		fabDao = new FabDao();
+		this.user = user;
 
 		Label label = new Label("Enter article");
 		TextField textField = new TextField();
@@ -126,14 +128,14 @@ public class FaberlicGoods extends Stage{
 		bottomPannel.getChildren().addAll(btnAddGoods, btnUpdateGoods, btnDeleteGoods);
 		root.setBottom(bottomPannel);
 		btnAddGoods.setOnAction(e -> {
-			AddDialogFX addDialogFX = new AddDialogFX(FaberlicGoods.this, fabDao, null, false);
+			AddDialogFX addDialogFX = new AddDialogFX(FaberlicGoods.this, fabDao, null, false, user);
 			addDialogFX.show();
 		});
 		btnUpdateGoods.setOnAction(e ->{
 			try{
 				Goods selectedGoods = tableView.getSelectionModel().getSelectedItem();
 				selectedId = tableView.getSelectionModel().getSelectedIndex() + 1;
-				AddDialogFX addDialogFX = new AddDialogFX(FaberlicGoods.this, fabDao, selectedGoods, true);
+				AddDialogFX addDialogFX = new AddDialogFX(FaberlicGoods.this, fabDao, selectedGoods, true, user);
 				addDialogFX.show();
 			} catch (NullPointerException exc){
 				AlertGui.createAlertError(exc);

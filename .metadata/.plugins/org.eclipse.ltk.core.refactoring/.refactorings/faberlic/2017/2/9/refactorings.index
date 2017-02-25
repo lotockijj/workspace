@@ -2,3 +2,6 @@
 1487595264764	Rename method 'saveGoods'
 1487596798873	Delete element
 1487793774471	Rename type 'AuditHistory'
+1487865721380	Rename type 'User'
+1488009664444	Rename local variable 'password'
+1488010051559	Rename local variable 'encryptedPassword'

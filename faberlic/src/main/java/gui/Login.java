@@ -2,22 +2,17 @@ package gui;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 import com.dao.FabDao;
-import com.faberlic.Goods;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -62,16 +57,7 @@ public class Login extends Application {
 
 			vBox.getChildren().addAll(mainBox);
 		}
-		
 		Button btnOK = new Button("Ok");
-		btnOK.setOnAction(e ->{
-			validateUsersPassword(fabDao);
-			try {
-				new FaberlicGoods();
-			} catch (Exception e1) {
-				AlertGui.createAlertError(e1);
-			}	
-		});
 		Button btnCancel = new Button("Cancel");
 		HBox btnBox = new HBox();
 		btnBox.setSpacing(10);
@@ -91,10 +77,23 @@ public class Login extends Application {
 		primaryStage.setTitle("User login.");
 		primaryStage.centerOnScreen();
 		primaryStage.show();
-	}
-	
-	private void validateUsersPassword(FabDao fabDao) {
 		
+		btnOK.setOnAction(e ->{
+			boolean confirmPassword = fabDao.validateUsersPassword(mapTextFields.get("User:").getText(), 
+					mapTextFields.get("Password:").getText());
+			try {
+				if(confirmPassword) {
+					User user = fabDao.createNewUser(mapTextFields.get("User:").getText());
+					new FaberlicGoods(user);
+				} else {
+					AlertGui.createAlertError(null);
+				}
+			} catch (Exception e1) {
+				AlertGui.createAlertError(e1);
+			}	
+		});
+		
+		btnCancel.setOnAction(e -> primaryStage.close());
 	}
 
 	public static void main(String[] args) {

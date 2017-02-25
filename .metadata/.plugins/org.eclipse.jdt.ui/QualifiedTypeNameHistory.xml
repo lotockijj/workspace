@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javafx.scene.control.cell.PropertyValueFactory"/>
 <fullyQualifiedTypeName name="db.CreateDB"/>
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
@@ -46,7 +45,6 @@
 <fullyQualifiedTypeName name="javafx.geometry.Insets"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="gui.User"/>
 <fullyQualifiedTypeName name="javafx.application.Application"/>
 <fullyQualifiedTypeName name="gui.FaberlicGoods"/>
 <fullyQualifiedTypeName name="gui.AlertGui"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
 <fullyQualifiedTypeName name="yakov.fain.lesson24.wolkthrough.MyDBWorker"/>
 <fullyQualifiedTypeName name="yakov.fain.lesson24.wolkthrough.DBParams"/>
+<fullyQualifiedTypeName name="gui.User"/>
+<fullyQualifiedTypeName name="org.jasypt.util.password.StrongPasswordEncryptor"/>
 </qualifiedTypeNameHistroy>

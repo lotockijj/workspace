@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.40-bin.jar"/>
 	<classpathentry kind="lib" path="lib/derby.jar"/>
 	<classpathentry kind="lib" path="lib/controlsfx-8.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jasypt-1.9.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

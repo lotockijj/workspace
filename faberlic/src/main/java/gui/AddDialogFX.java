@@ -29,24 +29,23 @@ public class AddDialogFX extends Stage {
 
 	private FabDao fabDAO;
 	private FaberlicGoods faberlicGoods;
+	private User user;
 	
 	private Goods previosGoods = null;
 	private boolean updateMode = false;
 
 	public AddDialogFX(FaberlicGoods theFaberlicGoods, FabDao theFabDao, 
-			Goods thePreviosGoods, boolean theUpdateMode){
-		
+			Goods thePreviosGoods, boolean theUpdateMode, User user){
 		this();
 		fabDAO = theFabDao;
 		faberlicGoods = theFaberlicGoods;
 		previosGoods = thePreviosGoods;
 		updateMode = theUpdateMode;
-		
 		if(updateMode){
 			setTitle("Update goods");
 			populateGUI(previosGoods);
 		}
-		
+		this.user = user; 
 	}
 
 	public AddDialogFX() {
@@ -158,7 +157,7 @@ public class AddDialogFX extends Stage {
 			Optional<ButtonType> result = alert.showAndWait();
 			if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
 				if(updateMode){
-					fabDAO.updateGoods(tempGoods, faberlicGoods.selectedId);
+					fabDAO.updateGoods(tempGoods, faberlicGoods.selectedId, user);
 				} else {
 					fabDAO.addGoods(tempGoods);
 				}
