@@ -37,7 +37,7 @@ public class JoinNext {
 			}
 			scanner.close();
 		} catch(Exception e){
-			AlertGui.createAlertError(e);
+			e.printStackTrace();
 		}
 	}
 
@@ -53,7 +53,7 @@ public class JoinNext {
 			}
 			scanner.close();
 		} catch(Exception e){
-			AlertGui.createAlertError(e);
+			e.printStackTrace();
 		}
 	}
 
@@ -182,7 +182,7 @@ public class JoinNext {
 				stmt.executeUpdate();
 			}
 		} catch(Exception e){
-			AlertGui.createAlertError(e);
+			e.printStackTrace();
 		}
 	}
 }

@@ -19,7 +19,6 @@ import com.faberlic.Goods;
 
 import gui.AlertGui;
 import gui.User;
-import gui.UsersHistory;
 
 public class FabDao {
 
@@ -32,9 +31,7 @@ public class FabDao {
 		String user = props.getProperty("user");
 		String password = props.getProperty("password");
 		String dburl = props.getProperty("dburl");
-		//connect to database
 		myConn = DriverManager.getConnection(dburl, user, password);
-		System.out.println("DB connection successful to: " + dburl);
 		passwordEncryptor = new StrongPasswordEncryptor();
 	}
 
@@ -49,7 +46,7 @@ public class FabDao {
 			}
 		} catch(Exception e){
 			AlertGui.createAlertError(e);
-		}
+		} 
 		return list;
 	}
 
@@ -67,7 +64,7 @@ public class FabDao {
 			}
 		} catch (SQLException e) {
 			AlertGui.createAlertError(e);
-		} finally {
+		} finally{
 			try {
 				myRs.close();
 			} catch (SQLException e) {
@@ -77,7 +74,7 @@ public class FabDao {
 		return list;
 	}
 
-	public void addGoods(Goods theGoods){
+	public void addGoods(Goods theGoods, User user){
 		try(PreparedStatement myStmt = myConn.prepareStatement("insert into fab ("
 				+ "discount, page, article, name, priceCatalog, theSame, allowance, "
 				+ "priceStore, ballConsultant, priceBuyer, ballBuyer) "
@@ -98,9 +95,10 @@ public class FabDao {
 
 			myStmt.executeUpdate();
 			alignDataBase();
+			updateAuditHistory(user, "Adding goods");
 		} catch (SQLException e){
 			AlertGui.createAlertError(e);
-		}
+		} 
 	}
 
 	public void updateGoods(Goods newGoods, int id, User user){
@@ -123,7 +121,6 @@ public class FabDao {
 			myStmt.setInt(12, id);
 
 			myStmt.executeUpdate();
-			System.out.println("Inside updating***");
 			alignDataBase();
 
 			updateAuditHistory(user, "Updating table");
@@ -148,7 +145,6 @@ public class FabDao {
 		try(PreparedStatement myStmt = myConn.prepareStatement("insert into audit_history "
 				+ "(last_name, first_name, action, action_date_time)"
 				+ " values(?, ?, ?, ?);")){
-			System.out.println(user);
 			myStmt.setString(1, user.getFirst_name());
 			myStmt.setString(2, user.getLast_name());
 			myStmt.setString(3, action);
@@ -160,12 +156,13 @@ public class FabDao {
 
 	}
 
-	public void deleteGoods(int id){
+	public void deleteGoods(int id, User user){
 		try(PreparedStatement myStmt = myConn.prepareStatement(""
 				+ "delete from fab where id=?;")){
 			myStmt.setInt(1, id);
 			myStmt.executeUpdate();
 			alignDataBase();
+			updateAuditHistory(user, "Deleting goods");
 		} catch (SQLException e){
 			AlertGui.createAlertError(e);
 		}
@@ -220,14 +217,18 @@ public class FabDao {
 				User tempUser = convertRowToUser(myRs);
 				list.add(tempUser);
 			}
-			System.out.println(list.get(0));
 			result = passwordEncryptor.checkPassword(password, list.get(0).getPassword());
 		} catch (SQLException e){
 			AlertGui.createAlertError(e);
+		}  finally{
+			try {
+				myRs.close();
+			} catch (SQLException e) {
+				AlertGui.createAlertError(e);
+			}
 		}
 		return result;
 	}
-
 
 	private User convertRowToUser(ResultSet myRs){
 		User user = new User();
@@ -239,8 +240,8 @@ public class FabDao {
 			String password = myRs.getString("password");
 			user = new User(id, last_name, first_name, email, password);
 		} catch (SQLException e){
-			e.printStackTrace();
-		}
+			AlertGui.createAlertError(e);
+		}  
 		return user;
 	}
 
@@ -261,9 +262,8 @@ public class FabDao {
 			}
 			//user = convertRowToUser(myRs);
 		} catch (SQLException e) {
-			e.printStackTrace();
 			AlertGui.createAlertError(e);
-		} finally {
+		} finally{
 			try {
 				myRs.close();
 			} catch (SQLException e) {

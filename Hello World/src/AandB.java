@@ -10,13 +10,19 @@ public class AandB {
 		a = b - a; 
 		b = b - a - a; 
 		
-		System.out.println("a = " + a + "\nb = " + b);
-		boolean c = true;
-		boolean d = false;
-		System.out.println((d || d || d || d || c));
+//		System.out.println("a = " + a + "\nb = " + b);
+//		boolean c = true;
+//		boolean d = false;
+//		System.out.println((d || d || d || d || c));
+//		
+//		String s1 = "str"; 
+//		String s2 = "str"; 
+//		System.out.println("Result: "  + "  ______!!!! " + s1 == s2);
+//		System.gc();
 		
-		String s1 = "str"; 
-		String s2 = "str"; 
-		System.out.println("Result: "  + "  ______!!!! " + s1 == s2);
+		for(float i = 0.0f; i != 0; i += 0.1f){
+			System.out.println(i);
+		}
+		System.out.println("Done!!! :) ");
 	}
 }

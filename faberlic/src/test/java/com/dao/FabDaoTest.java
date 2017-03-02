@@ -25,7 +25,7 @@ public class FabDaoTest {
 		try {
 			dao = new FabDao();
 		} catch (Exception e) {
-			AlertGui.createAlertError(e);
+			e.printStackTrace();
 		}
 		StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
 		String encryptedPassword = passwordEncryptor.encryptPassword("java");

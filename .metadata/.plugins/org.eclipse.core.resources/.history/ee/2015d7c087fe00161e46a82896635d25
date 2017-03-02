@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="post" action="SimpleServletPath">
+User name: <input name = "userName" />
+Full name: <input name = "fullName" />
+<br>
+Profession:
+<input type="radio" name="prof" value="Developer">Developer</input>
+<input type="radio" name="prof" value="Architect">Architect</input>
+<input type = "submit"/>
+
+</form>
+</body>
+</html>
