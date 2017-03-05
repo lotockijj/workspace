@@ -92,6 +92,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Робота\workspace\main.fx"/>
+			<item value="D:\Робота\workspace\servlet2\WebContent\objects.jsp"/>
 			<item value="C:\Users\Роман Лотоцький\workspace\artifactId"/>
 			<item value="C:\Users\Роман Лотоцький\workspace\artifactId\lib\mysql-connector-java-5.1.40-bin.jar"/>
 			<item value="C:\Users\Роман Лотоцький\workspace\MyFirst"/>
@@ -108,6 +110,8 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.upwork"/>
+			<item value="com.main.fx"/>
 			<item value="com.faberlic"/>
 			<item value="order.artificialId"/>
 			<item value="order.JDBSTutorial"/>
@@ -121,8 +125,6 @@
 			<item value="WebServicesStub"/>
 			<item value="WebServicesStub.web"/>
 			<item value="WebServicesStub.newer"/>
-			<item value="new.a"/>
-			<item value="new.n"/>
 		</list>
 		<list key="groupId">
 			<item value="com"/>
@@ -137,6 +139,8 @@
 			<item value="robot"/>
 		</list>
 		<list key="artifactId">
+			<item value="upwork"/>
+			<item value="main.fx"/>
 			<item value="faberlic"/>
 			<item value="artificialId"/>
 			<item value="JDBSTutorial"/>
@@ -150,8 +154,6 @@
 			<item value="WebServicesSt"/>
 			<item value="web"/>
 			<item value="newer"/>
-			<item value="a"/>
-			<item value="n"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

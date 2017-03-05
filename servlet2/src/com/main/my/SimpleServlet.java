@@ -46,7 +46,7 @@ public class SimpleServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hello from GET method!");
+		System.out.println("Hello from POST  method!");
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		String userName = request.getParameter("userName");

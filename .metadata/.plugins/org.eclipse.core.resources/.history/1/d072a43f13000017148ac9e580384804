@@ -1,0 +1,46 @@
+package com.main.fx;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
+
+public class AddParts extends Stage{
+
+	public AddParts() {
+
+		BorderPane layout = new BorderPane();/* layout */
+
+		//Create notice "Inventory Management System" and position it. 
+		Label headName = new Label("Parts");
+		headName.setFont(Font.font("Default", FontWeight.BOLD, 18));
+		
+		RadioButton rbInHouse = new RadioButton("In-house");
+		RadioButton rbOutSourced = new RadioButton("Outsourced");
+		
+		HBox hBox = createHBox(15, 15);
+		hBox.setAlignment(Pos.BASELINE_LEFT);
+		hBox.getChildren().addAll(headName, rbInHouse, rbOutSourced);
+
+		layout.setTop(hBox);
+		Scene scene = new Scene(layout, 300, 500);
+		this.setScene(scene);
+		this.setTitle("Add goods");
+		this.centerOnScreen();
+
+	}
+	
+	private HBox createHBox(int pad, int spac) {
+		HBox hBox = new HBox();
+		hBox.setPadding(new Insets(pad, pad, pad, pad));
+		hBox.setSpacing(spac);
+		return hBox;
+	}
+
+}

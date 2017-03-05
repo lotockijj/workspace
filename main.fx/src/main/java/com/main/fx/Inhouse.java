@@ -2,14 +2,14 @@ package com.main.fx;
 
 public class Inhouse extends Part {
 	
-	String companyName;
+	int machineId;
 
-	public String getCompanyName() {
-		return companyName;
+	public int getCompanyName() {
+		return machineId;
 	}
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
+	public void setCompanyName(int machineId) {
+		this.machineId = machineId;
 	}
 	
 }

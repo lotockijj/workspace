@@ -2,15 +2,14 @@ package com.main.fx;
 
 public class Outsourced extends Part {
 	
-	int machineID;
+	String companyName;
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
 	
-	public int getMachineID() {
-		return machineID;
-	}
-
-
-	public void setMachineID(int machineID) {
-		this.machineID = machineID;
-	}
-
 }
