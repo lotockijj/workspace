@@ -118,9 +118,9 @@ public class AddOrModifyProduct extends Stage{
 		VBox topVB = new VBox();
 		HBox topTableHB = createHBox(10, 10);
 		topTableHB.setAlignment(Pos.CENTER);
-		Button btnSearch = new Button("Search");
+		Button searchButton = new Button("Search");
 		TextField searchTF = new TextField();
-		topTableHB.getChildren().addAll(btnSearch, searchTF);
+		topTableHB.getChildren().addAll(searchButton, searchTF);
 		HBox topTable = createHBox(10, 10);
 		tableParts = createTable();//new TableView<>();
 		observableList = FXCollections.observableArrayList(mainScreen.parts);
@@ -184,18 +184,6 @@ public class AddOrModifyProduct extends Stage{
 			refreshGui();
 		}
 		
-		btnSearch.setOnAction(e -> {
-			ArrayList<Part> tempListParts = null;
-			String searchingName = searchTF.getText();
-			if(searchingName != null && searchingName.trim().length() > 0){
-				tempListParts = getListSearchingNamesParts(searchingName);
-				observableList = FXCollections.observableArrayList(tempListParts);
-			} else {
-				observableList = FXCollections.observableArrayList(mainScreen.parts);
-			}
-			tableParts.setItems(observableList);
-		});
-		
 		btnAdd.setOnAction(e -> {
 			Part selectedPart = tableParts.getSelectionModel().getSelectedItem();
 			if(!tempList.contains(selectedPart)){
@@ -235,16 +223,6 @@ public class AddOrModifyProduct extends Stage{
 		});
 		
 		btnCancel.setOnAction(e -> this.close());
-	}
-
-	private ArrayList<Part> getListSearchingNamesParts(String name) {
-		ArrayList<Part> tempList = new ArrayList<>();
-		for(Part p : mainScreen.parts){
-			if(p.getName().equals(name)){
-				tempList.add(p);
-			}
-		}
-		return tempList;
 	}
 
 	private void refreshGui() {

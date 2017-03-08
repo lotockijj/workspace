@@ -178,11 +178,10 @@ public class MainScreen extends Application {
 			if(searchingName != null && searchingName.trim().length() > 0){
 				tempListParts = getListSearchingNamesParts(searchingName);
 				observableListParts = FXCollections.observableArrayList(tempListParts);
-				tableParts.setItems(observableListParts);
 			} else {
 				observableListParts = FXCollections.observableArrayList(parts);
-				tableParts.setItems(observableListParts);
 			}
+			tableParts.setItems(observableListParts);
 		});
 		btnSearchPr.setOnAction(e -> {
 			ArrayList<Product> tempListProducts = null;
@@ -190,11 +189,10 @@ public class MainScreen extends Application {
 			if(searchingName != null && searchingName.trim().length() > 0){
 				tempListProducts = getListSearchingNamesProducts(searchingName);
 				observableListProducts = FXCollections.observableArrayList(tempListProducts);
-				tableProducts.setItems(observableListProducts);
 			}  else{
 				observableListProducts = FXCollections.observableArrayList(products);
-				tableProducts.setItems(observableListProducts);
 			}
+			tableProducts.setItems(observableListProducts);
 		});
 		btnDelete.setOnAction(e -> {
 			selectedId = tableParts.getSelectionModel().getSelectedIndex();

@@ -81,7 +81,6 @@ INDEX VERSION 1.127+D:\Робота\workspace\.metadata\.plugins\org.eclipse.jdt.core
 4226829371.index
 2956139262.index
 1608247621.index
-1578304499.index
 2095373679.index
 817242437.index
 3619217368.index

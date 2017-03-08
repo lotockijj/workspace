@@ -3,3 +3,4 @@
 1488908645904	Rename field 'observableList'
 1488985073345	Rename local variable 'tempListPart'
 1488985307338	Rename method 'getListSearchingName'
+1488986339079	Rename local variable 'searchButton'
