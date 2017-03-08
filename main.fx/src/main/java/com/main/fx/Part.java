@@ -45,5 +45,10 @@ public abstract class Part {
 		this.max = max;
 	}
 	
+	@Override
+	public String toString() {
+		return "Part [name=" + name + ", partID=" + partID + ", price=" + price + ", instock=" + instock + ", min="
+				+ min + ", max=" + max + "]";
+	}
 	
 }

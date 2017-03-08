@@ -6,8 +6,8 @@ public class Product {
 	private ArrayList<Part> parts;
 	private int productID;
 	private String name;
-	private double price;
 	private int instock;
+	private double price;
 	private int min;
 	private int max;
 	
@@ -32,7 +32,7 @@ public class Product {
 	public int getMax() {
 		return max;
 	}
-	public void setParts(ArrayList<Part> parts) {
+	public void setParts(ArrayList<Part> parts){
 		this.parts = parts;
 	}
 	public void setProductID(int productID) {
@@ -53,21 +53,30 @@ public class Product {
 	public void setMax(int max) {
 		this.max = max;
 	}
-	
 	protected void addPart(Part part){
-		
+		parts.add(part);
 	}
-	
 	protected boolean removePart(int id){
-		return false;
+		if(parts.size() > id){
+			parts.remove(id);
+			return true;
+		} else {
+			return false;
+		}
 	}
-	
 	protected Part lookupPart(int id){
-		return null;
+		return parts.get(id);
 	}
 	
+//	updatePart(int): void
 	protected void updatePart(int id){
-		
 	}
+	@Override
+	public String toString() {
+		return "Product [parts=" + parts + ", productID=" + productID + "\n, name=" + name + ", price=" + price
+				+ ", instock=" + instock + ", min=" + min + ", max=" + max + "]";
+	}
+	
+	
 	
 }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /* Поміняти значення а і b без створення третьої змінної. */ 
 
 public class AandB {
@@ -20,9 +22,13 @@ public class AandB {
 //		System.out.println("Result: "  + "  ______!!!! " + s1 == s2);
 //		System.gc();
 		
-		for(float i = 0.0f; i != 0; i += 0.1f){
-			System.out.println(i);
-		}
-		System.out.println("Done!!! :) ");
+//		for(float i = 0.0f; i != 0; i += 0.1f){
+//			System.out.println(i);
+//		}
+//		System.out.println("Done!!! :) ");
+		ArrayList<Integer> test = new ArrayList<>();
+		test.add(1);
+		test.add(2);
+		System.out.println(test.size() + " " + test.get(0) + " " + test.get(1));
 	}
 }

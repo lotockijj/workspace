@@ -1,16 +1,25 @@
 package com.main.fx;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import javafx.application.Application;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.BorderStroke;
@@ -18,16 +27,24 @@ import javafx.scene.layout.BorderStrokeStyle;
 import javafx.scene.layout.BorderWidths;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class MainScreen extends Application {
+	List<Part> parts;
+	List<Product> products;
+	ObservableList<Part> observableListParts;
+	ObservableList<Product> observableListProducts;
+	TableView<Part> tableParts;
+	TableView<Product> tableProducts;
+	int selectedId;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		parts = new ArrayList<>();
+		products = new ArrayList<>();
 		//Create notice "Inventory Management System" and position it. 
 		Label inventoryManSys = new Label("Inventory Management System");
 		inventoryManSys.setFont(Font.font("Default", FontWeight.BOLD, 20));
@@ -64,13 +81,18 @@ public class MainScreen extends Application {
 		hBoxPartsMain.getChildren().add(hBoxParts);
 
 		//creating table for parts.
-		
-		TableView tableParts = new TableView();
-		TableColumn partId = new TableColumn("Part id");
-		TableColumn partName= new TableColumn("Part name");
-		TableColumn inventoryLevel = new TableColumn("Inventory level");
-		TableColumn priceCost = new TableColumn("Price/Cost" + "\n" + "per Unit");
-		
+
+		tableParts = new TableView<>();
+		TableColumn<Part, Number> partId = new TableColumn<Part, Number>("Part id");
+		partId.setCellValueFactory(column-> 
+		new ReadOnlyObjectWrapper<Number>(tableParts.getItems().indexOf(column.getValue())+1));
+		TableColumn<Part, String> partName= new TableColumn<Part, String>("Part name");
+		partName.setCellValueFactory(new PropertyValueFactory<>("name"));
+		TableColumn<Part, Integer> inventoryLevel = new TableColumn<Part, Integer>("Inventory level");
+		inventoryLevel.setCellValueFactory(new PropertyValueFactory<>("instock"));
+		TableColumn<Part, Double> priceCost = new TableColumn<Part, Double>("Price/Cost" + "\n" + "per Unit");
+		priceCost.setCellValueFactory(new PropertyValueFactory<>("price"));
+
 		tableParts.getColumns().addAll(partId, partName, inventoryLevel, priceCost);
 		tableParts.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 		borderParts.setCenter(tableParts);
@@ -103,14 +125,19 @@ public class MainScreen extends Application {
 
 		HBox hBoxProductsMain = createHBox(10, 10);
 		hBoxProductsMain.getChildren().add(hBoxProducts);
-		
+
 		//creating table for products
-		TableView tableProducts = new TableView();
-		TableColumn productId = new TableColumn("Product id");
-		TableColumn productName= new TableColumn("Product name");
-		TableColumn inventoryLevelPr = new TableColumn("Inventory level");
-		TableColumn priceCostPr = new TableColumn("Price/Cost" + "\n" + "per Unit");
-		
+		tableProducts = new TableView<>();
+		TableColumn<Product, Integer> productId = new TableColumn<>("Product id");
+		productId.setCellValueFactory(column-> 
+		new ReadOnlyObjectWrapper<Integer>(tableProducts.getItems().indexOf(column.getValue())+1));
+		TableColumn<Product, String> productName= new TableColumn<>("Product name");
+		productName.setCellValueFactory(new PropertyValueFactory<>("name"));
+		TableColumn<Product, Integer> inventoryLevelPr = new TableColumn<>("Inventory level");
+		inventoryLevelPr.setCellValueFactory(new PropertyValueFactory<>("instock"));
+		TableColumn<Product, Double> priceCostPr = new TableColumn<>("Price/Cost" + "\n" + "per Unit");
+		priceCostPr.setCellValueFactory(new PropertyValueFactory<>("price"));
+
 		tableProducts.getColumns().addAll(productId, productName, inventoryLevelPr, priceCostPr);
 		tableProducts.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 		borderProducts.setCenter(tableProducts);
@@ -134,11 +161,57 @@ public class MainScreen extends Application {
 		primaryStage.show();
 
 		btnExit.setOnAction(e -> primaryStage.close());
-		btnAddPart.setOnAction(e -> new AddOrModifyPart("Add part   "));
-		btnModifyPart.setOnAction(e -> new AddOrModifyPart("Modify part  "));
-		btnAddPr.setOnAction(e -> new AddOrModifyProduct("Add Product"));
-		btnModifyPr.setOnAction(e -> new AddOrModifyProduct("Modify Product"));
+		btnAddPart.setOnAction(e -> new AddOrModifyPart(MainScreen.this, null,  "Add part   "));
+		btnModifyPart.setOnAction(e -> {
+			Part selectedPart = tableParts.getSelectionModel().getSelectedItem();
+			selectedId = tableParts.getSelectionModel().getSelectedIndex();
+			new AddOrModifyPart(MainScreen.this, selectedPart, "Modify part  ");	
+		});
+		btnAddPr.setOnAction(e -> new AddOrModifyProduct(MainScreen.this, null, "Add Product"));
+		btnModifyPr.setOnAction(e -> {
+			Product selectedProduct = tableProducts.getSelectionModel().getSelectedItem();
+			new AddOrModifyProduct(MainScreen.this, selectedProduct, "Modify Product");	
+		});
+		btnSearch.setOnAction(e -> {
+			ArrayList<Part> tempListPart = null;
+			String searchingName = tFSearch.getText();
+			if(searchingName != null && searchingName.trim().length() > 0){
+				tempListPart = getListSearchingName(searchingName);
+				observableListParts = FXCollections.observableArrayList(tempListPart);
+				tableParts.setItems(observableListParts);
+			} else {
+				observableListParts = FXCollections.observableArrayList(parts);
+				tableParts.setItems(observableListParts);
+			}
+		});
+		btnDelete.setOnAction(e -> {
+			selectedId = tableParts.getSelectionModel().getSelectedIndex();
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Delete goods ");
+			alert.setContentText("Are you sure you want to delete part id " + (selectedId + 1) + "?");
+			Optional<ButtonType> result = alert.showAndWait();
+			if (result.isPresent() && result.get() == ButtonType.OK) {
+				parts.remove(selectedId);
+			} 
+			refreshTables();
+		});
+		btnDeletePr.setOnAction(e -> {
+			selectedId = tableProducts.getSelectionModel().getSelectedIndex();
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Delete product");
+			alert.setContentText("Are you sure you want to delete product id " + (selectedId + 1) + "?");
+			Optional<ButtonType> result = alert.showAndWait();
+			if(result.isPresent() && result.get() == ButtonType.OK){
+				System.out.println("Name: " + products.get(selectedId).getName() + ", Index: " + selectedId);
+				products.remove(selectedId);
+			}
+			refreshTables();
+		});
 		//btnModify
+	}
+
+	public static void main(String[] args) {
+		launch(args);
 	}
 
 	private HBox createHBox(int pad, int spac) {
@@ -148,11 +221,21 @@ public class MainScreen extends Application {
 		return hBox;
 	}
 
-	public static void main(String[] args) {
-		launch(args);
+	public void refreshTables() {
+		observableListParts = FXCollections.observableArrayList(parts);
+		tableParts.setItems(observableListParts);
+		observableListProducts = FXCollections.observableArrayList(products);
+		tableProducts.setItems(observableListProducts);
 	}
-	
-	
 
+	private ArrayList<Part> getListSearchingName(String name) {
+		ArrayList<Part> tempList = new ArrayList<>();
+		for(Part p : parts){
+			if(p.getName().equals(name)){
+				tempList.add(p);
+			}
+		}
+		return tempList;
+	}
 
 }

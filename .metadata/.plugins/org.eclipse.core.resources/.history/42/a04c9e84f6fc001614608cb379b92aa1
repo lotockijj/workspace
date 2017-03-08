@@ -1,5 +1,0 @@
-package yakov.fain.Lesson25.rmi;
-
-public interface Hello {
-
-}

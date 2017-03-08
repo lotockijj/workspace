@@ -19,20 +19,25 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class AddOrModifyPart extends Stage{
-	TextField idTF;
+	TextField idTF, nameTF, invTF, priceCosTF, maxTF, minTF, compNameOrMachIdTF;
+	RadioButton rbInHouse,  rbOutSourced;
 	Label compNmOrMachIdL;
+	MainScreen mainScreen;
+	
 
-	public AddOrModifyPart(String title) {
+	public AddOrModifyPart(MainScreen mainScreen, Part selectedPart, String title) {
+		this.mainScreen = mainScreen;
 		BorderPane layout = new BorderPane();
 		//Create notice "Inventory Management System" and position it. 
 		Label headName = new Label(title);
 		headName.setFont(Font.font("Default", FontWeight.BOLD, 18));
 
-		RadioButton rbInHouse = new RadioButton("In-house");
-		RadioButton rbOutSourced = new RadioButton("Outsourced");
+		rbInHouse = new RadioButton("In-house");
+		rbOutSourced = new RadioButton("Outsourced");
 		final ToggleGroup group = new ToggleGroup();
 		rbInHouse.setToggleGroup(group);
 		rbOutSourced.setToggleGroup(group);
+		rbOutSourced.setSelected(true);
 		group.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
 			public void changed(ObservableValue<? extends Toggle> ov,
 					Toggle old_toggle, Toggle new_toggle) {
@@ -41,11 +46,9 @@ public class AddOrModifyPart extends Stage{
 				}
 				if(group.getSelectedToggle() == rbOutSourced){
 					compNmOrMachIdL.setText("Company name");
-					  
 				}
 			}                
 		});
-		rbOutSourced.setSelected(true);
 
 		HBox hBox = createHBox(15, 15);
 		hBox.setAlignment(Pos.BASELINE_LEFT);
@@ -63,23 +66,23 @@ public class AddOrModifyPart extends Stage{
 		idTF.setText("Auto Gen Disabled");
 		idTF.setEditable(false);
 		grid.add(idTF, 1, 0);
-		
+
 		Label nameL = new Label("Name");
 		grid.add(nameL, 0, 1);
 
-		TextField nameTF = new TextField();
+		nameTF = new TextField();
 		grid.add(nameTF, 1, 1);
 
 		Label inv = new Label("Inv");
 		grid.add(inv, 0, 2);
 
-		TextField invTF = new TextField();
+		invTF = new TextField();
 		grid.add(invTF, 1, 2);
 
 		Label priceCostL = new Label("Price/Cost            ");
 		grid.add(priceCostL, 0, 3);
 
-		TextField priceCosTF = new TextField();
+		priceCosTF = new TextField();
 		grid.add(priceCosTF, 1, 3);
 
 		Label maxL = new Label("Max");
@@ -87,7 +90,7 @@ public class AddOrModifyPart extends Stage{
 
 		// hBox
 		HBox hBoxForMaxMin = createHBox(3, 3);
-		TextField maxTF = new TextField();
+		maxTF = new TextField();
 		maxTF.setMaxWidth(80);
 
 		Label minL = new Label("            Min");
@@ -95,21 +98,21 @@ public class AddOrModifyPart extends Stage{
 		hBoxForMaxMin.getChildren().addAll(maxTF, minL);
 		grid.add(hBoxForMaxMin, 1, 4);
 
-		TextField minTF = new TextField();
+		minTF = new TextField();
 		minTF.setMaxWidth(80);
 		grid.add(minTF, 3, 4);
 
 		compNmOrMachIdL = new Label("Company name");
 		grid.add(compNmOrMachIdL, 0, 5);
-		TextField compNameTF = new TextField();
-		grid.add(compNameTF, 1, 5);
+		compNameOrMachIdTF = new TextField();
+		grid.add(compNameOrMachIdTF, 1, 5);
 
 		//create HBox for save and cancel button
 		HBox hBoxSaveCancel = createHBox(20, 20);
 		hBoxSaveCancel.setAlignment(Pos.BASELINE_RIGHT);
 		Button btnSave = new Button("Save");
-		Button btnCansel = new Button("Cansel");
-		hBoxSaveCancel.getChildren().addAll(btnSave, btnCansel);
+		Button btnCancel = new Button("Cancel");
+		hBoxSaveCancel.getChildren().addAll(btnSave, btnCancel);
 		layout.setTop(hBox);
 		layout.setCenter(grid);
 		layout.setBottom(hBoxSaveCancel);
@@ -117,6 +120,64 @@ public class AddOrModifyPart extends Stage{
 		this.setScene(scene);
 		this.centerOnScreen();
 		this.show();
+
+		btnCancel.setOnAction(e -> this.close());
+		btnSave.setOnAction(e ->{
+			if(group.getSelectedToggle() == rbInHouse){
+				Inhouse part = new Inhouse();
+				part.setPartID(mainScreen.selectedId + 1);
+				part.setName(nameTF.getText());
+				part.setInstock(Integer.parseInt(invTF.getText()));
+				part.setPrice(Double.parseDouble(priceCosTF.getText()));
+				part.setMax(Integer.parseInt(maxTF.getText()));
+				part.setMin(Integer.parseInt(minTF.getText()));
+				part.setMachineId(Integer.parseInt(compNameOrMachIdTF.getText()));
+				if(title.equals("Modify part  ")){
+					mainScreen.parts.set(mainScreen.selectedId, part);
+				} else{
+					mainScreen.parts.add(part);
+				}
+			}
+			if(group.getSelectedToggle() == rbOutSourced){
+				Outsourced part = new Outsourced();
+				part.setPartID(mainScreen.selectedId + 1);
+				part.setName(nameTF.getText());
+				part.setInstock(Integer.parseInt(invTF.getText()));
+				part.setPrice(Double.parseDouble(priceCosTF.getText()));
+				part.setMax(Integer.parseInt(maxTF.getText()));
+				part.setMin(Integer.parseInt(minTF.getText()));
+				part.setCompanyName(compNameOrMachIdTF.getText());
+				if(title.equals("Modify part  ")){
+					mainScreen.parts.set(mainScreen.selectedId, part);
+				} else{
+					mainScreen.parts.add(part);
+				}
+			}
+			mainScreen.refreshTables();
+			this.close();
+		});
+		if(title.equals("Modify part  ")){
+			populateModifyPart(selectedPart);
+		}
+	}
+
+	private void populateModifyPart(Part selectedPart) {
+		idTF.setText(Integer.toString(mainScreen.selectedId + 1));
+		nameTF.setText(selectedPart.getName());
+		invTF.setText(Integer.toString(selectedPart.getInstock()));
+		priceCosTF.setText(Double.toString(selectedPart.getPrice()));
+		maxTF.setText(Integer.toString(selectedPart.getMax()));
+		minTF.setText(Integer.toString(selectedPart.getMin()));
+		if (selectedPart instanceof Inhouse) {
+			Inhouse tempPart = (Inhouse) selectedPart;
+			compNameOrMachIdTF.setText(Integer.toString(tempPart.getMachineId()));
+			rbInHouse.setSelected(true);
+		}
+		if(selectedPart instanceof Outsourced){
+			Outsourced tempPart = (Outsourced) selectedPart;
+			compNameOrMachIdTF.setText(tempPart.getCompanyName());
+			rbOutSourced.setSelected(true);
+		}
 	}
 
 	private HBox createHBox(int pad, int spac) {

@@ -6,17 +6,22 @@ public class Inventory {
 	ArrayList<Product> products;
 	
 	protected void addProduct(Product product){
-		
+		products.add(product);
 	}
 	
 	protected boolean removeProduct(int id){
-		return false;
+		if(products.size() > id){
+			products.remove(id);
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
-	protected Product lookUp(Product product){
-		return null;
+	protected Product lookUp(int id){
+		return products.get(id);
 	}
 
-	protected void updateProduct(Product product){
+	protected void updateProduct(int id){
 	}
 }
