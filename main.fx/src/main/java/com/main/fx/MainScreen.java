@@ -173,15 +173,27 @@ public class MainScreen extends Application {
 			new AddOrModifyProduct(MainScreen.this, selectedProduct, "Modify Product");	
 		});
 		btnSearch.setOnAction(e -> {
-			ArrayList<Part> tempListPart = null;
+			ArrayList<Part> tempListParts = null;
 			String searchingName = tFSearch.getText();
 			if(searchingName != null && searchingName.trim().length() > 0){
-				tempListPart = getListSearchingName(searchingName);
-				observableListParts = FXCollections.observableArrayList(tempListPart);
+				tempListParts = getListSearchingNamesParts(searchingName);
+				observableListParts = FXCollections.observableArrayList(tempListParts);
 				tableParts.setItems(observableListParts);
 			} else {
 				observableListParts = FXCollections.observableArrayList(parts);
 				tableParts.setItems(observableListParts);
+			}
+		});
+		btnSearchPr.setOnAction(e -> {
+			ArrayList<Product> tempListProducts = null;
+			String searchingName = tFSearchPr.getText();
+			if(searchingName != null && searchingName.trim().length() > 0){
+				tempListProducts = getListSearchingNamesProducts(searchingName);
+				observableListProducts = FXCollections.observableArrayList(tempListProducts);
+				tableProducts.setItems(observableListProducts);
+			}  else{
+				observableListProducts = FXCollections.observableArrayList(products);
+				tableProducts.setItems(observableListProducts);
 			}
 		});
 		btnDelete.setOnAction(e -> {
@@ -228,9 +240,19 @@ public class MainScreen extends Application {
 		tableProducts.setItems(observableListProducts);
 	}
 
-	private ArrayList<Part> getListSearchingName(String name) {
+	private ArrayList<Part> getListSearchingNamesParts(String name) {
 		ArrayList<Part> tempList = new ArrayList<>();
 		for(Part p : parts){
+			if(p.getName().equals(name)){
+				tempList.add(p);
+			}
+		}
+		return tempList;
+	}
+	
+	private ArrayList<Product> getListSearchingNamesProducts(String name) {
+		ArrayList<Product> tempList = new ArrayList<>();
+		for(Product p : products){
 			if(p.getName().equals(name)){
 				tempList.add(p);
 			}
