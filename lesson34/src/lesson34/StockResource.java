@@ -11,6 +11,7 @@ import javax.ws.rs.core.Response;
 
 @Path("/stock")
 public class StockResource {
+	
 	@Produces({"application/xml", "application/json"})
 	@Path("{symbol}")
 	@GET
@@ -21,6 +22,7 @@ public class StockResource {
 		}
 		return stock;
 	}
+	
 	@POST
 	@Consumes("application/x-www-form-urlencoded")
 	public Response addStock(@FormParam("symbol") String symb,

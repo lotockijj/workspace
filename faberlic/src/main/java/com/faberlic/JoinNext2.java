@@ -61,7 +61,6 @@ public class JoinNext2 {
 			//System.out.println("Size: " + listTest.size());
 		} catch (IOException e) {
 			e.printStackTrace();
-
 		}
 	}
 

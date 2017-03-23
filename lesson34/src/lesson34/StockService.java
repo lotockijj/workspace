@@ -2,7 +2,9 @@ package lesson34;
 
 import java.util.HashMap;
 import java.util.Map;
+
 public class StockService {
+
 	public static void addStock(Stock stock) {
 		stocks.put(stock.getSymbol(), stock);
 	}

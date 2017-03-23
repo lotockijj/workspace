@@ -110,50 +110,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.main"/>
 			<item value="com.upwork"/>
-			<item value="com.main.fx"/>
-			<item value="com.faberlic"/>
-			<item value="order.artificialId"/>
-			<item value="order.JDBSTutorial"/>
-			<item value="order.JDBCTutorial"/>
-			<item value="order.artifactId"/>
-			<item value="order.testorder"/>
-			<item value="duck.duck"/>
-			<item value="duck.template"/>
-			<item value="MyFirst.MyFirst"/>
-			<item value="MyFirst.Coursera"/>
-			<item value="WebServicesStub"/>
-			<item value="WebServicesStub.web"/>
-			<item value="WebServicesStub.newer"/>
 		</list>
 		<list key="groupId">
 			<item value="com"/>
-			<item value="order"/>
-			<item value="duck"/>
-			<item value="MyFirst"/>
-			<item value="WebServicesStub"/>
-			<item value="new"/>
-			<item value="robot5"/>
-			<item value="third"/>
-			<item value="fadsfasf"/>
-			<item value="robot"/>
 		</list>
 		<list key="artifactId">
+			<item value="main"/>
 			<item value="upwork"/>
-			<item value="main.fx"/>
-			<item value="faberlic"/>
-			<item value="artificialId"/>
-			<item value="JDBSTutorial"/>
-			<item value="JDBCTutorial"/>
-			<item value="artifactId"/>
-			<item value="testorder"/>
-			<item value="duck"/>
-			<item value="template"/>
-			<item value="MyFirst"/>
-			<item value="Coursera"/>
-			<item value="WebServicesSt"/>
-			<item value="web"/>
-			<item value="newer"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

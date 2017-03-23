@@ -8,13 +8,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import gui.AlertGui;
 
 // Completely work for first discount!!!
 
@@ -70,23 +71,7 @@ public class JoinNext {
 		if(i == 2){
 			sName = scanner.nextLine();
 			currentGoods.setName(sName); //System.out.println(currentGoods.getName());
-			String ss = "";
-			Pattern pattern = Pattern.compile("\\d\\d\\d\\d");
-			Pattern pattern2 = Pattern.compile("\\d\\d\\d\\d\\d");
-			Matcher matcher = pattern.matcher(sName);
-			Matcher matcher2 = pattern2.matcher(sName);
-			while(matcher.find()){
-				ss += matcher.group() + ", ";
-			}
-			int j = 0;
-			while(matcher2.find()){
-				if(j == 0){
-					ss = ""; 
-				}
-				j++;
-				ss += matcher2.group() + ", ";
-			}
-			ss = removeLastCharAndYears(ss);
+			String ss = findingArticleAndSetAllArticles(sName);
 			currentGoods.setArticle(ss); //System.out.println(currentGoods.getArticle());
 		}
 		if(i == 3){
@@ -145,6 +130,89 @@ public class JoinNext {
 		scanner.close();
 	}
 
+	public String findingArticleAndSetAllArticles(String s){
+		ArrayList<Integer> completeList = new ArrayList<>();
+		completeList.addAll(tryAndCheckRegexTwoNumbersThoughDefis(s));
+		Set<Integer> set = new HashSet<>();
+		String str = "";
+		for(int i = 0; i < completeList.size(); i++){
+			set.add(completeList.get(i));
+		} 
+		List<Integer> sortedList = new ArrayList<>(set);
+		Collections.sort(sortedList);
+		for(int st : sortedList){
+			str += st + ", ";
+		}
+		str = removeLastCharAndYears(str);
+		return str;
+	}
+
+	//finding separate numbers like 1234 or 23444 etc.
+	public ArrayList<Integer> findingSeparateNumbers(String str){
+		ArrayList<Integer> list = new ArrayList<>();
+		Pattern pattern = Pattern.compile("\\d\\d\\d\\d");
+		Pattern pattern2 = Pattern.compile("\\d\\d\\d\\d\\d");
+		Matcher matcher = pattern.matcher(str);
+		Matcher matcher2 = pattern2.matcher(str);
+		while(matcher.find()){
+			list.add(Integer.parseInt(matcher.group()));
+		}
+		while(matcher2.find()){
+			list.add(Integer.parseInt(matcher2.group()));
+		}
+		return list;
+	}
+
+	//test this in order to find and process: 12345-12349
+	public ArrayList<Integer> tryAndCheckRegexTwoNumbersThoughDefis(String str){
+		// a metacharacter to be treated as an ordinary character:
+		//		precede the metacharacter with a backslash, or
+		//		enclose it within \Q (which starts the quote) and \E (which ends it).
+		ArrayList<Integer> list = new ArrayList<>();
+		Pattern pattern3 = Pattern.compile("\\d\\d\\d\\d\\d\\-\\d\\d\\d\\d\\d");
+		Matcher matcher3 = pattern3.matcher(str);
+		str = deleteUsedPattern(pattern3, str);
+		if(matcher3.find()){
+			String stringFirstNumber = matcher3.group().substring(0, 5);
+			String stringSecondNumber = matcher3.group().substring(6, 11);
+			int firstNumber = Integer.parseInt(stringFirstNumber);
+			int secondNumber = Integer.parseInt(stringSecondNumber);
+			for(int i = firstNumber; i <= secondNumber; i++){
+				list.add(i);
+			}
+		} 
+		list.addAll(tryAndCheckRegexTwoNumbersThoughDefis2(str));
+		list.addAll(findingSeparateNumbers(str));
+		return list;
+	}
+
+	//test this in order to find and process: 1234-1238
+	public ArrayList<Integer> tryAndCheckRegexTwoNumbersThoughDefis2(String str){
+		ArrayList<Integer> list = new ArrayList<>();
+		Pattern pattern = Pattern.compile("\\d\\d\\d\\d\\-\\d\\d\\d\\d");
+		Matcher matcher = pattern.matcher(str);
+		str = deleteUsedPattern(pattern, str);
+		if(matcher.find()){
+			String stringFirstNumber = matcher.group().substring(0, 4);
+			String stringSecondNumber = matcher.group().substring(5, 9);
+			int firstNumber = Integer.parseInt(stringFirstNumber);
+			int secondNumber = Integer.parseInt(stringSecondNumber);
+			for(int i = firstNumber; i <= secondNumber; i++){
+				list.add(i);
+			}
+		}
+		return list;
+	}
+
+	public String deleteUsedPattern(Pattern pt, String str){
+		Matcher match = pt.matcher(str);
+		while (match.find()) {
+			String s = match.group();
+			str = str.replaceAll( s, "");
+		}
+		return str;
+	}
+	
 	private String removeLastCharAndYears(String ss) {
 		if(ss != null){
 			ss = ss.replace("2016", "  ");

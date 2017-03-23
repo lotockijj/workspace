@@ -6,4 +6,18 @@
       </node>
     </node>
   </facet>
+  <facet id="jpt.jpa">
+    <node name="libprov">
+      <node name="last-provider-used">
+        <attribute name="2.1" value="GlassFish-3.1-SystemLibrary-JPA"/>
+      </node>
+    </node>
+  </facet>
+  <facet id="jst.jaxrs">
+    <node name="libprov">
+      <node name="last-provider-used">
+        <attribute name="1.1" value="oracle.eclipse.tools.glassfish.jaxrsLibraryproviderID"/>
+      </node>
+    </node>
+  </facet>
 </root>

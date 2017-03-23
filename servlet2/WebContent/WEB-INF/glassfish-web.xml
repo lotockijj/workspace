@@ -3,5 +3,22 @@
 <!DOCTYPE glassfish-web-app PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN" "http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd">
 <glassfish-web-app>
     <context-root>/servlet2</context-root>
-    
+<!--    	<display-name>SimpleServletProject</display-name> -->
+<!--    	<welcome-file-list> -->
+<!--    	<welcome-file>index.html</welcome-file> -->
+<!--    	</welcome-file-list> -->
+<!--    	<servlet> -->
+<!--    	<servlet-name>JnitJSP</servlet-name> -->
+<!--    	<jsp-file>/initpage.jsp</jsp-file> -->
+<!--    	<init-param> -->
+<!--    	<param-name>defaultUser</param-name> -->
+<!--    	<param-value>Default User Name</param-value> -->
+<!--    	</init-param> -->
+<!--    	</servlet> -->
+<!--    	<servlet-mapping> -->
+<!--    	<servlet-name>InitJSP</servlet-name> -->
+<!--    	<url-pattern>/initpage.jsp</url-pattern> -->
+<!--    	</servlet-mapping> -->
 </glassfish-web-app>
+
+

@@ -6,7 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="lib"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -14,15 +13,28 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="E:/javax-mail-1.3.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/glassfish-4.1.1/mq/lib/javax.servlet-api.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.5-FINAL-sources.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-3.9.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-examples-3.7-20101029.jar.zip"/>
+	<classpathentry kind="lib" path="lib/derbyclient-10.9.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-net-3.0.1-ftp.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/derbyclient-10.9.1.0.jar"/>
 	<classpathentry kind="lib" path="E:/glassfish3/mq/lib/imq.jar"/>
 	<classpathentry kind="lib" path="E:/glassfish3/mq/lib/jms.jar"/>
-	<classpathentry kind="lib" path="lib/derby.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-3.2-FINAL.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-3.7-20101029.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.7-20101029.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.7-20101029.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.7-20101029.jar (1).zip"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.3.0.jar.zip"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.11.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.7-20101029.jar.zip"/>
+	<classpathentry kind="lib" path="E:/upwork/jar/derby.jar.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

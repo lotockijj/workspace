@@ -1,0 +1,41 @@
+package upwork;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.commons.net.ftp.FTPSClient;
+
+public class SFtpFileReader {
+
+	private String ftpUrl;
+	private String fileName;
+	private String port;
+	private String fileDir;
+	private String user;
+	private String pass;
+
+	public SFtpFileReader(String ftpUrl, String fileName, String port, String fileDir, String user, String pass) {
+		this.ftpUrl = ftpUrl;
+		this.fileName = fileName;
+		this.port = port;
+		this.fileDir = fileDir;
+		this.user = user;
+		this.pass = pass;
+	}
+
+	public InputStream read() {
+		try {
+			
+			FTPSClient sftpClient = new FTPSClient();
+			sftpClient.connect(ftpUrl, Integer.parseInt(port));
+			sftpClient.login(user, pass);
+			sftpClient.enterLocalPassiveMode();
+			sftpClient.changeWorkingDirectory(fileDir);
+
+			return sftpClient.retrieveFileStream(fileName);
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+}

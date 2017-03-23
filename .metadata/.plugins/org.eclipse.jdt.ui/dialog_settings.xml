@@ -11,7 +11,7 @@
 	<item value="500" key="CallHierarchyViewPart.ratio3"/>
 	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="0" key="CallHierarchyViewPart.call_mode"/>
-	<item value="E:\Arxive" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="E:\upwork\jar" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="3" key="CallHierarchyViewPart.orientation"/>
 	<item value="2" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
 	<list key="SearchScopeActionGroup.working_set">
@@ -152,8 +152,8 @@
 		<item value="1366" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="718" key="DIALOG_HEIGHT"/>
-		<item value="9" key="DIALOG_X_ORIGIN"/>
-		<item value="9" key="DIALOG_Y_ORIGIN"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="-324" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item value="678" key="DIALOG_WIDTH"/>
@@ -195,6 +195,6 @@
 		<item value="false" key="create_package_info_java"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item value="3" key="pageIndex"/>
+		<item value="2" key="pageIndex"/>
 	</section>
 </section>

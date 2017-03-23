@@ -1,0 +1,24 @@
+package scraper;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.Scanner;
+
+public class WebReader {
+
+	public static void main(String[] args) throws IOException{
+		String address = "https://www.google.com.ua/search?q=photo&espv=2&rlz=1C1CHWL_enUA715UA715&tbm=isch&imgil=to_zaX8jWXVisM%253A%253BvLQedIVxWVt_6M%253Bhttps%25253A%25252F%25252Fwww.aviary.com%25252F&source=iu&pf=m&fir=to_zaX8jWXVisM%253A%252CvLQedIVxWVt_6M%252C_&usg=__wLUGdysaLAg5ucPG9LdUbZdZH1Q%3D&biw=1093&bih=506&ved=0ahUKEwicutORqtvSAhWCWxQKHa2gDUkQyjcIKw&ei=yK3KWJy2D4K3Ua3BtsgE#imgrc=to_zaX8jWXVisM:";
+				URL pageLocation = new URL(address);
+		Scanner in = new Scanner(pageLocation.openStream());
+		while(in.hasNext()){
+			String line = in.next();
+			if(line.contains("href=\"http://")){
+				int from = line.indexOf("\"");
+				int to = line.lastIndexOf("\"");
+				System.out.println(line.substring(from + 1, to));
+			}
+		}
+		in.close();
+	}
+
+}
