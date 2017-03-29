@@ -22,23 +22,14 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.ui.wizards.new.file" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.ui.Basic"/>
-			<item value="org.eclipse.wst.jsdt.ui.java"/>
-			<item value="org.eclipse.jpt.jaxb"/>
-			<item value="org.eclipse.jpt.jpa"/>
-			<item value="org.eclipse.jpt.jpa/org.eclipse.jpt.jpa.eclipselink"/>
 			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
-			<item value="org.eclipse.datatools.sql"/>
-			<item value="org.eclipse.wst.web.ui"/>
-			<item value="org.eclipse.jst.ws.ui.new"/>
-			<item value="org.eclipse.wst.XMLCategory"/>
-			<item value="org.eclipse.ui.Other"/>
+			<item value="org.springsource.ide.eclipse.gettingstarted.wizards.import.category"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.ui.wizards.import.ZipFile" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
@@ -79,6 +70,8 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\Роман Лотоцький\Desktop\SpringDemo2\src"/>
+			<item value="C:\Users\Роман Лотоцький\Desktop\SpringDemo2"/>
 			<item value="E:\pdfbox-2.0.3"/>
 			<item value="E:\jdbc-swing-gui"/>
 			<item value="E:\jdbc-stored-procedures-tutorial"/>

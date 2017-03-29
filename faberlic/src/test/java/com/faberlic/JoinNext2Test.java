@@ -12,7 +12,7 @@ public class JoinNext2Test {
 	public void setUp() throws Exception {
 		join = new JoinNext2();
 		try {
-			join.createPathAndScanner("E:\\Faberlic\\15_2016adapter22.txt");
+			join.createPathAndScanner("E:\\Faberlic\\15_2016adapter28.txt");
 			join.writeListTestIntoFile("C:\\Users\\Роман Лотоцький\\"
 					+ "workspace\\faberlic\\fileForTesting\\2.txt");
 		} catch (IOException e) {

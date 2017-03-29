@@ -92,11 +92,11 @@
 	</bean>
 
 	<alias name="triangle2" alias="triangler-alias" />
-	
-<!-- 	<bean id="circle" class="com.main.Circle"> -->
-<!-- 	<property name="center" ref="pointA"/> -->
-<!-- 	@Required -->
-<!-- 	</bean> -->
+
+	<!-- <bean id="circle" class="com.main.Circle"> -->
+	<!-- <property name="center" ref="pointA"/> -->
+	<!-- @Required -->
+	<!-- </bean> -->
 	<!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/> -->
 	<bean
 		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
@@ -104,14 +104,14 @@
 		<property name="x" value="333333" />
 		<property name="y" value="444444" />
 	</bean>
-	
-	<context:component-scan base-package="com.main"/>
-	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+
+	<context:component-scan base-package="com.main" />
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
 				<value>mymessage</value>
 			</list>
 		</property>
 	</bean>
-
 </beans> 
