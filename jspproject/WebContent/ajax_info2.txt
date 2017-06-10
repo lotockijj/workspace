@@ -1,0 +1,3 @@
+ajax_info2.txt just for testing... :) ! :) ? :) 
+<h2> This is html h2 tag </h2>
+<h6> And I'm  &lth6&gt tag :)</h6>
