@@ -1,0 +1,11 @@
+package designpatterns.second.triangle;
+
+public class RightAngledTriangle extends Triangle {
+
+	@Override
+	public int getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,8 @@
+pymongo
+flask
+flask_restful
+validate_email
+wtforms
+flask-wtf
+Flask-Login
+gunicorn

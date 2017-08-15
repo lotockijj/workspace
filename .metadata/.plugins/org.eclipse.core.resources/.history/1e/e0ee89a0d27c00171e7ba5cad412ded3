@@ -1,0 +1,28 @@
+package abonnements;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+
+import decorator.ServiceDecorator;
+
+public class AbonnementsTo16Unlimited extends ServiceDecorator {
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BigDecimal getPrice() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setPrice(Date startDate) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

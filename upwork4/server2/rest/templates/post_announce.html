@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script
+  src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+ <script type="text/javascript">
+        $(document).ready(function(){
+        $("#datefrom").datepicker({
+      showOn: "button",
+      buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }).datepicker("setDate", new Date());
+        $("#datetill").datepicker({
+      showOn: "button",
+      buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }).datepicker("setDate", new Date());
+        // click on button submit
+        $("#form").submit(function(e){
+           e.preventDefault();
+           if($("#datefrom").datepicker("getDate") != null && $("#datetill").datepicker("getDate") != null) {
+           var datefrom = $("#datefrom").datepicker("getDate").getTime() / 1000;
+           var datetill = $("#datetill").datepicker("getDate").getTime() / 1000;
+           console.log(datefrom);
+           console.log(datetill);
+           }
+         var formData = {"name": $('input[name=name]').val(),'message': $('input[name=message]').val(),'link': $('input[name=link]').val(), 'datefrom': datefrom, 'datetill': datetill};
+            // send ajax
+            $.ajax({
+                url: 'announcements', // url where to submit the request
+                type : "POST", // type of action POST || GET
+                contentType: 'application/json',
+                dataType : 'json', // data type
+                data : JSON.stringify(formData),
+                success : function(result) {
+                    // you can see the result from the console
+                    // tab of the developer tools
+                    console.log(result);
+                    $('#message').html("<h2>Contact Form Submitted!</h2>");
+                },
+                error: function(xhr, resp, text) {
+                    console.log(xhr, resp, text);
+                }
+            })
+        });
+    });
+    
+ </script>
+ </head>
+ 
+ <body>
+
+                    <form method="post" action="announcements" role="form" class='form' id='form'>
+                        {{form.hidden_tag()}}
+                        <div>
+                           Announcement <br>
+                           Name: {{form.name(placeholder="text placeholder")}}<br>
+                           Message: {{form.message(placeholder="Anounce placeholder")}}<br>
+                           Link: {{form.link(placeholder="Anounce link")}}<br>
+                           Active from: {{form.datefrom(placeholder="Active from")}}<br>
+                            Active till: {{form.datetill(placeholder="Active till")}}<br>
+                            <input style="display: inline;" type="submit" value="Submit" class="btn" id='submit'>
+                        </div>
+                    </form>
+                    <div id="message"></div>
+</body>
+</html>

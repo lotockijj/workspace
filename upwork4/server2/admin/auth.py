@@ -1,0 +1,2 @@
+USERNAME = "dGVzdA=="
+PASSWORD = "dGVzdA=="

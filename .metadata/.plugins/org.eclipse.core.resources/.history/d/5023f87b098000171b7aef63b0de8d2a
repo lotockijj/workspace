@@ -1,0 +1,11 @@
+package designpatterns.first;
+
+public class BinarySearch implements Search {
+
+	@Override
+	public int getItem() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

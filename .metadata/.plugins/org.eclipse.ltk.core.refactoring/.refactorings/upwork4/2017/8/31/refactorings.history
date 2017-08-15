@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 9 elements to &apos;upwork4&apos;&#x0D;&#x0A;- Original project: &apos;upwork4&apos;&#x0D;&#x0A;- Destination element: &apos;upwork4&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     trunk&#x0D;&#x0A;     payment&#x0D;&#x0A;     PSD&#x0D;&#x0A;     server&#x0D;&#x0A;     Installer&#x0D;&#x0A;     com.mindcastr.app&#x0D;&#x0A;     MindCastr&#x0D;&#x0A;     LibsToInclude&#x0D;&#x0A;     tools" description="Copy folders" destination="=upwork4" element1="trunk" element2="payment" element3="PSD" element4="server" element5="Installer" element6="com.mindcastr.app" element7="MindCastr" element8="LibsToInclude" element9="tools" files="0" flags="589830" folders="9" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1501935682089" units="0" version="1.0"/>
+</session>

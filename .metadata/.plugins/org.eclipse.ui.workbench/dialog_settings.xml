@@ -22,24 +22,25 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jpt.dbws"/>
-			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
-			<item value="org.eclipse.wst.XMLCategory"/>
-			<item value="org.eclipse.ui.Examples"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.wst.xml.examples"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jdt.ui.java/org.eclipse.jdt.junit"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ZipFile" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
 	<section name="ZipFileImportWizard">
 		<item value="false" key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="D:\Робота\workspace\faberlic\lib\mysql-connector-java-5.1.40-bin.jar"/>
+			<item value="E:\Arxive\jar\db-derby-10.13.1.1-bin\lib\derby.jar"/>
 			<item value="E:\Arxive\derbyclient-10.9.1.0.jar.zip"/>
 			<item value="E:\org.apache.commons.logging-1.1.1.jar"/>
 			<item value="E:\Arxive\pdfbox-1.3.1.jar.zip"/>
@@ -58,8 +59,6 @@
 			<item value="E:\Lesson05.zip"/>
 			<item value="E:\percolation-testing.zip"/>
 			<item value="D:\algs4DATA\algs4-data.zip"/>
-			<item value="C:\Users\Роман Лотоцький\AppData\Roaming\Skype\My Skype Received Files\lotoroman(1).zip"/>
-			<item value="C:\Users\Роман Лотоцький\AppData\Roaming\Skype\My Skype Received Files\lotoroman.zip"/>
 		</list>
 	</section>
 	<section name="FileExtensionDialogSettings">
@@ -73,6 +72,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\Роман Лотоцький\Desktop\mindcastr.git"/>
 			<item value="C:\Users\Роман Лотоцький\Desktop\SpringDemo2\src"/>
 			<item value="C:\Users\Роман Лотоцький\Desktop\SpringDemo2"/>
 			<item value="E:\pdfbox-2.0.3"/>

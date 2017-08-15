@@ -1,0 +1,38 @@
+package designpatterns.first;
+
+import java.util.Arrays;
+
+public class BinarySearch implements Search {
+	private int[] arr;
+	private int item;
+
+
+
+	public BinarySearch(int[] arr, int item) {
+		this.arr = arr;
+		this.item = item;
+	}
+
+	@Override
+	public int getItem() {
+		int middle = arr[arr.length/2];
+		int high = arr[arr.length - 1];
+		int low = arr[0];
+		Arrays.sort(arr);
+		
+		while(!(Thread.currentThread().isInterrupted())){
+			if(arr[middle] > item){
+				high = middle;
+			}
+			if(arr[middle] < item){
+				low = middle;
+			}
+			if(arr[middle] == item){
+				return item;
+			}
+		}
+		return 0;
+	}
+
+
+}

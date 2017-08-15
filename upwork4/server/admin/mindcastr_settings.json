@@ -1,0 +1,19 @@
+{
+    "ads1": {
+        "img": "ads_1.jpg", 
+        "url": "http://onclick1url"
+    }, 
+    "ads2": {
+        "img": "ads_2.jpg", 
+        "url": "http://onclick2url"
+    }, 
+    "latest_mindcastr_version": {
+        "url": "http://mindcastr.com/Thank%20You.html?item=trialnow&cbreceipt=KJ6KL8ZE&time=1451171578&cbpop=C7ACA03A&cbaffi=ZXGINXZ33&cname=Rosane++Coopman&cemail=rcoopman10%40new.rr.com&ccountry=US&czip=54952&cbfid=16053", 
+        "version": "1.0",
+        "update_files": {
+            "win": "http://mindcastr.com/update_win.zip",
+            "mac": "http://mindcastr.com/update_mac.zip"
+        }
+    }, 
+    "tutorialUrl": "https://www.youtube.com/watch?v=MBQdDQnitXs"
+}

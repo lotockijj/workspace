@@ -1,0 +1,26 @@
+package designpatterns.seven;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ConstantDataManager2Test {
+	ConstantDataManager2 manager;
+	
+	@Before
+	public void setUp() throws Exception {
+		manager = new ConstantDataManager2();
+	}
+
+	@Test
+	public void test() {
+		manager.readDataFromFile();
+		System.out.println(manager.ACCOUNT_DATA_FILE);
+		System.out.println(manager.VALID_MIN_LNAME_LEN);
+		System.out.println(manager.ADDRESS_DATA_FILE);
+		
+		System.out.println(manager.DISCOVER);
+	}
+
+}

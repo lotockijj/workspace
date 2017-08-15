@@ -1,0 +1,9 @@
+package designpatterns.seven;
+
+public class Account implements ConstantDataManager{
+
+	public void getData(){
+		String file = ACCOUNT_DATA_FILE;
+		System.out.println(file);
+	}
+}

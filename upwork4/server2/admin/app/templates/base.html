@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   {% if title %}
+      <title>{{title}}</title>
+   {% else %}
+      <title>Configuration</title>
+   {% endif %}
+   <style>
+   html,body {
+      padding: 0;
+      margin: 0;
+      font-family: verdana;
+   }
+   .content {
+     width: 725px;
+      margin: 0 auto
+   }
+   .header {
+      background: #4E9BBF;
+      height: 50px;
+   }
+   .menu {
+      padding-top: 13px;
+      padding-left: 6px;
+      color:#fff;
+   }
+   .footer {
+       background: #4E9BBF;
+       height: 30px;
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       width: 100%;       
+   }
+   .header-link{
+      font-weight: bold;;
+   }
+   .link {
+       color: #fff;
+       text-decoration: none;
+       float: left;
+   }
+   h1 {
+      font-size: 25px;
+      color: #0A1725;
+   }
+   input {
+      width: 300px;
+      height: 25px;
+      margin-bottom: 17px;
+      color: #585757;
+      font-size: 14px;
+
+   }
+   label{
+      width: 400px;
+      display: block;
+      font-size: 16px;
+      margin-bottom: 6px;
+   }
+   .submit {
+       -webkit-appearance: none;
+       text-decoration: none;
+       color: #fff;
+       background: #4E9BBF;
+       border-radius: 15px;
+       margin: 22px 8px;
+       border: 0 none;
+       font-size: 16px;
+       -webkit-appearance: none;
+       width: 143px;
+       outline: none;
+       cursor: pointer;
+       height: 39px;
+       padding: 0 20px;
+       margin-left: 0; 
+   }
+   .login-form {
+    width: 307px;
+    margin: 0 auto;
+   }
+   </style>
+   </head>
+   <body>
+         <div class="header">
+            <div class="menu">
+               <a class="link header-link" href="{{ url_for("index") }}">| Home |</a> - 
+               {% if not current_user.is_authenticated %}
+                  <a class="link header-link" href="{{ url_for("login") }}">| Sign In |</a>
+               {% else %}
+                  <a class="link header-link" href="{{ url_for("logout") }}">| Logout |</a>
+               {% endif %}
+            </div>
+         </div>
+
+      <div class="content">
+
+        
+         {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+               <ul class=flashes>
+               {% for category, message in messages %}
+                  <li class="{{ category }}">{{ message }}</li>
+               {% endfor %}
+               </ul>
+               <hr>
+            {% endif %}
+         {% endwith %}
+         {% if title %}<h1>{{ title }}</h1>{% endif %}
+         {% block content %}{% endblock %}
+      </div>
+      <div class="footer"></div>
+   </body>
+</html>

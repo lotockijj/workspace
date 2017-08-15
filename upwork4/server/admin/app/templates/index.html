@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+
+   <form action="" method="post" name="editor" enctype="multipart/form-data">
+      {{form.hidden_tag()}}
+      <table>
+         <tr>
+            <td>
+               {% if data.ads1.img %}
+                  <div align="center" valign="center">
+                     {% if data.ads1.url %}
+                        <a target=_blank href="{{data.ads1.url}}">
+                     {% endif %}
+                           <img id="ads1" src="{{data.ads1.img}}" width="200">
+                     {% if data.ads1.url %}
+                        </a>
+                     {% endif %}
+                  </div>
+               {% endif %}
+               <br>
+            </td>
+            <td>&nbsp;</td>
+            <td>
+               {% if data.ads2.img %}
+                  <div align="center" valign="center">
+                     {% if data.ads2.url %}
+                        <a target=_blank href="{{data.ads2.url}}">
+                     {% endif %}
+                           <img id="ads2" src="{{data.ads2.img}}" width="200">
+                     {% if data.ads2.url %}
+                        </a>
+                     {% endif %}
+                  </div>
+               {% endif %}
+               <br>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <div align="left">
+                  <label>First URL:</label>
+                  {{form.urladdr1(size=50, maxlength=100, value=data.ads1.url)}}<br>
+                  
+                  <label>First Image:</label>
+                  {{form.imagefile1(size=30)}}<br>
+
+                  <label>Win Update File:</label>
+                  {{form.updatefile1(size=30)}}<br>
+                  
+               </div>
+            </td>
+            <td>&nbsp;</td>
+            <td>
+               <div align="left">
+                  <label>Second URL:</label>
+                  {{form.urladdr2(size=50, maxlength=100, value=data.ads2.url)}}<br>
+                  
+                  <label>Second Image:</label>
+                  {{form.imagefile2(size=30)}}<br>
+
+                  <label>Mac Update File:</label>
+                  {{form.updatefile2(size=30)}}<br>
+                  
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="3">
+               <label>Latest version:</label>
+               {{form.latest_url(size=50, maxlength=100, value=data.latest_mindcastr_version.url)}}<br>
+               <label>Current version:</label>
+               {{form.version(size=10, maxlength=50, value=data.latest_mindcastr_version.version)}}<br>
+               <label>Tutorial:</label>
+               {{form.tutorial_url(size=50, maxlength=100, value=data.tutorialUrl)}}<br>
+               <input class="submit" type="submit" value="Save changes">
+            </td>
+         </tr>
+      </table>
+   </form>
+   <script language="javascript" type="text/javascript">
+      var d = new Date(); 
+      document.getElementById("ads1").src = "{{data.ads1.img}}?rev=" + d.getTime();
+      document.getElementById("ads2").src = "{{data.ads2.img}}?rev=" + d.getTime();
+   </script>
+   <br>
+   <a href="{{ url_for("change_pwd") }}">Change password</a>
+{% endblock %}

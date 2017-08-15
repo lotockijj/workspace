@@ -1,0 +1,5 @@
+package designpatterns.second.triangle;
+
+public class Triangle {
+
+}

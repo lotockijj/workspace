@@ -1,0 +1,10 @@
+1502099075888	Move compilation unit
+1502133843745	Rename type 'CreateMySqlDb'
+1502134000375	Rename type 'DaoClient'
+1502134024463	Rename type 'DaoClient'
+1502134034086	Move compilation unit
+1502174176692	Rename local variable 'tempClient'
+1502174646390	Rename field 'cityName'
+1502174895008	Rename method 'setCityName'
+1502174945270	Rename method 'getCityName'
+1502390033254	Delete element

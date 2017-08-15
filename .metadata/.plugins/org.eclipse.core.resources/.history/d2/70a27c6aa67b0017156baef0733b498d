@@ -1,0 +1,40 @@
+package eleks.sportclub.helpful;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.text.ParseException;
+import abonnements.AbonnementsTo16and12Times;
+import db.DaoClientMySql;
+import decorator.Price;
+import eleks.sportclub.Client;
+import eleks.sportclub.Gender;
+import services.GeneralMassage;
+import services.Sauna;
+
+public class Gym {
+
+	public static void main(String[] args) throws ParseException{
+		/*Client client = new Client("Lotockiy", "Roman", 35, SqlDate.createSqlDate("10-11-1981"),
+				"Lviv", Gender.MAN, false, SqlDate.createSqlDate("02-09-2006"));
+		Price price = new AbonnementsTo16and12Times();
+		client.setPrice(price);
+		price = new Sauna(price);
+		price = new GeneralMassage(price);
+		System.out.println(client.getLastName() + " " + client.getFirstName() + "\n" + 
+				"Price: " + client.getPrice().getPrice() +
+				"\nDescription: " + price.getDescription() + 
+				"\nThe whole price: " + price.getPrice());*/
+		
+		try {
+			DaoClientMySql mySql = new DaoClientMySql();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

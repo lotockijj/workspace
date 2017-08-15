@@ -1,0 +1,68 @@
+package db;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+import eleks.sportclub.Client;
+
+public class CreateMySqlDb {
+
+	private Connection myConn;
+	
+	public CreateMySqlDb() throws SQLException, FileNotFoundException, IOException{
+		Properties props = new Properties();
+		props.load(new FileInputStream("demo.properties"));
+		String user = props.getProperty("user");
+		String password = props.getProperty("password");
+		String dburl = props.getProperty("dburl");
+		//connect to database
+		myConn = DriverManager.getConnection(dburl, user, password);
+		//System.out.println("DB connection successful to: " + dburl);
+	}
+
+	public List<Client> getAllGoods(){
+		List<Client> list = new ArrayList<>();
+		try(Statement myStmt = myConn.createStatement();
+				ResultSet 	myRs = myStmt.executeQuery("select *from fab;")){
+
+			while(myRs.next()){
+				Client tempGoods = convertRowToGoods(myRs);
+				list.add(tempGoods);
+			}
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	private Client convertRowToGoods(ResultSet myRs) {
+		Client tempClient = new Client();
+		try{
+			String lastName = myRs.getString("lastName");
+			String firstName = myRs.getString("firstName");
+			int age = myRs.getInt("age");
+			Date birthDate = myRs.getDate("birthDate");
+			String city = myRs.getString("city");
+			String gender = myRs.getString("gender");
+			boolean bodyBuildingWinner = myRs.getBoolean("bodyBuildingWinner");
+			Date startDate = myRs.getDate("startDate");
+
+			tempClient = new Client(lastName, firstName, age, birthDate, city, gender,
+					bodyBuildingWinner, startDate);
+		} catch (SQLException e){
+			AlertGui.createAlertError(e);
+		}
+		return tempGoods;
+	}
+	
+}

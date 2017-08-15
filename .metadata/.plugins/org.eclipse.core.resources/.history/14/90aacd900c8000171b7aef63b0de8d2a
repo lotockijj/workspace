@@ -1,0 +1,11 @@
+package designpatterns.first;
+
+public class LinearSearch implements Search {
+
+	@Override
+	public int getItem(int[] arr, int item) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

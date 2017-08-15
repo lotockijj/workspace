@@ -1,0 +1,7 @@
+package designpatterns.first;
+
+public interface Search {
+	
+	int getItem();
+
+}

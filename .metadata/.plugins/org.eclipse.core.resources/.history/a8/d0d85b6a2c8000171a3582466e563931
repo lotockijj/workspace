@@ -1,0 +1,35 @@
+package eleks.sportclub.helpful;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import abonnements.AbonnementsTo16and12Times;
+import decorator.Price;
+import eleks.sportclub.Client;
+import eleks.sportclub.Gender;
+import junit.framework.Assert;
+
+public class GymTest {
+	Client client;
+	Price price; 
+	
+	@Before
+	public void setUp() throws Exception {
+		client = new Client("Lotockiy", "Roman", 35, SqlDate.createSqlDate("10-11-1981"),
+				"Lviv", Gender.MAN, false, SqlDate.createSqlDate("02-09-2006"));
+		price = new AbonnementsTo16and12Times();
+	}
+
+	@Test
+	public void test() {
+		client.setPrice(price);
+		System.out.println(client.getPrice().getPrice());
+		System.out.println(price.getPrice());
+		Assert.assertEquals(new BigDecimal("370.49"), price.getPrice());
+	}
+
+}

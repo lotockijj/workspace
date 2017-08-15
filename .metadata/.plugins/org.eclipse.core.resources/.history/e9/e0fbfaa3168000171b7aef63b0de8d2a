@@ -1,0 +1,5 @@
+package designpatterns.second.validator;
+
+public class Client {
+
+}

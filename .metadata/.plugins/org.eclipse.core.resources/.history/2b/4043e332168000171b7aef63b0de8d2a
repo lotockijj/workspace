@@ -1,0 +1,11 @@
+package designpatterns.second.validator;
+
+public class CAAddress implements AddressValidator {
+
+	@Override
+	public boolean validate(Address address) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

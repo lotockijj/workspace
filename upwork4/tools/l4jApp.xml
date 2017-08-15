@@ -1,0 +1,29 @@
+<launch4jConfig>
+    <headerType>gui</headerType>
+    <classPath>
+        <mainClass>MindCastr.main.VisionBoard</mainClass>
+        <cp>lib/*</cp>
+    </classPath>
+    <errTitle>MindCastr</errTitle>
+    <customProcName>true</customProcName>
+    <downloadUrl>http://java.com/download</downloadUrl>
+    <supportUrl>http://mindcastr.com</supportUrl>
+    <priority>normal</priority>
+    <icon>../MindCastr/src/icon.ico</icon>
+    <singleInstance>
+        <mutexName>MindCastr</mutexName>
+        <windowTitle>MindCastr</windowTitle>
+    </singleInstance>
+    <jre>
+        <minVersion>1.7.0</minVersion>
+    </jre>
+    <versionInfo>
+    <fileDescription>MindCastr is a tool for your mind created to give you control over your own life</fileDescription>
+    <copyright>Copyright © 2015-2016 Ross Atlas</copyright>
+    <productName>MindCastr</productName>
+    <companyName>Ross Atlas</companyName>
+    <internalName>MindCastr</internalName>
+    <originalFilename>MindCastr.exe</originalFilename>
+  </versionInfo>
+  
+</launch4jConfig>

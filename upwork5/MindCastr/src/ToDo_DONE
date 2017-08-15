@@ -1,0 +1,15 @@
+2. VisionBoard loading from TOP - DONE
+4. Check all icons, remove background - removed BG from Close and Minimize(check please) - Ashot: Great!
+5. Add security checking
+6. Add categories edit functional - DONE
+8. Settings, VisionBoard content info in files(backend functional) - DONE: an issue is currently we store images within jar which may blow a jar
+                                                                     TODO: move images folder out from jar DONE
+8.1. Configurations persistence (time settings, message location, category configurations...)
+12. MindCastr.com visibility and position in playback panel - DONE
+13. Remove scroll from FONT SETTINGS panel - DONE
+16. Fix settings main panel layout - DONE
+17. Add main project program ICON - DONE
+19. Fix buttons pressed color in settings panel - DONE
+20. Remove backgrounds from category add/edit buttons - DONE
+21. Create balancing logic for VisionBoard for supporting size base balancing for add/remove functional - DONE. Greg - Great work my friend !!!
+22. fix Subliminal input textfield focus - DONE

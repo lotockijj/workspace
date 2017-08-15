@@ -1,0 +1,18 @@
+package quartz;
+
+import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
+import org.quartz.impl.StdSchedulerFactory;
+
+public class SetScheduler {
+	
+	public static void main(String[] args) throws SchedulerException {
+		Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+		scheduler.start();
+	}
+	
+	private void setJobTrigger(){
+		SetScheduler job = new SetScheduler();
+	}
+
+}

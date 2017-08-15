@@ -1,0 +1,5 @@
+flask
+wtforms
+flask-wtf
+Flask-Login
+gunicorn

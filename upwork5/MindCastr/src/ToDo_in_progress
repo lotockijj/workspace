@@ -1,0 +1,13 @@
+1. VisionBoard image appearance (without hover) DONE but doesn't work in some cases. TODO: investigate
+
+3. Add YouTube label to visionBoard
+
+7. Create RAMKA for play, pause and settings buttons - DONE for play, pause and settings (check please - I don't like :( ) 
+- Ashot: Please change play button's borders to be thin(is it possible?) just to separate button and background, currently they seem thick.
+Or maybe color difference makes border to appear thicker then it is?
+
+10. JLabel background 
+(which was work in JDK 1.7 and not working in JDK 1.6) - DONE for text, but image not working still :(
+ASHOT: what you want to do for image? Just make the panel's (I think you show it in jpanel) size as picture's one.
+
+18. Should adding/removing new items to/from checked category also add/remove items from visionboard?

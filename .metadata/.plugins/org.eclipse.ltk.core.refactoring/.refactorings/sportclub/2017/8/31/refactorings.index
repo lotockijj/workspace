@@ -1,0 +1,17 @@
+1501702466355	Rename type 'App'
+1501702537416	Rename type 'AppTest'
+1501750103719	Delete element
+1501750161599	Delete element
+1501756986557	Delete element
+1501757012704	Move compilation unit
+1501757021086	Move compilation unit
+1501836433536	Delete element
+1501924531927	Rename method 'createDerbyDataBase'
+1501924657613	Rename method 'createResultSet'
+1501924918340	Rename local variable 'list'
+1501928605761	Rename local variable 'client'
+1501939617050	Rename local variable 'prSt'
+1501942489774	Rename type 'FabClient'
+1501943025191	Rename type 'ServicesTrack'
+1501943449426	Rename local variable 'listOfClients'
+1501948274181	Rename method 'convertRowToClient'

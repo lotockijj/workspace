@@ -74,6 +74,9 @@ public class Square extends Rectangle {
 			List resultList = (ArrayList) ois.readObject();
 			Rectangle resultR1 = (Rectangle) ois.readObject();
 			System.out.println("Reading result list = " + resultList);
+			for(byte i = 126; i<=127; i++){
+				System.out.println(i);
+			}
 			System.out.println("Reading result r1 = " + resultR1);
 			ois.close();
 		} catch (FileNotFoundException e) {
