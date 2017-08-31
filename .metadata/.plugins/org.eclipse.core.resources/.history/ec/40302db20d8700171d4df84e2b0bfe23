@@ -1,0 +1,20 @@
+package designpatterns.twelve.two;
+
+public class NonLuxuryCar implements Car {
+	private String name;
+	
+	public NonLuxuryCar(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String getCarName(String name) {
+		return name;
+	}
+
+	@Override
+	public String getCarFeatures(String features) {
+		return "Empty set";
+	}
+
+}

@@ -1,0 +1,5 @@
+package designpatterns.twelve.two;
+
+public interface Car {
+
+}

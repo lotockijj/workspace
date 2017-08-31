@@ -1,0 +1,17 @@
+package designpatterns.fourteen;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		FactoryBuilder factory = new FactoryBuilder();
+//		Builder builderPacket = factory.getBuilder("Packet");
+//		Container container = new Container(builderPacket);
+//		container.build();
+//		System.out.println(builderPacket.getObject().toString());
+		
+		Builder builderBox = factory.getBuilder("BOX");
+		Container container2 = new Container(builderBox);
+		container2.build();
+		System.out.println(builderBox.getObject().toString());
+	}
+}

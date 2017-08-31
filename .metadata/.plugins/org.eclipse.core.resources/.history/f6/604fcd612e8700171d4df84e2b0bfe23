@@ -1,0 +1,14 @@
+package designpatterns.twelve.two;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class VehicleFactoryUsingPrototypeTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

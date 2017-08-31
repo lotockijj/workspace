@@ -1,1 +1,5 @@
 1502634692246	Rename type 'SetSchedule'
+1502881273049	Delete element
+1502885207584	Rename method 'updateClient'
+1502894323950	Rename method 'getAllGoods'
+1502895186518	Rename type 'DaoServTrack'

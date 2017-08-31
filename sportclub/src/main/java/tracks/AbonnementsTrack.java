@@ -7,6 +7,18 @@ public class AbonnementsTrack {
 	private boolean baseAllDayUnlimited;
 	private boolean personalCoach;
 
+	public AbonnementsTrack(){
+	}
+	
+	public AbonnementsTrack(boolean base, boolean baseAllDay, boolean baseUnlimited, boolean baseAllDayUnlimited,
+			boolean personalCoach) {
+		this.base = base;
+		this.baseAllDay = baseAllDay;
+		this.baseUnlimited = baseUnlimited;
+		this.baseAllDayUnlimited = baseAllDayUnlimited;
+		this.personalCoach = personalCoach;
+	}
+	
 	public boolean isBase() {
 		return base;
 	}
@@ -56,4 +68,10 @@ public class AbonnementsTrack {
 		}
 	}
 
+	@Override
+	public String toString() {
+		return "AbonnementsTrack [base=" + base + ", baseAllDay=" + baseAllDay + ", baseUnlimited=" + baseUnlimited
+				+ ", baseAllDayUnlimited=" + baseAllDayUnlimited + ", personalCoach=" + personalCoach + "]";
+	}
+	
 }

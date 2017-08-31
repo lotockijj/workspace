@@ -1,0 +1,26 @@
+package designpatterns.ten;
+
+import java.io.IOException;
+import java.util.Properties;
+
+public class LoggerFactory {
+	
+	public Logger getLogger(){
+		Properties p = new Properties();
+		try {
+			p.load(ClassLoader.getSystemResourceAsStream("Logger.properties"));
+			String fileLoggingValue = p.getProperty("fileLoggingValue");
+			if(fileLoggingValue.equalsIgnoreCase("db")){
+				return new DBLogger();
+			}
+			if(fileLoggingValue.equalsIgnoreCase("console")){
+				return new FileLogger();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return new ConsoleLogger();
+	}
+	
+
+}

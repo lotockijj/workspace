@@ -1,0 +1,16 @@
+package com.epam;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class LoopThreeBiggestTest {
+
+	@Test
+	public void testGetTreeBiggest() {
+		int[] arr = {1, 7, 100, 27, 28, 99, 101};
+		int[] resultArray = LoopThreeBiggest.getTreeBiggest(arr);
+		System.out.println(resultArray);
+	}
+
+}

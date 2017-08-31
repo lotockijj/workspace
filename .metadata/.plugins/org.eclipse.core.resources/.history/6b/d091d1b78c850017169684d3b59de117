@@ -1,0 +1,10 @@
+package designpatterns.ten;
+
+public class ConsoleLogger implements Logger {
+
+	public void log(String msg) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

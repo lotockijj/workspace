@@ -1,0 +1,17 @@
+package designpatterns.twelve.two;
+
+public class NonLuxurySUV implements SUV {
+
+	@Override
+	public String getSUVName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getSUVFeatures() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

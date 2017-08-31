@@ -1,0 +1,7 @@
+package designpatterns.twelve.two;
+
+public abstract class VehicleFactory {
+	
+	abstract Car getCar();
+	abstract SUV getSUV();
+}

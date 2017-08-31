@@ -1,0 +1,22 @@
+package designpatterns.fourteen;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class BuilderTest {
+
+	@Test
+	public void test() {
+		FactoryBuilder factory = new FactoryBuilder();
+		Builder builderPacket = factory.getBuilder("Packet");
+		Container container = new Container(builderPacket);
+		container.build();
+		Assert.assertEquals("AB packet", 
+				builderPacket.getObject().toString());
+		
+		//Builder builder
+	}
+
+}

@@ -3,8 +3,14 @@
 <typeInfo handle="=faberlic/src\/main\/java&lt;com.faberlic{JoinNext2.java[JoinNext2" modifiers="1" timestamp="1489591361376"/>
 <typeInfo handle="=main.fx/src\/main\/java&lt;com.main.fx{Part.java[Part" modifiers="1025" timestamp="1488875414347"/>
 <typeInfo handle="=hibernate/src\/main\/java&lt;com.example.hibernate.dto{Vehicle.java[Vehicle" modifiers="1" timestamp="1491032110957"/>
-<typeInfo handle="=sportclub/src\/main\/java&lt;decorator{ServiceDecorator.java[ServiceDecorator" modifiers="1025" timestamp="1502653165923"/>
 <typeInfo handle="=demo/src\/main\/java&lt;designpatterns.first{Search.java[Search" modifiers="513" timestamp="1502616953641"/>
 <typeInfo handle="=demo/src\/main\/java&lt;designpatterns.second.validator{AddressValidator.java[AddressValidator" modifiers="513" timestamp="1502621732510"/>
 <typeInfo handle="=demo/src\/main\/java&lt;designpatterns.second.triangle{Triangle.java[Triangle" modifiers="1025" timestamp="1502625182718"/>
+<typeInfo handle="=com.lviv/src\/main\/java&lt;designpatterns.ten{Logger.java[Logger" modifiers="513" timestamp="1503222475675"/>
+<typeInfo handle="=demo/src\/main\/java&lt;designpatterns.twelve{Abonnement.java[Abonnement" modifiers="513" timestamp="1503318606999"/>
+<typeInfo handle="=demo/src\/main\/java&lt;designpatterns.twelve{AbonnementFactory.java[AbonnementFactory" modifiers="513" timestamp="1503315711498"/>
+<typeInfo handle="=demo/src\/main\/java&lt;designpatterns.twelve.two{Car.java[Car" modifiers="513" timestamp="1503402241028"/>
+<typeInfo handle="=demo/src\/main\/java&lt;designpatterns.twelve.two{SUV.java[SUV" modifiers="513" timestamp="1503400885650"/>
+<typeInfo handle="=demo/src\/main\/java&lt;designpatterns.twelve.two{VehicleFactory.java[VehicleFactory" modifiers="1025" timestamp="1503389949597"/>
+<typeInfo handle="=demo/src\/main\/java&lt;designpatterns.fourteen{Builder.java[Builder" modifiers="513" timestamp="1503478538202"/>
 </typeInfoHistroy>

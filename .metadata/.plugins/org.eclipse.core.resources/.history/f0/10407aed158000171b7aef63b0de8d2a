@@ -1,5 +1,0 @@
-package designpatterns.second.validator;
-
-public interface AddressValidator {
-
-}

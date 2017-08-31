@@ -104,6 +104,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Робота\workspace\sportclub\src\test\java\services\AttendingGymTest.java"/>
 			<item value="D:\Робота\workspace\sportclub\src\main\java\eleks\sportclub"/>
 			<item value="D:\Робота\workspace"/>
 			<item value="D:\Робота\workspace\main.fx"/>
@@ -124,6 +125,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="eleks.com.ebean"/>
 			<item value="eleks.WorkWithSockets"/>
 			<item value="eleks.sportclub"/>
 			<item value="com.example.hibernate"/>
@@ -134,6 +136,7 @@
 			<item value="com.example"/>
 		</list>
 		<list key="artifactId">
+			<item value="com.lviv"/>
 			<item value="WorkWithSockets"/>
 			<item value="sportclub"/>
 			<item value="hibernate"/>

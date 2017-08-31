@@ -1,0 +1,36 @@
+package designpatterns.twelve;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class AbonnementTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		AbonnementFactory abonFactory = new AdultAbonnementFactory();
+		Abonnement abon = abonFactory.createAbonnement("1");
+		print(abon);
+		abon = abonFactory.createAbonnement("2");
+		print(abon);
+		abon = abonFactory.createAbonnement("3");
+		print(abon);
+		abon = abonFactory.createAbonnement("4");
+		print(abon);
+		abonFactory = new ChildrenAbonnementFactory();
+		abon = abonFactory.createAbonnement("1");
+		print(abon);
+		abon = abonFactory.createAbonnement("2");
+		print(abon);
+	}
+	
+	private void print(Abonnement abon){
+		System.out.println(abon.getDescription() + abon.getCost());
+	}
+
+}

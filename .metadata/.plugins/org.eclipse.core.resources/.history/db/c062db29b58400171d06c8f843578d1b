@@ -1,0 +1,31 @@
+package com.epam;
+
+// Get three biggest numbers from loop only with one iteration.
+
+public class LoopThreeBiggest {
+	
+	public static int[] getTreeBiggest(int[] arr){
+		int first = arr[0];
+		int second = arr[1];
+		int third = arr[2];
+		for(int i = 0; i < arr.length; i++){
+			if(first < arr[i]){
+				first = arr[i];
+				i++;
+			}
+			if(second < arr[i]){
+				second = arr[i];
+				i++;
+			}
+			if(third < arr[i]){
+				i++;
+			}
+			if(i > arr.length){
+				break;
+			}
+		}
+		int[] resultArray = {first, second, third};
+		return resultArray;
+	}
+
+}

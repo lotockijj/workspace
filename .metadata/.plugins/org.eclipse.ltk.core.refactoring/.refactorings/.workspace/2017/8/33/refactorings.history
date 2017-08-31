@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;ebean.properties&apos;" deleteContents="false" description="Delete resource &apos;ebean.properties&apos;" element1="/ebean.properties" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1502974691290"/>
+</session>

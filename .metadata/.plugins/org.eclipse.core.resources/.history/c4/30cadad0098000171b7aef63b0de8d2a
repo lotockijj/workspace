@@ -1,5 +1,0 @@
-package designpatterns.first;
-
-public interface Search {
-
-}

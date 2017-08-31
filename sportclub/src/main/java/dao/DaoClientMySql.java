@@ -1,18 +1,15 @@
 package dao;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 import eleks.sportclub.Client;
 import eleks.sportclub.Gender;
@@ -21,18 +18,11 @@ public class DaoClientMySql {
 
 	private Connection myConn;
 	
-	public DaoClientMySql() throws SQLException, FileNotFoundException, IOException{
-		Properties props = new Properties();
-		props.load(new FileInputStream("demo.properties"));
-		String user = props.getProperty("user");
-		String password = props.getProperty("password");
-		String dburl = props.getProperty("dburl");
-		//connect to database
-		myConn = DriverManager.getConnection(dburl, user, password);
-		//System.out.println("DB connection successful to: " + dburl);
+	public DaoClientMySql(Connection myConn) throws SQLException, FileNotFoundException, IOException{
+		this.myConn = myConn;
 	}
 
-	public List<Client> getAllGoods(){
+	public List<Client> getAllClients(){
 		List<Client> list = new ArrayList<>();
 		try(Statement myStmt = myConn.createStatement();
 				ResultSet myRs = myStmt.executeQuery("select *from client;")){
@@ -121,8 +111,9 @@ public class DaoClientMySql {
 	}
 	
 	private Client convertRowToGoods(ResultSet myRs) {
-		Client tempClient = new Client();
+		Client tempClient = null;
 		try{
+			int id = myRs.getInt("id");
 			String lastName = myRs.getString("lastName");
 			String firstName = myRs.getString("firstName");
 			int age = myRs.getInt("age");
@@ -132,7 +123,7 @@ public class DaoClientMySql {
 			boolean bodyBuildingWinner = myRs.getBoolean("bodyBuildingWinner");
 			Date startDate = myRs.getDate("startDate");
 
-			tempClient = new Client(lastName, firstName, age, birthDate, city, gender,
+			tempClient = new Client(id, lastName, firstName, age, birthDate, city, gender,
 					bodyBuildingWinner, startDate);
 		} catch (SQLException e){
 			e.printStackTrace();

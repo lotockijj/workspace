@@ -1,0 +1,16 @@
+package decorator;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+
+interface Price {
+	
+	BigDecimal getPrice();
+	
+	String getDescription();
+	
+	void setPrice(Date startDate);
+	
+	void updateTrack(int id);
+	
+}

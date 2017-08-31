@@ -1,0 +1,16 @@
+package designpatterns.twelve.two;
+
+public class NonLuxuryVehicleFactory extends VehicleFactory {
+	private String name;
+	
+	@Override
+	Car getCar() {
+		return new NonLuxuryCar(name);
+	}
+
+	@Override
+	SUV getSUV() {
+		return new NonLuxurySUV(name);
+	}
+
+}

@@ -2,12 +2,21 @@ package services;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.sql.SQLException;
 
+import dao.DaoServicesTrack;
 import decorator.Price;
-import decorator.ServiceDecorator;
+import tracks.ServicesTrack;
 
-public class Fresh  extends ServiceDecorator{
+public class Fresh  implements Price{
 	private Price price;
+	private ServicesTrack track;
+	private DaoServicesTrack dao;
+	
+	public Fresh() throws SQLException{
+		track = new ServicesTrack();
+		dao = new DaoServicesTrack();
+	}
 	
 	public Fresh(Price price) {
 		this.price = price;
@@ -25,6 +34,11 @@ public class Fresh  extends ServiceDecorator{
 
 	@Override
 	public void setPrice(Date startDate) {
+	}
+
+	@Override
+	public void updateTrack(int id) {
+		dao.updateServicesTrack(track, id);
 	}
 	
 }

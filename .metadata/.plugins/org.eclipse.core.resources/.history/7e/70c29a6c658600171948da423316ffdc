@@ -1,0 +1,17 @@
+package designpatterns.twelve;
+
+public class BaseTo16AllDay implements Abonnement {
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getCost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

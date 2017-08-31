@@ -18,8 +18,8 @@ public class AbonnementsAllDay12TimesTest {
 	@Before
 	public void setUp() throws Exception {
 		cost = new BigDecimal(420);
-		ab = new AbonnementsAllDay12Times();
 		startDate = SqlDate.createSqlDate("11-10-2000");
+		ab = new AbonnementsAllDay12Times();
 	}
 
 	@Test
@@ -50,14 +50,13 @@ public class AbonnementsAllDay12TimesTest {
 	@Test
 	public void testSetPriceStartDateMoreThan10Years() throws ParseException{
 		ab.setPrice(startDate);
-		System.out.println(ab.getPrice());
-		Assert.assertEquals(420.0, ab.getPrice().doubleValue());
+		Assert.assertEquals(398.99, ab.getPrice().doubleValue());
 	}
 	
 	@Test
 	public void testSetPriceStartDateLessThan10Years() throws ParseException{
-		//ab.setPrice(SqlDate.createSqlDate("11-10-2017"));
-		//System.out.println(ab.getPrice());
+		ab.setPrice(SqlDate.createSqlDate("11-10-2017"));
+		Assert.assertEquals(420.00,  ab.getPrice().doubleValue());
 	}
 
 }

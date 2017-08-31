@@ -1,0 +1,11 @@
+package designpatterns.twelve;
+
+public class ChildrenAbonnementFactory implements AbonnementFactory {
+
+	@Override
+	public Abonnement createAbonnement(String abonnement) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

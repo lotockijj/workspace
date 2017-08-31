@@ -1,0 +1,7 @@
+package designpatterns.twelve.two;
+
+public interface Car {
+	
+	String getCarName(String name);
+	String getCarFeatures();
+}

@@ -1,0 +1,37 @@
+package designpatterns.twelve.two;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.testng.Assert;
+
+public class VehicleFactoryTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		VehicleFactory factory = VehicleFactory.getVehicleFactory("Luxury");
+		
+		Car car = factory.getCar();
+		Assert.assertEquals("Honda", car.getCarName("Honda"));
+		Assert.assertEquals("Conditioning, computer, TV, JPS.", car.getCarFeatures());
+		
+		SUV suv = factory.getSUV();
+		Assert.assertEquals("Caterpillar", suv.getSUVName("Caterpillar"));
+		Assert.assertEquals("Conditioning, JPS, bed.", suv.getSUVFeatures());
+		
+		factory = VehicleFactory.getVehicleFactory("Non-Luxury");
+		car = factory.getCar();
+		Assert.assertEquals("Empty set", car.getCarFeatures().trim());
+		System.out.println(car.getCarFeatures());
+		
+		suv = factory.getSUV();
+		//Assert.assertEquals("Empty set", suv.getSUVFeatures());
+		System.out.println(suv.getSUVFeatures());
+	}
+
+}

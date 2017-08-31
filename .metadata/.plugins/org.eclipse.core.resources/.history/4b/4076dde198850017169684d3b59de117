@@ -1,0 +1,11 @@
+package designpatterns.ten;
+
+public class LogMessage {
+	int id;
+	String msg;
+
+	public LogMessage(int id, String msg) {
+		this.id = id;
+		this.msg = msg;
+	}
+}

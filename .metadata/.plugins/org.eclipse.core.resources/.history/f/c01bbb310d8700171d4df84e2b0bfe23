@@ -1,0 +1,15 @@
+package designpatterns.twelve.two;
+
+public class LuxuryCar implements Car {
+
+	@Override
+	public String getCarName(String name) {
+		return "Luxury car";
+	}
+
+	@Override
+	public String getCarFeatures(String features) {
+		return "Conditioning, computer, TV, JPS.";
+	}
+
+}

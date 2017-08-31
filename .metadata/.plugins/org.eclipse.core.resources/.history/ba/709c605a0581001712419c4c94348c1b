@@ -1,9 +1,0 @@
-package designpatterns.nine;
-
-public class LogReader {
-	
-	public synchronized void readLog(){
-		
-	}
-
-}

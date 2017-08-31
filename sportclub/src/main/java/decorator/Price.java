@@ -1,35 +1,16 @@
 package decorator;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.sql.Date;
-import java.time.LocalDate;
-import java.time.Period;
 
-public abstract class Price {
-	private BigDecimal cost;
+public interface Price {
 	
-	public Price(BigDecimal cost){
-		this.cost = cost;
-	}
+	BigDecimal getPrice();
 	
-	public Price(){
-	}
+	String getDescription();
 	
-	public abstract BigDecimal getPrice();
+	void setPrice(Date startDate);
 	
-	public void setPrice(Date startDate) {
-		LocalDate start = startDate.toLocalDate();
-		LocalDate today = LocalDate.now();
-		if(Period.between(start, today).getYears() >= 10){
-			cost = cost.multiply(new BigDecimal(0.95));
-			cost = cost.setScale(2, RoundingMode.FLOOR);
-			System.out.println(cost);
-		}
-	}
-
-	public String getDescription() {
-		return "";
-	}
+	void updateTrack(int id);
 	
 }

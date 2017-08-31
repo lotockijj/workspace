@@ -1,0 +1,6 @@
+package designpatterns.ten
+
+interface Logger {
+	def void log(String msg)
+
+}

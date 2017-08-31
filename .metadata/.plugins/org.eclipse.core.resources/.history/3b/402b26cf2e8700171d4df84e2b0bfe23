@@ -1,0 +1,21 @@
+package designpatterns.twelve.two;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class VehicleFactoryUsingPrototypeTest {
+
+	@Test
+	public void test() {
+		Car car = new LuxuryCar("toyota");
+		SUV suv = new NonLuxurySUV("super lift");
+		
+		VehicleFactory factory = new VehicleFactoryUsingPrototype(car, suv);
+		Car myCar = factory.getCar();
+		System.out.println(myCar.getCarName("Name") + " " + myCar.getCarFeatures());
+		SUV mySUV = factory.getSUV();
+		System.out.println(mySUV.getSUVName("Name") + " " + mySUV.getSUVFeatures());
+	}
+
+}

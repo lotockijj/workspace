@@ -1,12 +1,21 @@
 package services;
 
 import java.math.BigDecimal;
+import java.sql.SQLException;
 
+import dao.DaoServicesTrack;
 import decorator.Price;
-import decorator.ServiceDecorator;
+import tracks.ServicesTrack;
 
-public class Sauna extends ServiceDecorator {
+public class Sauna implements Price{
 	private Price price;
+	private ServicesTrack track;
+	private DaoServicesTrack dao;
+	
+	public Sauna() throws SQLException{
+		track = new ServicesTrack();
+		dao = new DaoServicesTrack();
+	}
 	
 	public Sauna(Price price) {
 		this.price = price;
@@ -24,6 +33,11 @@ public class Sauna extends ServiceDecorator {
 
 	@Override
 	public void setPrice(java.sql.Date startDate) {
+	}
+
+	@Override
+	public void updateTrack(int id) {
+		dao.updateServicesTrack(track, id);
 	}
 	
 

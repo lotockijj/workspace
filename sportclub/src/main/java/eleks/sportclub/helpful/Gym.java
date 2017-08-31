@@ -1,34 +1,52 @@
 package eleks.sportclub.helpful;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.List;
+import java.util.Properties;
 
-import abonnements.AbonnementsTo16and12Times;
 import dao.DaoAbonTrack;
+import dao.DaoBalance;
 import dao.DaoClientMySql;
-import dao.DaoServTrack;
-import dao.DaoServicesTrack;
-import decorator.Price;
+import dao.DaoServTrackMySql;
 import eleks.sportclub.Client;
 import eleks.sportclub.Gender;
-import services.AttendingGym;
-import services.Fresh;
-import services.GeneralMassage;
-import services.Krosfit;
-import services.OneTimeSlippers;
-import services.Sauna;
-import services.Solarium;
-import services.Towel;
-import services.Yoga;
-import tracks.AbonnementsTrack;
-import tracks.ServicesTrack;
 
 public class Gym {
-
-	public static void main(String[] args) throws ParseException{
+	private Connection myConn;
+	
+	public Gym() throws FileNotFoundException, IOException, SQLException{
+		Properties props = new Properties();
+		props.load(new FileInputStream("demo.properties"));
+		String user = props.getProperty("user");
+		String password = props.getProperty("password");
+		String dburl = props.getProperty("dburl");
+		myConn = DriverManager.getConnection(dburl, user, password);
+	}
+	
+	public static void main(String[] args) throws ParseException, FileNotFoundException, SQLException, IOException{
+//		Gym gym = new Gym();
+//		Client client1 = new Client("Lotockiy", "Roman", 35, SqlDate.createSqlDate("10-11-1981"),
+//				"Lviv", Gender.MAN, false, SqlDate.createSqlDate("02-09-2006"));
+//		Client client2 = new Client("Shtoyko", "Vitaliy", 22, 
+//				SqlDate.createSqlDate("05-08-1991"),
+//				"Boorshtyn", Gender.MAN, false, 
+//				SqlDate.createSqlDate("02-08-2017"));
+//		Client client3 = new Client("Trenbach", "Kolya", 36, 
+//				SqlDate.createSqlDate("31-08-1981"),
+//				"Boorshtyn", Gender.MAN, false, 
+//				SqlDate.createSqlDate("02-08-2005"));
+//		DaoClientMySql daoClient = new DaoClientMySql(gym.myConn);
+//		daoClient.addClient(client1);
+//		daoClient.addClient(client2);
+//		daoClient.addClient(client3);
+//		System.out.println("Added.");
+		
 		/*Client client = new Client("Lotockiy", "Roman", 35, SqlDate.createSqlDate("10-11-1981"),
 				"Lviv", Gender.MAN, false, SqlDate.createSqlDate("02-09-2006"));
 		Price price = new AbonnementsTo16and12Times();
@@ -85,6 +103,32 @@ public class Gym {
 			e.printStackTrace();
 		}
 		*/
+		
+		Gym gym = new Gym();
+		DaoClientMySql dao = new DaoClientMySql(gym.myConn);
+		List<Client> list = dao.getAllClients();
+		printList("List of all clients: ", list);
+		
+		DaoServTrackMySql track = new DaoServTrackMySql(gym.myConn);
+		//System.out.println(track.getServicesTrack(1));
+		printList("List of service tracks", track.getAllServicesTracks());
+		
+		DaoAbonTrack daoAbonTr = new DaoAbonTrack(gym.myConn);
+		//System.out.println(daoAbonTr.getAbonnementsTrack(1));
+		printList("List of abonnement tracks", daoAbonTr.getAllAbonnementsTracks());
+		
+		DaoBalance daoBalance = new DaoBalance(gym.myConn);
+		//System.out.println("Balance with id = 7: " + daoBalance.getBalance(7));
+		printList("Balances", daoBalance.getListBalances());
+		
+		
+	}
+	
+	private static <T> void printList(String description, List<T> list){
+		System.out.println("*** " + description + " ***");
+		for(int i = 0; i < list.size(); i++){
+			System.out.println(list.get(i));
+		}
 	}
 
 }

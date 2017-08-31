@@ -1,0 +1,24 @@
+package designpatterns.thirteen.simple;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class PersonTest {
+
+	@Test
+	public void test() {
+		Car car = new Car("Civic");
+		Person person = new Person("Kolya", car);
+		Person personClone = (Person) person.clone();
+		personClone.setName("Taras");
+		Assert.assertEquals("Kolya", person.getName());
+		Assert.assertEquals("Taras", personClone.getName());
+		
+		personClone.getCar().setName("Honda");
+		
+		Assert.assertTrue(person.getCar() == personClone.getCar());
+	}
+
+}
