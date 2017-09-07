@@ -1,0 +1,5 @@
+package designpatterns.twenty;
+
+public abstract class LoggerIntr {
+
+}

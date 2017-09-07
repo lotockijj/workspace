@@ -1,0 +1,18 @@
+package com.epam;
+
+public class PowerOfTwo {
+	
+	public static String isNumberPowerOfTwo(double n){
+		if(n == 2){
+			return "Yes";
+		} else if(n == 1){
+			return "No";
+		} else if(n < 1){
+			return "No";
+		} else {
+			isNumberPowerOfTwo(n/2);
+		} 
+		return "Yes";
+	}
+
+}

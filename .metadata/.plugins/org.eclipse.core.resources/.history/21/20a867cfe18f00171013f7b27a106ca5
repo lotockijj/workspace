@@ -1,0 +1,13 @@
+package designpatterns.fiftinth;
+
+import java.math.BigDecimal;
+
+public class Product extends ProductComponent {
+
+	@Override
+	public BigDecimal getPrice() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

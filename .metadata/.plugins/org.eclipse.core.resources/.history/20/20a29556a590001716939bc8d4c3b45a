@@ -1,0 +1,8 @@
+package designpatterns.eightenn;
+
+import java.math.BigDecimal;
+
+public interface Price {
+	
+	public BigDecimal accept(VisitorIntr v);
+}

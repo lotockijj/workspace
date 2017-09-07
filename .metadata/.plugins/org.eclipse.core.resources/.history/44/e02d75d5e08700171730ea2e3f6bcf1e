@@ -1,5 +1,0 @@
-package designpatterns.fourteen;
-
-public interface Builder {
-
-}

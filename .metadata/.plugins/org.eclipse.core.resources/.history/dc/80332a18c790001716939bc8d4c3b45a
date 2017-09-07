@@ -1,0 +1,7 @@
+package designpatterns.twenty;
+
+import designpatterns.ten.FileLogger;
+
+public class HTMLFileLogger extends FileLogger {
+
+}

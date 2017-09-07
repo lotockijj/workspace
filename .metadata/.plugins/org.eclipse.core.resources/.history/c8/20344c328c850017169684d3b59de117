@@ -1,5 +1,0 @@
-package designpatterns.ten;
-
-public interface Logger {
-
-}

@@ -1,0 +1,27 @@
+package designpatterns.twentyone;
+
+public class PRManager {
+	private BranchManager branchManager;
+	private RegionalDirector regionalDirector;
+	private VicePresident vicePresident;
+	private PresidentCOO presidentCOO;
+	
+	public static void main(String[] args) {
+		PRManager manager = new PRManager();
+		manager.createAuthorizationFlow();
+		
+		PurchaseRequest request = new PurchaseRequest(1, "Office supplies", 150000);
+		manager.branchManager.authorize(request, null);
+	}
+
+	private void createAuthorizationFlow() {
+		branchManager = new BranchManager("Branch manager Roman");
+		regionalDirector = new RegionalDirector("Regional director Vasya");
+		vicePresident = new VicePresident("Vice president Kolya");
+		presidentCOO = new PresidentCOO("President COO Vitalic");
+		
+		branchManager.setNextHandler(regionalDirector);
+		regionalDirector.setNextHandler(vicePresident);
+		vicePresident.setNextHandler(presidentCOO);
+	}
+}

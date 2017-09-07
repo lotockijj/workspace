@@ -1,0 +1,20 @@
+package designpatterns.eightenn;
+
+import java.math.BigDecimal;
+
+import designpatterns.fiftinth.Item;
+import designpatterns.fiftinth.Product;
+
+public class PriceVisitor implements VisitorIntr {
+	
+	@Override
+	public BigDecimal visit(Product product) {
+		return product.getPrice();
+	}
+
+	@Override
+	public BigDecimal visit(Item item) {
+		return item.getPrice();
+	}
+
+}

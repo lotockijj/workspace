@@ -1,0 +1,17 @@
+package com.epam;
+
+import org.junit.Test;
+import org.testng.Assert;
+
+public class PowerOfTwoTest {
+
+	@Test
+	public void test() {
+		Assert.assertEquals("No",  PowerOfTwo.isNumberPowerOfTwo(200));
+		//Assert.assertEquals("Yes", PowerOfTwo.isNumberPowerOfTwo(16));
+		Assert.assertEquals("Yes", PowerOfTwo.isNumberPowerOfTwo(32));
+		Assert.assertEquals("Yes", PowerOfTwo.isNumberPowerOfTwo(512));
+		Assert.assertEquals("No",  PowerOfTwo.isNumberPowerOfTwo(21));
+	}
+
+}

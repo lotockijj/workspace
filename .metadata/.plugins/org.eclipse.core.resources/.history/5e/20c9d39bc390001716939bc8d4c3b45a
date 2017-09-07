@@ -1,0 +1,17 @@
+package designpatterns.twenty;
+
+import designpatterns.ten.FileLogger;
+
+public class FileLoggerAdapter extends LoggerIntr {
+	private FileLogger fileLogger;
+	
+	public FileLoggerAdapter(FileLogger fileLogger) {
+		this.fileLogger = fileLogger;
+	}
+
+	@Override
+	public void logMessage(String msg) {
+		fileLogger.log(msg);
+	}
+
+}

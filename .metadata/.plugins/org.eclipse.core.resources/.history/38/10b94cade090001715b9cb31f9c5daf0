@@ -1,0 +1,18 @@
+package designpatterns.twentyone;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PRHandlerTest {
+	private BranchManager branchManager;
+	private RegionalDirector regionalDirector;
+	private VicePresident vicePresident;
+	private PresidentCOO presidentCOO;
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,14 @@
+package designpatterns.eightenn;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class NameVisitorTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

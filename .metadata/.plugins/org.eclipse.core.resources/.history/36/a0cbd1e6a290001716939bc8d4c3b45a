@@ -1,0 +1,27 @@
+package designpatterns.fiftinth;
+
+import java.math.BigDecimal;
+
+public class Item extends ProductComponent {
+	private String name;
+	private BigDecimal price;
+	
+	public Item(String name, BigDecimal price) {
+		super(name);
+		this.price = price;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public BigDecimal getPrice() {
+		return price;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package designpatterns.eightenn;
+
+public class NameVisitor2 {
+
+}

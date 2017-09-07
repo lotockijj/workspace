@@ -1,0 +1,11 @@
+package designpatterns.twentyone;
+
+public class BranchManager extends PRHandler {
+
+	@Override
+	public boolean authorize(PurchaseRequest request) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,5 @@
+package designpatterns.eightenn;
+
+public interface OrderVisitor {
+
+}

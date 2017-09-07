@@ -1,0 +1,22 @@
+package designpatterns.fiftinth;
+
+import java.math.BigDecimal;
+
+public abstract class ProductComponent {
+	private BigDecimal price;
+
+	public ProductComponent(BigDecimal price) {
+		this.price = price;
+	}
+	
+	public void addComponent(ProductComponent product) throws CompositeException{
+		throw new CompositeException("Invalid operation. Not supported.");
+	}
+	
+	public ProductComponent getComponent(int componentNum) throws CompositeException{
+		throw new CompositeException("Invalid operation. Not supported.");
+	}
+	
+	public abstract BigDecimal getPrice();
+	
+}

@@ -1,0 +1,14 @@
+package designpatterns.twenty;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class FileLoggerAdapterTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
