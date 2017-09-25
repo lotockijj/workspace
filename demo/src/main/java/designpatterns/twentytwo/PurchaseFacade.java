@@ -83,9 +83,8 @@ public class PurchaseFacade {
 
 	@Override
 	public String toString() {
-//		return "PurchaseFacade [name=" + name + ", price=" + price + ", weight=" + weight + ", capacity=" + capacity
-//				+ ", head=" + head + ", date=" + date + ", details=" + details + ", description=" + description + "]";
-		return "Олег проснись ...";
+		return "PurchaseFacade [name=" + name + ", price=" + price + ", weight=" + weight + ", capacity=" + capacity
+				+ ", head=" + head + ", date=" + date + ", details=" + details + ", description=" + description + "]";
 	}
 
 	public boolean getDataFromPropertiesFile() throws ParseException{
