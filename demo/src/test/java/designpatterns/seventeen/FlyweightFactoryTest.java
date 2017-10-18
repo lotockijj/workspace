@@ -1,8 +1,9 @@
 package designpatterns.seventeen;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
+
+import designpatterns.flyweight.FlyweightFactory;
+import designpatterns.flyweight.FlyweightIntr;
 
 public class FlyweightFactoryTest {
 

@@ -1,0 +1,47 @@
+package ekkel._17_10_2017;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class Terminate implements KeyListener{
+	
+	public static void main(String[] args) {
+		new Thread(new Runnable(){
+			@SuppressWarnings("static-access")
+			@Override
+			public void run() {
+				int i = 0;
+				while(Thread.currentThread().interrupted()){
+					System.out.println("Hello" + i++);
+				}
+			}
+		}).start();
+		Terminate terminate = new Terminate();
+		terminate.keyPressed(null);
+		
+	}
+	
+	@Override
+	public void keyPressed(KeyEvent e){
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				this.notify();
+			}
+		});
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+}

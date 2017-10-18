@@ -4,6 +4,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.testng.Assert;
 
+import designpatterns.chainofresponsibility.BranchManager;
+import designpatterns.chainofresponsibility.PresidentCOO;
+import designpatterns.chainofresponsibility.PurchaseRequest;
+import designpatterns.chainofresponsibility.RegionalDirector;
+import designpatterns.chainofresponsibility.VicePresident;
+
 public class PRHandlerTest {
 	private BranchManager branchManager;
 	private RegionalDirector regionalDirector;

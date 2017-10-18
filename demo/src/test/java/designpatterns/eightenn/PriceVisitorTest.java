@@ -1,7 +1,5 @@
 package designpatterns.eightenn;
 
-import static org.junit.Assert.*;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +7,12 @@ import java.util.List;
 import org.junit.Test;
 import org.testng.Assert;
 
-import designpatterns.fiftinth.CompositeException;
-import designpatterns.fiftinth.Item;
-import designpatterns.fiftinth.Product;
-import designpatterns.fiftinth.ProductComponent;
+import designpatterns.composite.CompositeException;
+import designpatterns.composite.Item;
+import designpatterns.composite.Product;
+import designpatterns.composite.ProductComponent;
+import designpatterns.visitor.PriceVisitor;
+import designpatterns.visitor.VisitorIntr;
 
 public class PriceVisitorTest {
 

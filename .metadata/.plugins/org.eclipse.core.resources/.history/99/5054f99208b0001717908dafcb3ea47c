@@ -1,0 +1,5 @@
+package ekkel;
+
+public abstract class Shape {
+
+}

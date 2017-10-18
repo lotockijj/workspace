@@ -1,0 +1,36 @@
+package ekkel._17_10_2017;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+class Terminate implements Runnable{
+    static BufferedReader in ;  static int quit=0;
+     
+    public void run(){
+        String msg = null;
+        while(true){
+            try{
+            msg=in.readLine();
+            }catch(Exception e){}
+             
+            if(msg.equals("q")) {quit=1;break;}
+        }
+    }
+     
+     
+    public static void main(String args[]) throws Exception{
+    in=new BufferedReader(new InputStreamReader(System.in));
+         
+        Thread t1=new Thread(new Terminate());
+        t1.start();
+         
+        System.out.println("press Q THEN ENTER to terminate");
+         
+        while(true){
+            t1.sleep(10);
+            if(quit==1) break;
+            System.out.println("hello buddy");
+         
+        }
+    }
+}

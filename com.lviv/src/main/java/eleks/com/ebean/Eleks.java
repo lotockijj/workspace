@@ -15,6 +15,7 @@ public class Eleks {
 
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("deprecation")
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();

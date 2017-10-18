@@ -1,0 +1,27 @@
+package codility.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import codility.Solution;
+
+public class SolutionTest {
+	public Solution sol;
+	
+	@Before
+	public void setUp() throws Exception {
+		sol = new Solution();
+	}
+
+	@Test
+	public void testRotate() {
+		int[] arr = {3, 8, 9, 7, 6};
+		int[] rotArr = sol.rotate(arr, 3);
+		for (int i = 0; i < rotArr.length; i++) {
+			System.out.print(rotArr[i] + "  ");
+		}
+	}
+
+}

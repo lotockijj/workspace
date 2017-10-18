@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.Vector;
 
 public class CertificatedCandidates implements Iterator<Candidate>{
+	@SuppressWarnings("unused")
 	private Vector<Candidate> v;
 	AllCandidates2 ac;
 	String certificationType;

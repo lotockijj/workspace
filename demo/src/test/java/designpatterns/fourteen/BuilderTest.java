@@ -3,6 +3,10 @@ package designpatterns.fourteen;
 import org.junit.Assert;
 import org.junit.Test;
 
+import designpatterns.builder.Builder;
+import designpatterns.builder.Container;
+import designpatterns.builder.FactoryBuilder;
+
 public class BuilderTest {
 
 	@Test

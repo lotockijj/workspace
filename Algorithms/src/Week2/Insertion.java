@@ -6,10 +6,11 @@ when insertion sorting the following array:
     19 23 31 55 87 40 17 89 11 72 
 Your answer should be a sequence of 10 integers, separated by whitespace.
  */
+@SuppressWarnings("rawtypes")
 public class Insertion {
 
 	private static int count;
-	public static void sort(Comparable[] a){
+	public static void sort( Comparable[] a){
 		int N = a.length;
 		for(int i = 0; i < N; i++){
 			for(int j = i; j > 0; j--){
@@ -36,6 +37,7 @@ public class Insertion {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private static boolean less(Comparable v, Comparable w) {
 		return v.compareTo(w) < 0;
 	}

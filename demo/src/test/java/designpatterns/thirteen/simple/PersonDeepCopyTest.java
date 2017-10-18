@@ -1,7 +1,5 @@
 package designpatterns.thirteen.simple;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 import org.testng.Assert;
 

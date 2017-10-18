@@ -1,0 +1,28 @@
+package softserve.interview;
+
+public class Solution {
+
+	public static String compute(String s){
+		StringBuilder strB = new StringBuilder();
+		int index = 1;
+		for (int i = 0; i < s.length(); i++) {
+			for (int j = 0; j < s.length(); j++) {
+				if(i != j){
+					if(s.charAt(i) == s.charAt(j) && !Character.toString(s.charAt(i)).equals(" ")){
+						index++;
+					}
+				}
+			}
+			if(!Character.toString(s.charAt(i)).equals(" ")){
+				strB.append(s.charAt(i)).append("=").append(index).append("\n");
+			}
+			index = 1;
+		}
+		return strB.toString();
+	}
+
+	public static void main(String[] args) {
+		String input = "Hello Hello Roman";
+		System.out.println(Solution.compute(input));
+	}
+}

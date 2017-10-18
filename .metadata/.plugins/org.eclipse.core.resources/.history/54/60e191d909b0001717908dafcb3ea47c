@@ -1,0 +1,30 @@
+package ekkel;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ShapeTest {
+	private Circle circle;
+	private Square square;
+	
+	@Before
+	public void setUp() throws Exception {
+		circle = new Circle();
+		square = new Square();
+	}
+
+	@Test
+	public void testDraw() {
+		Shape.doDraw(circle);
+		Shape.doErase(square);
+	}
+
+	@Test
+	public void testErase() {
+		Shape.doErase(circle);
+		Shape.doErase(square);
+	}
+
+}

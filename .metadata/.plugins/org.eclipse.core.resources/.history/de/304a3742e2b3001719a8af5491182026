@@ -1,0 +1,47 @@
+package softserve.interview;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution {
+
+	// my solution was much worse (without !Character.toString(s.charAt(i)).equals(" ") )... 
+	// and contained many small mistake... 
+	public static String computeMySolution(String s){
+		StringBuilder strB = new StringBuilder();
+		int index = 1;
+		for (int i = 0; i < s.length(); i++) {
+			for (int j = 0; j < s.length(); j++) {
+				if(i != j){
+					if(s.charAt(i) == s.charAt(j) && !Character.toString(s.charAt(i)).equals(" ")){
+						index++;
+					}
+				}
+			}
+			if(!Character.toString(s.charAt(i)).equals(" ")){
+				strB.append(s.charAt(i)).append("=").append(index).append("\n");
+			}
+			index = 1;
+		}
+		return strB.toString();
+	}
+	
+	public static String compute(String s){
+		Map<String, Integer> map = new HashMap<>();
+		for (int i = 0; i < s.length(); i++) {
+			if(map.containsValue(s.charAt(i))){
+				int index = map.get(Character.toString(s.charAt(i)));
+				map.put(Character.toString(s.charAt(i)), ++index);
+			} else {
+				map.put(Character.toString(s.charAt(i)), 1);
+			}
+		}
+		return map.toString();
+	}
+
+	public static void main(String[] args) {
+		String input = "Hello Hello Roman";
+		System.out.println(Solution.computeMySolution(input));
+		System.out.println(Solution.compute(input));
+	}
+}

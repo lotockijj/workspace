@@ -7,12 +7,12 @@ import java.util.List;
 import org.junit.Test;
 import org.testng.Assert;
 
-import designpatterns.eightenn.NameVisitor;
-import designpatterns.eightenn.VisitorIntr;
-import designpatterns.fiftinth.CompositeException;
-import designpatterns.fiftinth.Item;
-import designpatterns.fiftinth.Product;
-import designpatterns.fiftinth.ProductComponent;
+import designpatterns.composite.CompositeException;
+import designpatterns.composite.Item;
+import designpatterns.composite.Product;
+import designpatterns.composite.ProductComponent;
+import designpatterns.visitor.NameVisitor;
+import designpatterns.visitor.VisitorIntr;
 
 public class NameVisitorTest {
 

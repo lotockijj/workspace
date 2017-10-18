@@ -5,6 +5,11 @@ import java.math.BigDecimal;
 import org.junit.Test;
 import org.testng.Assert;
 
+import designpatterns.composite.CompositeException;
+import designpatterns.composite.Item;
+import designpatterns.composite.Product;
+import designpatterns.composite.ProductComponent;
+
 public class ProductComponentTest {
 
 	@Test

@@ -1,0 +1,13 @@
+package ekkel;
+
+public abstract class Shape {
+
+	public void doSomething(Shape shape){
+		shape.draw();
+		shape.erase();
+	}
+	
+	public abstract void draw();
+	
+	public abstract void erase();
+}
