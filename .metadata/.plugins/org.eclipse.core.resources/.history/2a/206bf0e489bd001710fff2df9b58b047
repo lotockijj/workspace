@@ -1,0 +1,34 @@
+package initialization;
+
+import java.util.List;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
+import model.Droid;
+
+public class lnitializer {
+	
+	@SuppressWarnings("unused")
+	private static void initializeTeams(ObservableList<Droid> obsList, final List<Droid> firstTeam) {
+		obsList = FXCollections.observableList(firstTeam);
+		obsList.addListener((ListChangeListener<Droid>) change -> {
+			System.out.println("Something changed in First team. ");
+			if(!checkGroupForFlag(obsList)){
+				System.out.println("First team lost. ");
+				System.exit(1);
+			}
+		});
+	}
+
+	private static boolean checkGroupForFlag(ObservableList<Droid> list) {
+		boolean hasFlag = false;
+		for (int i = 0; i < list.size(); i++) {
+			if(list.get(i).getFlag() == true){
+				hasFlag = true;
+				break;
+			} 
+		}
+		return hasFlag;
+	}
+}

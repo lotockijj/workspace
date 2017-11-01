@@ -1,0 +1,17 @@
+package model;
+
+public class Fighter extends Droid {
+
+	@Override
+	public void performance() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void getShot() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

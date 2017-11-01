@@ -1,2 +1,6 @@
 1508162929478	Delete element
 1508316369658	Rename method 'compute'
+1508337787161	Rename field 'checkout'
+1508337960825	Rename method 'load'
+1508425981302	Rename local variable 'counted'
+1508426277870	Rename method 'computeOneMoreWithREGEX'

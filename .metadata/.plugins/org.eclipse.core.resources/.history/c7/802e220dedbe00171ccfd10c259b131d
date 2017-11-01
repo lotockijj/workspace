@@ -1,0 +1,74 @@
+package controller;
+
+import java.util.List;
+import java.util.Random;
+
+import factory.TeamOfDroids;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
+import model.Droid;
+
+public class BattleArena {
+	ObservableList<Droid> groupOne;
+	ObservableList<Droid> groupTwo;
+
+	public BattleArena(List<Droid> firstTeam, List<Droid> secondTeam){
+		initializeFirstTeamAsObservable(firstTeam);
+		initializeSecondTeamAsObservable(secondTeam);
+	}
+	
+	private void initializeFirstTeamAsObservable(List<Droid> firstTeam) {
+		groupOne = FXCollections.observableList(firstTeam);
+		groupOne.addListener((ListChangeListener<Droid>) change -> {
+			if(!checkGroupForFlag(groupOne)){
+				System.out.println("First team lost: " + groupOne.toString() + 
+						"\n" + "Second team won" +  groupTwo.toString());
+				System.exit(1);
+			}
+		});
+	}
+	
+	private void initializeSecondTeamAsObservable(List<Droid> secondTeam) {
+		groupTwo = FXCollections.observableList(secondTeam);
+		groupTwo.addListener((ListChangeListener<Droid>) change -> {
+			if(!checkGroupForFlag(groupTwo)){
+				System.out.println("Second team lost: " + groupTwo.toString() + 
+						"\n" + "First team won: " + groupOne.toString());
+				System.exit(1);
+			}
+		});
+	}
+
+	private boolean checkGroupForFlag(List<Droid> list) {
+		boolean hasFlag = false;
+		for (int i = 0; i < list.size(); i++) {
+			if(list.get(i).getFlag() == true){
+				hasFlag = true;
+				break;
+			} 
+		}
+		return hasFlag;
+	}
+	
+	private void play() throws InterruptedException{
+		Random r = new Random();
+		int countRound = 0;
+		while(true){
+			countRound++;
+			System.out.println("***** Round " + countRound + " *****");
+			Thread.sleep(500);
+			groupTwo.get(r.nextInt(groupTwo.size())).performance(groupOne);
+			Thread.sleep(500);
+			groupOne.get(r.nextInt(groupOne.size())).performance(groupTwo);
+		}
+	}
+	
+	public static void main(String[] args) throws InterruptedException {
+		TeamOfDroids teams = new TeamOfDroids();
+		BattleArena arena = new BattleArena(teams.getFirstTeam(), teams.getSecondTeam());
+		arena.play();
+	}
+
+
+}

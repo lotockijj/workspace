@@ -1,0 +1,15 @@
+1509309186962	Delete element
+1509309206388	Rename package 'epam.battle'
+1509309223286	Rename package 'epam.battle'
+1509309324197	Rename type 'AppTest'
+1509354621562	Rename field 'level'
+1509354642847	Rename local variable 'level'
+1509354675427	Rename local variable 'level'
+1509356214364	Rename local variable 'level'
+1509361760805	Rename field 'observableFirstTeam'
+1509361776000	Rename field 'observableSecondTeam'
+1509377499879	Rename method 'checkGroupOneForFlag'
+1509378560847	Delete element
+1509381200156	Rename method 'initializeTeams'
+1509442496276	Rename field 'flagsPosition'
+1509467054521	Rename method 'isAlive'

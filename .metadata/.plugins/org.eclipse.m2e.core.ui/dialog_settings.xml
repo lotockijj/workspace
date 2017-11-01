@@ -104,6 +104,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Робота\workspace\sportclub"/>
+			<item value="D:\Робота\workspace\demo\src\main\java\ekkel\_20_10_2017\next\Z.java"/>
 			<item value="D:\Робота\workspace\sportclub\src\test\java\services\AttendingGymTest.java"/>
 			<item value="D:\Робота\workspace\sportclub\src\main\java\eleks\sportclub"/>
 			<item value="D:\Робота\workspace"/>
@@ -125,6 +127,9 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="epam.battle"/>
+			<item value="epam.roman"/>
+			<item value="epam.first"/>
 			<item value="eleks.com.ebean"/>
 			<item value="eleks.WorkWithSockets"/>
 			<item value="eleks.sportclub"/>
@@ -132,10 +137,14 @@
 			<item value="org."/>
 		</list>
 		<list key="groupId">
+			<item value="epam"/>
 			<item value="eleks"/>
 			<item value="com.example"/>
 		</list>
 		<list key="artifactId">
+			<item value="battle"/>
+			<item value="roman"/>
+			<item value="first"/>
 			<item value="com.lviv"/>
 			<item value="WorkWithSockets"/>
 			<item value="sportclub"/>

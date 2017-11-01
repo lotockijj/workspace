@@ -1,5 +1,6 @@
 package week3QuickSort;
 
+@SuppressWarnings({ "unused", "rawtypes" })
 public class QuicSort {
 	
 	private static int portition(Comparable[] a, int lo, int hi){
@@ -19,6 +20,7 @@ public class QuicSort {
 		return j; //return index of item now known to be in place
 	}
 	
+	@SuppressWarnings("unchecked")
 	private static boolean less(Comparable v, Comparable w) {
 		return v.compareTo(w) < 0;
 	}

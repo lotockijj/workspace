@@ -1,0 +1,68 @@
+package controller;
+
+import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
+
+import factory.TeamOfDroids;
+import model.Droid;
+
+public class BattleArena {
+	ObservableList<Droid> groupOne;
+	ObservableList<Droid> groupTwo;
+
+	public BattleArena(List<Droid> firstTeam, List<Droid> secondTeam){
+		initializeTeams(firstTeam, secondTeam);
+	}
+
+	private void initializeTeams(List<Droid> firstTeam, List<Droid> secondTeam) {
+		groupOne = FXCollections.observableList(firstTeam);
+		groupOne.addListener((ListChangeListener<Droid>) change -> {
+			if(!checkGroupForFlag(groupOne)){
+				System.out.println("First team lost: " + groupOne.toString() + 
+						"\n" + groupTwo.toString());
+				System.exit(1);
+			}
+		});
+
+		groupTwo = FXCollections.observableList(secondTeam);
+		groupTwo.addListener((ListChangeListener<Droid>) change -> {
+			if(!checkGroupForFlag(groupTwo)){
+				System.out.println("Second team lost: " + groupTwo.toString() + 
+						"\n" + groupOne.toString());
+				System.exit(1);
+			}
+		});
+	}
+
+	private boolean checkGroupForFlag(List<Droid> list) {
+		boolean hasFlag = false;
+		for (int i = 0; i < list.size(); i++) {
+			if(list.get(i).getFlag() == true){
+				hasFlag = true;
+				break;
+			} 
+		}
+		System.out.println(list.toString());
+		return hasFlag;
+	}
+	
+	public static void main(String[] args) throws InterruptedException {
+		TeamOfDroids teams = new TeamOfDroids();
+		BattleArena arena = new BattleArena(teams.getFirstTeam(), teams.getSecondTeam());
+		while(true){
+			for (int j = 0; j < arena.groupTwo.size(); j++) {
+				arena.groupTwo.get(j).performance(arena.groupOne);
+				Thread.sleep(500);
+			}
+			for (int i = 0; i < arena.groupOne.size(); i++) {
+				arena.groupOne.get(i).performance(arena.groupTwo);
+				Thread.sleep(500);
+			}
+			System.out.println("***********************************************");
+		}
+	}
+
+
+}

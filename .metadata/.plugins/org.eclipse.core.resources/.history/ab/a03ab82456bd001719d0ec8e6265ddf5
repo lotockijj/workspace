@@ -1,0 +1,76 @@
+package model;
+
+import java.util.List;
+
+public abstract class Droid{
+	private String name;
+	private int health;
+	private int energy;
+	private int power;
+	private int price;
+	private boolean flag;
+	
+	public Droid(String name, int health, int energy, int power, int price) {
+		this.name = name;
+		this.health = health;
+		this.energy = energy;
+		this.power = power;
+		this.price = price;
+	}
+	
+	public abstract void performance(List<Droid> droid);
+	
+	public void getShot(int power) {
+		health -= power; 
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public int getHealth() {
+		return health;
+	}
+
+	public int getEnergy() {
+		return energy;
+	}
+
+	public int getPower() {
+		return power;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+	
+	public boolean getFlag(){
+		return flag;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setHealth(int health) {
+		this.health = health;
+	}
+
+	public void setEnergy(int energy) {
+		this.energy = energy;
+	}
+
+	public void setPower(int power) {
+		this.power = power;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public void setFlag(final boolean flag){
+		this.flag = flag;
+	}
+    
+}

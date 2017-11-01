@@ -1,0 +1,25 @@
+package state;
+
+import java.util.Random;
+
+public class Aim {
+	private int flagPosition;
+	private Random randomPosition;
+	
+	public Aim(){
+		flagPosition = -1;
+		randomPosition = new Random();
+	}
+	
+	public int getFlagsPosition(int sumOfDroids) {
+		if(flagPosition == -1){
+			return randomPosition.nextInt(sumOfDroids);
+		}
+		return flagPosition;
+	}
+	
+	public void setFlagsPosition(int flagPosition) {
+		this.flagPosition = flagPosition;
+	}
+	
+}

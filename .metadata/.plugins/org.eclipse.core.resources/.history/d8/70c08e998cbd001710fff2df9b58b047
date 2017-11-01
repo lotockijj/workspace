@@ -1,0 +1,40 @@
+package factory;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import model.Droid;
+import model.Fighter;
+
+public class TeamOfDroids {
+	Droid firstDroid = new Fighter("First", 4, 10, 2, 1, false);
+	Droid secondDroid = new Fighter("Second", 4, 10, 2, 1, true);
+	Droid thirdDroid = new Fighter("Third", 4, 10, 2, 1, false);
+	Droid forthDroid = new Fighter("Forth", 4, 10, 2, 1, false);
+	Droid fifthDroid = new Fighter("Fifth", 4, 10, 2, 1, false);
+	Droid sixthDroid = new Fighter("Sixth", 4, 10, 2, 1, false);
+	
+	
+	List<Droid> firstTeam;
+	List<Droid> secondTeam;
+	
+	public TeamOfDroids(){
+		firstTeam = new LinkedList<>();
+		firstTeam.add(firstDroid);
+		firstTeam.add(secondDroid);
+		firstTeam.add(thirdDroid);
+		secondTeam = new LinkedList<>();
+		secondTeam.add(forthDroid);
+		secondTeam.add(fifthDroid);
+		secondTeam.add(sixthDroid);
+	}
+
+	public List<Droid> getFirstTeam() {
+		return firstTeam;
+	}
+
+	public List<Droid> getSecondTeam() {
+		return secondTeam;
+	}
+
+}

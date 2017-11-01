@@ -1,0 +1,21 @@
+package model;
+
+public class Fighter extends Droid {
+
+	public Fighter(String name, int health, int energy, int power, int level) {
+		super(name, health, energy, power, level);
+	}
+
+	@Override
+	public void performance(Droid droid) {
+		System.out.println(this.getName() + " show " + droid.getName());
+		droid.getShot(this.getPower());
+
+	}
+
+	@Override
+	public void getShot(int power) {
+		setHealth(getHealth() - power); 
+	}
+
+}

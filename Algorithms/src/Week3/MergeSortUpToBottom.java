@@ -1,5 +1,6 @@
 package Week3;
 
+@SuppressWarnings("rawtypes")
 public class MergeSortUpToBottom {
 
 	private static Comparable[] aux; 
@@ -26,6 +27,7 @@ public class MergeSortUpToBottom {
 		return isSorted(a, lo, mid);
 	}
 
+	@SuppressWarnings("unchecked")
 	private static boolean less(Comparable v, Comparable w) {
 		return v.compareTo(w) < 0;
 	}
