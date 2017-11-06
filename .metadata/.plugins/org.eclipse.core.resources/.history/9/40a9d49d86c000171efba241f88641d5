@@ -1,0 +1,66 @@
+package factory;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import model.Droid;
+
+public class TeamBuilder {
+	private List<Droid> droids;
+
+	private TeamBuilder(Builder builder){
+		droids = builder.sketchDroids;
+	}
+
+	public List<Droid> getDroids() {
+		return droids;
+	}
+
+	public static class Builder{
+		List<Droid> sketchDroids;
+
+		public Builder(){
+			sketchDroids = new LinkedList<>();
+		}
+
+		public Builder addFighter(){ 
+			sketchDroids.add(DroidFactory.getFighter());
+			return this; 
+		}
+
+		public Builder addDestroyer(){
+			sketchDroids.add(DroidFactory.getDestroyer());
+			return this;
+		}
+
+		public Builder addPortal(){
+			Droid droid = DroidFactory.getPortal();
+			droid.setDroids(sketchDroids);
+			sketchDroids.add(DroidFactory.getPortal());
+			return this;
+		}
+
+		public Builder addRadar(){
+			Droid droid = DroidFactory.getRadar();
+			droid.setDroids(sketchDroids);
+			sketchDroids.add(DroidFactory.getRadar());
+			return this;
+		}
+
+		public Builder addRepairer(){
+			Droid droid = DroidFactory.getRepairer();
+			droid.setDroids(sketchDroids);
+			sketchDroids.add(droid);
+			return this;
+		}
+
+		public TeamBuilder build() {
+			return new TeamBuilder(this);
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		
+	}
+} 

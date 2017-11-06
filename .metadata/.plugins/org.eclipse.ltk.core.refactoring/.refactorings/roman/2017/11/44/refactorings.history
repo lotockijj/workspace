@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;sizeOfLength&apos; in &apos;task2.Plateau.solution(...)&apos; to &apos;size&apos;&#x0D;&#x0A;- Original project: &apos;roman&apos;&#x0D;&#x0A;- Original element: &apos;task2.Plateau.solution(int[]).sizeOfLength&apos;&#x0D;&#x0A;- Renamed element: &apos;sizeOfLength&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;sizeOfLength&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;task2{Plateau.java[Plateau~solution~\[I@sizeOfLength!378!398!382!393!I!0!false" name="size" references="true" stamp="1509717761276" version="1.0"/>
+</session>

@@ -1,0 +1,16 @@
+package task2;
+
+import org.junit.Test;
+
+public class PlateauTest {
+
+	@Test
+	public void testSolution() {
+		int[] arr = {1, 2, 2, 1, 4, 5, 5, 5, 2, 10, 2, 22};
+		int[] result = Plateau.solution(arr);
+		for (int i = 0; i < result.length; i++) {
+			System.out.print(result[i] + " | ");
+		}
+	}
+
+}

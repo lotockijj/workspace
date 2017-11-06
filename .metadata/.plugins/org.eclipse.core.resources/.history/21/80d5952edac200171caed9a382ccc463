@@ -1,0 +1,8 @@
+package epam.roman;
+
+public class IsNotNumberException extends Exception {
+
+	public IsNotNumberException(String s){
+		super(s);
+	}
+}

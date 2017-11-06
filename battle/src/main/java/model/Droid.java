@@ -108,6 +108,8 @@ public abstract class Droid{
 		}
 		return strB.toString();
 	}
-	
+
+	public void setDroids(List<Droid> firstTeam) {
+	}
 	
 }

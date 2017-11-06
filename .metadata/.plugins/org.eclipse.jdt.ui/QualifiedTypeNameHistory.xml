@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="newer.BubbleSort"/>
-<fullyQualifiedTypeName name="newer.SelectionSort"/>
-<fullyQualifiedTypeName name="newer.InsertionSort"/>
-<fullyQualifiedTypeName name="newer.QuickSort"/>
-<fullyQualifiedTypeName name="newer.MergeSort"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="lambda.Person"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
@@ -36,14 +31,10 @@
 <fullyQualifiedTypeName name="ekkel._17_10_2017.EnumTest"/>
 <fullyQualifiedTypeName name="ekkel._17_10_2017.ConnectionManager"/>
 <fullyQualifiedTypeName name="ekkel._17_10_2017.ConnectionManager.Connection"/>
-<fullyQualifiedTypeName name="org.junit.Assert"/>
 <fullyQualifiedTypeName name="ekkel._20_10_2017.Cleanser"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="java.util.stream.Stream"/>
-<fullyQualifiedTypeName name="model.Fighter"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="controller.BattleArena"/>
 <fullyQualifiedTypeName name="java.awt.SecondaryLoop"/>
 <fullyQualifiedTypeName name="javax.swing.event.EventListenerList"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -52,12 +43,21 @@
 <fullyQualifiedTypeName name="javafx.collections.ListChangeListener"/>
 <fullyQualifiedTypeName name="factory.TeamOfDroids"/>
 <fullyQualifiedTypeName name="javafx.collections.ObservableList"/>
-<fullyQualifiedTypeName name="model.Destroyer"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="model.Radar"/>
 <fullyQualifiedTypeName name="state.Position"/>
 <fullyQualifiedTypeName name="java.lang.NoSuchFieldError"/>
+<fullyQualifiedTypeName name="model.Fighter"/>
+<fullyQualifiedTypeName name="model.Destroyer"/>
 <fullyQualifiedTypeName name="model.Portal"/>
 <fullyQualifiedTypeName name="model.Repairer"/>
+<fullyQualifiedTypeName name="factory.DroidFactory"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="factory.TeamBuilder"/>
+<fullyQualifiedTypeName name="factory.TeamBuilder.Builder"/>
+<fullyQualifiedTypeName name="controller.BattleArena"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="task2.Minesweeper"/>
 </qualifiedTypeNameHistroy>

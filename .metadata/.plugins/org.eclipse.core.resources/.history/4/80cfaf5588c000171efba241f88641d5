@@ -1,0 +1,33 @@
+package controller;
+
+import java.util.List;
+
+import factory.DefaltSettings;
+import factory.TeamBuilder;
+import model.Droid;
+
+public class Game {
+	
+	public static void main(String[] args) throws InterruptedException {
+//		DefaltSettings teams = new DefaltSettings();
+//		BattleArena arena = new BattleArena(teams.getFirstTeam(), teams.getSecondTeam());
+//		arena.play();
+		
+		TeamBuilder teamBuilder = new TeamBuilder.Builder()
+				.addDestroyer().addFighter().addPortal()
+				.addRadar().addRepairer().build();
+		
+		List<Droid> droidsFirstTeam = teamBuilder.getDroids();
+		
+		TeamBuilder teamBuilder2 = new TeamBuilder.Builder().addFighter()
+				.addDestroyer().addPortal().addRadar().addRepairer().build();
+		
+		List<Droid> droidsSecondTeam = teamBuilder2.getDroids();
+		
+		BattleArena arena = new BattleArena(droidsFirstTeam, droidsSecondTeam);
+		arena.play();
+		
+	}
+
+
+}

@@ -1,0 +1,6 @@
+package epam.roman.exception;
+
+public interface MyAutoClosable {
+
+	public void close() throws Exception;
+}

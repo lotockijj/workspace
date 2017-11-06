@@ -34,13 +34,13 @@ public class DefaltSettings {
 			firstTeam.add(new Fighter(n, 4, 10, 2, 1));
 		}
 		firstTeam.add(new Destroyer("Destroyer first team" , 4, 10, 2, 1));
-		Radar radar = new Radar("Radar first team", 4, 10, 2, 5);
+		Droid radar = new Radar("Radar first team", 4, 10, 2, 5);
 		radar.setDroids(firstTeam);
 		firstTeam.add(radar);
-		Portal portal = new Portal("Portal first team", 10, 10, 10, 10);
+		Droid portal = new Portal("Portal first team", 10, 10, 10, 10);
 		portal.setDroids(firstTeam);
 		firstTeam.add(portal);
-		Repairer repairer = new Repairer("Repairer", 10, 10, 10, 10);
+		Droid repairer = new Repairer("Repairer", 10, 10, 10, 10);
 		repairer.setDroids(firstTeam);
 		firstTeam.add(repairer);
 		Aim aim = new Aim();

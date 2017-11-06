@@ -56,10 +56,11 @@ public class BattleArena {
 		int countRound = 0;
 		while(!stopGame){
 			countRound++;
+			Thread.sleep(350);
 			System.out.println("***** ROUND " + countRound + " *****");
-			Thread.sleep(500);
+			Thread.sleep(350);
 			groupTwo.get(r.nextInt(groupTwo.size())).performance(groupOne);
-			Thread.sleep(500);
+			Thread.sleep(350);
 			groupOne.get(r.nextInt(groupOne.size())).performance(groupTwo);
 		}
 	}

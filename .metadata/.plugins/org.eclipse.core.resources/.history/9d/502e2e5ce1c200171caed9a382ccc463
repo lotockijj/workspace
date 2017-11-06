@@ -1,0 +1,9 @@
+package epam.roman;
+
+public class IsNotNumberException extends Exception {
+	private static final long serialVersionUID = 1L;
+
+	public IsNotNumberException(String s){
+		super(s);
+	}
+}

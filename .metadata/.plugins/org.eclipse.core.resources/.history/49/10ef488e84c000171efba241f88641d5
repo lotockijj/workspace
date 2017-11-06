@@ -1,0 +1,13 @@
+package controller;
+
+import java.util.List;
+
+import factory.TeamBuilder;
+import model.Droid;
+
+public class Game2 {
+	
+	public static void main(String[] args) {
+		List<Droid> firstTeam = TeamBuilder.addFighter();
+	}
+}

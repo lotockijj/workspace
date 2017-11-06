@@ -1,0 +1,21 @@
+package epam.roman.exception;
+
+public class MyClosable implements AutoCloseable {
+
+	@Override
+	public void close() throws Exception {
+		 System.out.println("Closing new connection()");
+	}
+	
+	public void open(){
+		System.out.println("Open resource. ");
+	}
+
+	public static void main(String[] args){
+		try(MyClosable myClosable = new MyClosable()){
+			myClosable.open();
+		} catch ( Exception e){
+			e.printStackTrace();
+		}
+	}
+}

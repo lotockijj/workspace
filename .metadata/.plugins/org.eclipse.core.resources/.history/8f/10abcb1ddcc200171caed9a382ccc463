@@ -1,0 +1,11 @@
+package epam.roman.exception;
+
+public class MyClosable implements MyAutoClosable {
+
+	@Override
+	public void close() throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+}

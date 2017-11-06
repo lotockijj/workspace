@@ -1,0 +1,81 @@
+package factory;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+
+import model.Droid;
+import state.Aim;
+
+public class TeamBuilder {
+	private List<Droid> droids;
+
+	private TeamBuilder(Builder builder){
+		droids = builder.sketchDroids;
+	}
+
+	public List<Droid> getDroids() {
+		return droids;
+	}
+
+	public static class Builder{
+		List<Droid> sketchDroids;
+
+		public Builder(){
+			sketchDroids = new LinkedList<>();
+		}
+
+		public Builder addFighter(){ 
+			sketchDroids.add(DroidFactory.getFighter());
+			return this; 
+		}
+
+		public Builder addDestroyer(){
+			sketchDroids.add(DroidFactory.getDestroyer());
+			return this;
+		}
+
+		public Builder addPortal(){
+			Droid droid = DroidFactory.getPortal();
+			droid.setDroids(sketchDroids);
+			sketchDroids.add(droid);
+			return this;
+		}
+
+		public Builder addRadar(){
+			Droid droid = DroidFactory.getRadar();
+			droid.setDroids(sketchDroids);
+			sketchDroids.add(droid);
+			return this;
+		}
+
+		public Builder addRepairer(){
+			Droid droid = DroidFactory.getRepairer();
+			droid.setDroids(sketchDroids);
+			sketchDroids.add(droid);
+			return this;
+		}
+
+		public TeamBuilder build() {
+			setAim();
+			setFlag();
+			return new TeamBuilder(this);
+		}
+		
+		public void setAim(){
+			Aim aim = new Aim();
+			for (int i = 0; i < sketchDroids.size(); i++) {
+				sketchDroids.get(i).setAim(aim);
+			}
+		}
+	
+		public void setFlag(){
+			Random r = new Random();
+			int position = r.nextInt(sketchDroids.size());
+			sketchDroids.get(position).setFlag(true);
+			position = r.nextInt(sketchDroids.size());
+			sketchDroids.get(position).setFlag(true);
+		}
+	}
+
+} 

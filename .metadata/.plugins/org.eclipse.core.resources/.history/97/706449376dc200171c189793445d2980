@@ -1,0 +1,91 @@
+package task2;
+
+import java.util.Random;
+
+/**Minesweeper. Write a program Minesweeper.java that takes 3 command-line arguments M, N, and p 
+ * and produces an M-by-N boolean array where each entry is occupied with probability p. 
+ * In the minesweeper game, occupied cells represent bombs and empty cells represent safe cells.
+ * Print out the array using an asterisk for bombs and a period for safe cells. 
+ * Then, replace each safe square with the number of neighboring bombs 
+ * (above, below, left, right, or diagonal) and print out the solution..
+ * Try to write your code so that you have as few special cases as possible to deal with, 
+ * by using an (M+2)-by-(N+2) boolean array.
+ * спробуйте реалізувати консольне меню не використовуючи if та case.
+*/
+
+public class Minesweeper {
+	int[][] arr;
+	int m;
+	int n;
+	float p;
+	Random r;
+	
+	public Minesweeper(int m, int n, float p){
+		arr = new int[m][n];
+		if( p < 0 || p > 1){
+			throw new ArithmeticException();
+		}
+		this.p = p;
+		r = new Random();
+	}
+	
+	public void populateArrayWithBombs(){
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				float chRandom = r.nextFloat();
+				arr[i][j] = (p > chRandom) ? 0 : 1;
+			}
+		}
+	}
+
+	public void printArray(){
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + "|");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void setValuesNeighboring(){
+		for (int i1 = 0; i1 < arr.length; i1++) {
+			for (int j1 = 0; j1 < arr[i1].length; j1++) {
+				int n = i1;
+				int m = j1;
+				
+				if(withinRange(n + 1, m) && arr[n + 1][m] == 0) arr[n][m]++;
+				if(withinRange(n - 1, m) && arr[n - 1][m] == 0) arr[n][m]++;
+				if(withinRange(n, m + 1) && arr[n][m + 1] == 0) arr[n][m]++;
+				if(withinRange(n, m - 1) && arr[n][m - 1] == 0) arr[n][m]++;
+				
+				if(withinRange(n + 1, m + 1) && arr[n + 1][m + 1] == 0) arr[n][m]++;
+				if(withinRange(n + 1, m - 1) && arr[n + 1][m - 1] == 0) arr[n][m]++;
+				if(withinRange(n - 1, m + 1) && arr[n - 1][m + 1] == 0) arr[n][m]++;
+				if(withinRange(n - 1, m - 1) && arr[n - 1][m - 1] == 0) arr[n][m]++;
+			}
+		}
+	}
+	
+	private boolean withinRange(int n2, int m2) {
+		if(n2 < arr.length && m2 < arr[0].length && n2 >= 0 && m2 >= 0){
+			return true;
+		}
+		return false;
+	}
+
+	private void minusOneIfNotZero(){
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				if(arr[i][j] != 0) arr[i][j]--;
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		Minesweeper minesweeper = new Minesweeper(4, 3, 0.25f);
+		minesweeper.populateArrayWithBombs();
+		minesweeper.setValuesNeighboring();
+		minesweeper.minusOneIfNotZero();
+		minesweeper.printArray();
+	}
+}

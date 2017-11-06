@@ -1,5 +1,6 @@
 package epam.roman;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -9,8 +10,9 @@ public class Input {
 
 	public static Solution getUserInput(){
 		int firstNumber = 0, secondNumber = 0, sizeOfSet = 0;
-		try(Scanner scanner = new Scanner(System.in)){
-			while(true){
+		Scanner scanner = new Scanner(System.in);
+		while(true){
+			try{
 				System.out.println("Enter the lowest number of the interval: ");
 				firstNumber = scanner.nextInt();
 				System.out.println("Enter the highest number of the interval: ");
@@ -19,12 +21,20 @@ public class Input {
 				sizeOfSet = scanner.nextInt();
 				if(isValid(firstNumber, secondNumber, sizeOfSet)){
 					break;
-				} 
+				}
+			} catch (NumberFormatException | InputMismatchException e){
+				System.err.println("Value is not number, please try again");
+				scanner.next();
 			}
-		} catch (Exception e){
-			e.printStackTrace();
 		}
+		close(scanner);
 		return new Solution(firstNumber, secondNumber, sizeOfSet);
+	}
+
+	private static void close(Scanner scanner) {
+		if(scanner != null){
+			scanner.close();
+		}
 	}
 
 	private static boolean isValid(int firstNumber, int secondNumber, int sizeOfSet) {
