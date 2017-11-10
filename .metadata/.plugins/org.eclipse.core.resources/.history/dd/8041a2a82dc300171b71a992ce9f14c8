@@ -1,0 +1,13 @@
+
+2017-11-06 16:22:47 INFO  Log4jExample:18 - Hello this is an info message
+2017-11-06 16:22:47 INFO  Log4jExample:19 - Hello Roman :) :) :) 
+2017-11-06 20:36:30 INFO  Log4jExample:18 - Hello this is an info message
+2017-11-06 20:36:30 INFO  Log4jExample:19 - Hello Roman :) :) :) 
+2017-11-06 21:09:50 INFO  Log4jExample:18 - Hello this is an info message
+2017-11-06 21:09:50 INFO  Log4jExample:19 - Hello Roman :) :) :) 
+2017-11-06 21:58:37 INFO  Log4jExample:18 - Hello this is an info message
+2017-11-06 21:58:37 INFO  Log4jExample:19 - Hello Roman :) :) :) 
+2017-11-06 21:59:24 INFO  Log4jExample:18 - Hello this is an info message
+2017-11-06 21:59:24 INFO  Log4jExample:19 - Hello Roman :) :) :) 
+2017-11-06 22:04:00 INFO  Log4jExample:19 - Hello this is an info message
+2017-11-06 22:04:00 INFO  Log4jExample:20 - Hello Roman :) :) :) 

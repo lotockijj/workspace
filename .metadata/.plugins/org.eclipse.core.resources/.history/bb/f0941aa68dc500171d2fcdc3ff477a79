@@ -1,0 +1,44 @@
+#TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+ log4j.rootLogger=DEBUG, toConsole, toFile, email, sms, A2
+
+#Console
+log4j.appender.toConsole=org.apache.log4j.ConsoleAppender
+log4j.appender.toConsole.layout=org.apache.log4j.PatternLayout
+log4j.appender.toConsole.layout.ConversionPattern=%d{HH:mm:ss} %5p [%t] (%F:%L) - %m%n
+
+ #DaillyRollingFile
+ log4j.appender.toFile=org.apache.log4j.DailyRollingFileAppender
+ log4j.appender.toFile.File=./log/logfile.log
+ log4j.appender.toFile.Threshold=INFO
+ log4j.appender.toFile.DatePattern='.'yyyy-MM-dd
+ log4j.appender.toFile.layout=org.apache.log4j.PatternLayout
+ log4j.appender.toFile.layout.ConversionPattern=%d %5p [%t] - %c.%M %L - %m%n
+ 
+ #CONFIGURE SMTP
+log4j.appender.email=org.apache.log4j.net.SMTPAppender
+log4j.appender.email.SMTPHost=rambler.ru
+log4j.appender.email.SMTPUsername=lotockijj-roman@rambler.ru
+log4j.appender.email.SMTPPassword=131313aa
+log4j.appender.email.From=lotockijj-roman@rambler.ru
+log4j.appender.email.To=lotockijj-roman@rambler.ru
+log4j.appender.email.Subject=Log of messages
+log4j.appender.email.BufferSize=1
+log4j.appender.email.EvaluatorClass=TriggerLogEvent
+log4j.appender.email.layout=org.apache.log4j.PatternLayout
+log4j.appender.email.layout.ConversionPattern=%d %5p [%t] - %c.%M %L - %m%n
+
+log4j.appender.sms=com.bashan.log4j.IPIPISmsOverSmtpAppender
+log4j.appender.sms.SMTPUsername=bashan
+log4j.appender.sms.SMTPPassword=bashan
+log4j.appender.sms.TimeFrame=10
+log4j.appender.sms.MaxEMails=30
+log4j.appender.sms.To=+380679538747,+380635703747
+log4j.appender.sms.layout=org.apache.log4j.PatternLayout
+log4j.appender.sms.layout.ConversionPattern=%d [%t] %-5p %c %x - %m%n
+
+log4j.appender.A2=net.codesmarts.log4j.SMSBugReportAppender
+log4j.appender.A2.thresholdPriority=ERROR
+log4j.appender.A2.to=recipient1@smsprovider.dom,recipient2@smsprovider.dom
+log4j.appender.A2.from=bugs@domain.dom
+log4j.appender.A2.smtpServer=mail.domain.dom
+log4j.appender.A2.subject=Error occured in production!

@@ -1,0 +1,9 @@
+
+2017-11-06 22:04:17 INFO  Log4jExample:19 - Hello this is an info message
+2017-11-06 22:04:17 INFO  Log4jExample:20 - Hello Roman :) :) :) 
+2017-11-06 22:08:32 DEBUG Log4jExample:17 - Hello this is a debug message
+2017-11-06 22:08:32 INFO  Log4jExample:18 - Hello this is an info message
+2017-11-06 22:08:32 INFO  Log4jExample:19 - Hello Roman :) :) :) 
+2017-11-07 09:41:49 DEBUG Log4jExample:17 - Hello this is a debug message
+2017-11-07 09:41:49 INFO  Log4jExample:18 - Hello this is an info message
+2017-11-07 09:41:49 INFO  Log4jExample:19 - Hello Roman :) :) :) 

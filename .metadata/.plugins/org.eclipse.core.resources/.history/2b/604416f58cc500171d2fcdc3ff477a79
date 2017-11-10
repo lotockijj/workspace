@@ -1,0 +1,5 @@
+package sms.ipipi;
+
+public class IPIPISmsOverSmtpAppender {
+
+}

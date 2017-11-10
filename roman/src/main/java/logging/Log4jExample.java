@@ -1,10 +1,12 @@
 package logging;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
 //import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class Log4jExample{
 
@@ -12,8 +14,16 @@ public class Log4jExample{
 	static Logger log = Logger.getLogger(Log4jExample.class.getName());
 
 	public static void main(String[] args)throws IOException,SQLException{
+		PropertyConfigurator.configure("log4j.properties");
 		//BasicConfigurator.configure();
 		log.debug("Hello this is a debug message");
 		log.info("Hello this is an info message");
+		log.info("Hello Roman :) :) :) ");
+		try{
+			throw new FileNotFoundException();
+		} catch (FileNotFoundException e){
+			log.error(e, e);
+		}
+		log.trace("Trace");
 	}
 }

@@ -1,0 +1,8 @@
+2017-11-06 16:20:18,674 - logging.Log4jExample -INFO -Hello this is an info message
+2017-11-06 16:20:18,674 [main] INFO logging.Log4jExample - Hello this is an info message
+2017-11-06 16:20:18,684 - logging.Log4jExample -INFO -Hello Roman :) :) :) 
+2017-11-06 16:20:18,684 [main] INFO logging.Log4jExample - Hello Roman :) :) :) 
+2017-11-06 16:21:14,982 - logging.Log4jExample -INFO -Hello this is an info message
+2017-11-06 16:21:14,982 [main] INFO logging.Log4jExample - Hello this is an info message
+2017-11-06 16:21:14,991 - logging.Log4jExample -INFO -Hello Roman :) :) :) 
+2017-11-06 16:21:14,991 [main] INFO logging.Log4jExample - Hello Roman :) :) :) 

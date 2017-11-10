@@ -1,0 +1,28 @@
+#TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+ log4j.rootLogger=DEBUG, toConsole, toFile, email
+
+#Console
+log4j.appender.toConsole=org.apache.log4j.ConsoleAppender
+log4j.appender.toConsole.layout=org.apache.log4j.PatternLayout
+log4j.appender.toConsole.layout.ConversionPattern=%d{HH:mm:ss} %5p [%t] (%F:%L) - %m%n
+
+ #DaillyRollingFile
+ log4j.appender.toFile=org.apache.log4j.DailyRollingFileAppender
+ log4j.appender.toFile.File=./log/logfile.log
+ log4j.appender.toFile.Threshold=INFO
+ log4j.appender.toFile.DatePattern='.'yyyy-MM-dd
+ log4j.appender.toFile.layout=org.apache.log4j.PatternLayout
+ log4j.appender.toFile.layout.ConversionPattern=%d %5p [%t] - %c.%M %L - %m%n
+ 
+ #CONFIGURE SMTP
+log4j.appender.email=org.apache.log4j.net.SMTPAppender
+log4j.appender.email.SMTPHost=rambler.ru
+log4j.appender.email.SMTPUsername=lotockijj-roman@rambler.ru
+log4j.appender.email.SMTPPassword=131313aa
+log4j.appender.email.From=lotockijj-roman@rambler.ru
+log4j.appender.email.To=lotockijj-roman@rambler.ru
+log4j.appender.email.Subject=Log of messages
+log4j.appender.email.BufferSize=1
+log4j.appender.email.EvaluatorClass=TriggerLogEvent
+log4j.appender.email.layout=org.apache.log4j.PatternLayout
+log4j.appender.email.layout.ConversionPattern=%d %5p [%t] - %c.%M %L - %m%n

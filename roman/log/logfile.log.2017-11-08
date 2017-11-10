@@ -1,0 +1,30 @@
+2017-11-08 14:10:18,493 DEBUG [main] - logging.Log4jExample.main 19 - Hello this is a debug message
+2017-11-08 14:10:18,498  INFO [main] - logging.Log4jExample.main 20 - Hello this is an info message
+2017-11-08 14:10:18,498  INFO [main] - logging.Log4jExample.main 21 - Hello Roman :) :) :) 
+2017-11-08 14:10:18,499 ERROR [main] - logging.Log4jExample.main 25 - java.io.FileNotFoundException
+2017-11-08 14:13:53,763 DEBUG [main] - logging.Log4jExample.main 19 - Hello this is a debug message
+2017-11-08 14:13:53,768  INFO [main] - logging.Log4jExample.main 20 - Hello this is an info message
+2017-11-08 14:13:53,769  INFO [main] - logging.Log4jExample.main 21 - Hello Roman :) :) :) 
+2017-11-08 14:13:53,771 ERROR [main] - logging.Log4jExample.main 25 - java.io.FileNotFoundException
+java.io.FileNotFoundException
+	at logging.Log4jExample.main(Log4jExample.java:23)
+2017-11-08 14:23:08,629  INFO [main] - logging.Log4jExample.main 20 - Hello this is an info message
+2017-11-08 14:23:08,630  INFO [main] - logging.Log4jExample.main 21 - Hello Roman :) :) :) 
+2017-11-08 14:23:08,632 ERROR [main] - logging.Log4jExample.main 25 - java.io.FileNotFoundException
+java.io.FileNotFoundException
+	at logging.Log4jExample.main(Log4jExample.java:23)
+2017-11-08 16:30:50,889  INFO [main] - logging.Log4jExample.main 20 - Hello this is an info message
+2017-11-08 16:30:50,905  INFO [main] - logging.Log4jExample.main 21 - Hello Roman :) :) :) 
+2017-11-08 16:30:50,906 ERROR [main] - logging.Log4jExample.main 25 - java.io.FileNotFoundException
+java.io.FileNotFoundException
+	at logging.Log4jExample.main(Log4jExample.java:23)
+2017-11-08 16:47:53,475  INFO [main] - logging.Log4jExample.main 20 - Hello this is an info message
+2017-11-08 16:47:53,476  INFO [main] - logging.Log4jExample.main 21 - Hello Roman :) :) :) 
+2017-11-08 16:47:53,478 ERROR [main] - logging.Log4jExample.main 25 - java.io.FileNotFoundException
+java.io.FileNotFoundException
+	at logging.Log4jExample.main(Log4jExample.java:23)
+2017-11-08 17:00:57,868  INFO [main] - logging.Log4jExample.main 20 - Hello this is an info message
+2017-11-08 17:00:57,870  INFO [main] - logging.Log4jExample.main 21 - Hello Roman :) :) :) 
+2017-11-08 17:00:57,873 ERROR [main] - logging.Log4jExample.main 25 - java.io.FileNotFoundException
+java.io.FileNotFoundException
+	at logging.Log4jExample.main(Log4jExample.java:23)

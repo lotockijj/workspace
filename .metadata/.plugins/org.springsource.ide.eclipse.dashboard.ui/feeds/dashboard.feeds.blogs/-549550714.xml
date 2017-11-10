@@ -5,7 +5,177 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-06T08:48:48Z</updated>
+  <updated>2017-11-09T19:00:19Z</updated>
+  <entry>
+    <title>Spring Cloud Stream Elmhurst.M3 /2.0.0.M3 Release Announcement</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/09/spring-cloud-stream-elmhurst-m3-2-0-0-m3-release-announcement" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Oleg Zhurakousky</name>
+    </author>
+    <id>tag:spring.io,2017-11-09:3091</id>
+    <updated>2017-11-09T19:00:19Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the 2.0.0.M3 release of the Spring Cloud Stream Elmhurst release train.&lt;/p&gt;
+&lt;p&gt;Spring Cloud Stream Elmhurst 2.0.0.M3 is available for use in the &lt;a href="http://repo.spring.io/libs-milestone-local/org/springframework/cloud/spring-cloud-stream/2.0.0.M3/"&gt;Spring Milestone&lt;/a&gt; repository. The &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-starters/releases/tag/vElmhurst.M3"&gt;release notes&lt;/a&gt; include relevant information about version compatibility with Spring Boot, Spring Cloud, Spring AMQP, and Spring for Apache Kafka. &lt;/p&gt;
+&lt;p&gt;The following sections list new features and improvements included in this release:&lt;/p&gt;&lt;h3&gt;&lt;a href="#improved-content-type-resolution" class="anchor" name="improved-content-type-resolution"&gt;&lt;/a&gt;Improved Content Type Resolution&lt;/h3&gt;
+&lt;p&gt;The content-type resolution has been improved and consolidated in the &lt;a href="https://docs.spring.io/spring-integration/reference/htmlsingle/#channel-interceptors"&gt;channel interceptors&lt;/a&gt;, which makes it configurable for situations that require application-level customizations. Also, based on the community feedback, we now set the default content-type as &lt;code&gt;application/json&lt;/code&gt;. However, it is still possible to override it via &lt;code&gt;BindingProperties&lt;/code&gt; or it can be passed with the &lt;code&gt;Message&lt;/code&gt; coming from an upstream application.&lt;/p&gt;&lt;h3&gt;&lt;a href="#support-for-apache-kafka-0-11" class="anchor" name="support-for-apache-kafka-0-11"&gt;&lt;/a&gt;Support for Apache Kafka 0.11+&lt;/h3&gt;
+&lt;p&gt;This release comes with full support for Apache Kafka 0.11+ including support for &lt;a href="https://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/common/header/Headers.html"&gt;native headers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While we strongly recommend upgrading your Kafka broker, this release still supports 0.10 Kafka broker, however you’d need to set the &lt;code&gt;headerMode&lt;/code&gt; to either &lt;code&gt;none&lt;/code&gt; or &lt;code&gt;embedded&lt;/code&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#a-note-about-samples" class="anchor" name="a-note-about-samples"&gt;&lt;/a&gt;A note about Samples&lt;/h3&gt;
+&lt;p&gt;As always, great way to learn any new technology or a framework is trying it out and applying it on a use-case. We see a variety of use-cases coming from the community and the customers. To further improve the learning experience, we &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples"&gt;continue to add more samples&lt;/a&gt;, and it has had a few new additions recently. Use it or fork it; as well, share your experiences by submitting examples to engage with the broader community. We welcome contributions!&lt;/p&gt;&lt;h4&gt;&lt;a href="#next-steps" class="anchor" name="next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h4&gt;
+&lt;p&gt;We are hoping to get to a stable release-candidate state by &lt;a href="https://springoneplatform.io/"&gt;SpringOne Platform 2017&lt;/a&gt;. Please try it out and give us feedback and do that often!&lt;/p&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream"&gt;Gitter&lt;/a&gt;. &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tips: Bootiful Kotlin Redux</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/08/spring-tips-bootiful-kotlin-redux" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-11-04:3086</id>
+    <updated>2017-11-08T22:11:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi Spring fans! In this installment of Spring Tips we&amp;rsquo;ll revisit Kotlin, leveraging more DSLs in both the Kotlin and Spring ecosystem.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/P3yI_YhG5pk" frameborder="0" gesture="media" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Session Data Geode/GemFire 2.0.0.RC1 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/07/spring-session-data-geode-gemfire-2-0-0-rc1-available" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>John Blum</name>
+    </author>
+    <id>tag:spring.io,2017-11-07:3090</id>
+    <updated>2017-11-07T21:23:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring and Apache Geode/Pivotal GemFire communities, I am pleased to announce the release of &lt;em&gt;Spring Session Data Geode&lt;/em&gt; and &lt;em&gt;Spring Session Data GemFire&lt;/em&gt; 2.0.0.RC1 releases.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Both releases build on:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="olist arabic"&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Spring Framework&lt;/em&gt; &lt;code&gt;5.0.1.RELEASE&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Spring Security&lt;/em&gt; &lt;code&gt;2.0.0.RC1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Spring Data&lt;/em&gt; &lt;code&gt;Kay-RC1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Spring Session&lt;/em&gt; core &lt;code&gt;2.0.0.RC1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Spring Boot&lt;/em&gt; &lt;code&gt;2.0.0.M5&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The artifacts can be acquired from &lt;em&gt;Spring&lt;/em&gt; &lt;code&gt;libs-milestone&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="title"&gt;Maven&lt;/div&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;repositories&amp;gt;
+  &amp;lt;repository&amp;gt;
+    &amp;lt;id&amp;gt;spring-libs-milestone&amp;lt;/id&amp;gt;
+    &amp;lt;url&amp;gt;https://repo.spring.io/libs-milestone&amp;lt;/url&amp;gt;
+  &amp;lt;/repository&amp;gt;
+&amp;lt;/repositories&amp;gt;
+
+&amp;lt;dependencies&amp;gt;
+  &amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.springframework.session&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;spring-session-data-geode&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.0.0.RC1&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+&amp;lt;/dependencies&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="title"&gt;Gradle&lt;/div&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;repositories {
+  maven { url "https://repo.spring.io/libs-milestone" }
+}
+
+dependencies {
+  compile 'org.springframework.session:spring-session-data-geode:2.0.0.RC1'
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h1 id="what-s-new" class="sect0"&gt;&lt;a class="anchor" href="#what-s-new"&gt;&lt;/a&gt;What&amp;#8217;s New!&lt;/h1&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release builds on the &lt;code&gt;2.0.0.M2&lt;/code&gt; release by applying Java 8 types (e.g. &lt;code&gt;Stream&lt;/code&gt;) and &lt;em&gt;Lambda&lt;/em&gt; expressions to simplify  the codebase.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In addition, I have included a &lt;a href="https://docs.spring.io/autorepo/docs/spring-session-data-geode-build/2.0.0.RC1/reference/html5/guides/boot-gemfire-with-scoped-proxies.html"&gt;new sample&lt;/a&gt;  demonstrating how to use &lt;em&gt;Spring Session&lt;/em&gt; backed by Apache Geode (or Pivotal GemFire) to build &lt;em&gt;Spring Boot&lt;/em&gt; Web applications that use either "&lt;em&gt;session&lt;/em&gt;" or "&lt;em&gt;request&lt;/em&gt;" scoped proxy beans.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This sample proves that "&lt;em&gt;session&lt;/em&gt;" scoped proxy beans defined in the &lt;em&gt;Spring&lt;/em&gt; container are still managed properly even though &lt;em&gt;Spring Session&lt;/em&gt; replaces the underlying Web container&amp;#8217;s &lt;code&gt;HttpSession&lt;/code&gt; with an implementation provided by &lt;em&gt;Spring Session&lt;/em&gt; using a backing data store, like Apache Geode.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This sample was based on this &lt;a href="https://stackoverflow.com/questions/45674137/can-session-scope-beans-be-used-with-spring-session-and-gemfire"&gt;posting&lt;/a&gt; in &lt;em&gt;StackOverflow&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id="what-s-next" class="sect0"&gt;&lt;a class="anchor" href="#what-s-next"&gt;&lt;/a&gt;What&amp;#8217;s Next?&lt;/h1&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Once &lt;em&gt;Spring Session&lt;/em&gt; core goes GA, I can release &lt;em&gt;Spring Session Data GemFire/Geode&lt;/em&gt; 2.0 GA.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As always feedback on this release is welcomed and appreciated.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session-data-geode"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session-data-geode/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-session"&gt;StackOverflow&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonitionblock tip"&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class="icon"&gt;
+&lt;div class="title"&gt;Tip&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="content"&gt;
+If you are using Pivotal GemFire instead of Apache Geode, you can simply change the &lt;code&gt;artifactid&lt;/code&gt; to &lt;code&gt;spring-session-data-gemfire&lt;/code&gt;.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - November 7th, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/07/this-week-in-spring-november-7th-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-11-07:3089</id>
+    <updated>2017-11-07T07:11:07Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Antwerp, Belgium for the amazing Devoxx (Belgium) event. I&amp;rsquo;m co-presenting with my friends Matt Raible and Mark Heckler on progressive web applications and reactive Spring. I&amp;rsquo;ll be joined by a lot of Pivotal and Spring teammates here so make sure to check the schedule. &lt;/p&gt;
+&lt;p&gt;Later this week I&amp;rsquo;ll be doing a joint &lt;a href="https://objectcomputing.com/products/grails/webinar-grails-3-spring-developers/"&gt;webinar - &lt;em&gt;Grails for the Spring Boot Developer&lt;/em&gt; - with Grails co-founder Jeff Scott Brown&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Then, it&amp;rsquo;s off to Casablanca, Morocco, for the Devoxx MA event. &lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re at either event, &lt;a href="http://twitter.com/starbuxman"&gt;don&amp;rsquo;t hesitate to say hi&lt;/a&gt;!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Cloud Pipelines lead Marcin Grzejszczak &lt;a href="https://spring.io/blog/2017/10/31/spring-cloud-pipelines-1-0-0-m7-released"&gt;just announced Spring Cloud Pipelines 1.0.0.M7&lt;/a&gt;. This new release debuts Kubernetes support for Jenkins and Concourse. It also drastically improves the code coverage with over 150 Bash tests, among other things.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud co-lead Spencer Gibb just announced &lt;a href="https://spring.io/blog/2017/10/31/spring-cloud-finchley-m3-released"&gt;Spring Cloud Finchley M3 is now available&lt;/a&gt;. Spring Cloud Finchley integrates reactive APIs in Spring Framework 5, and introduces a new project called Spring Cloud Gateway.&lt;/li&gt;
+  &lt;li&gt;Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2017/11/01/spring-security-5-0-0-rc1-released"&gt;just announced Spring Security 5.0.0.RC1&lt;/a&gt;. This release is &lt;em&gt;massive&lt;/em&gt; so you should definitely check the new release, see if the code works for you, right now. It includes, among many other things, integration for Spring Web Flux and Spring Framework 5, OAuth 2.0 integration (directly in Spring Security itself!), password storage updates, UnboundID LDAP in-memory support, and so much more.&lt;/li&gt;
+  &lt;li&gt;Spring Security and Spring Session lead Rob Winch &lt;a href="https://spring.io/blog/2017/11/01/spring-session-2-0-0-rc1-released"&gt;just announced Spring Session 2.0.0.RC1&lt;/a&gt;. The new release puts final touches on the impending 2.0.0.RELEASE by simplifying the integration with the Servlet APIs, and by adding support for a Redis session cleanup cron process.&lt;/li&gt;
+  &lt;li&gt;Spring Integration ninja &lt;a href="https://spring.io/blog/2017/11/01/spring-integration-5-0-release-candidate-1-available"&gt;Artem Bilan just announced Spring Integration 5.0 RC1&lt;/a&gt;. The new release sees - among many other things - 20 issues fixed, HTTP WebFlux-based adapters, and a change in the behavior of the Java DSL to support registering new bean definitions for each component created in the DSL.&lt;/li&gt;
+  &lt;li&gt;Spring Batch lead Michael Minella just &lt;a href="https://spring.io/blog/2017/11/02/spring-batch-4-0-0-rc1-is-now-available"&gt;announced Spring Batch 4.0.0.RC1&lt;/a&gt; which includes updated baseline APIs, new builder APIs, updated Java configuration and documentation. All in all, a worthy upgrade. Those using Spring Boot should get the bits, kick the tires and try it out now.&lt;/li&gt;
+  &lt;li&gt;Spring Boot ninja St?phane Nicoll &lt;a href="https://spring.io/blog/2017/11/06/spring-boot-2-0-0-m6-available-now"&gt;just announced Spring Boot 2.0.0.M6&lt;/a&gt; which has initial support for HTTP/2, improved support for WebFlux-based applications (adding TLS configuration and error pages), and the first Kotlin integration.&lt;/li&gt;
+  &lt;li&gt;In the latest installment of Spring Tips, I &lt;a href="https://spring.io/blog/2017/11/01/spring-tips-spring-shell"&gt;looked at the Spring Shell project&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The Thymeleaf &lt;a href="http://forum.thymeleaf.org/Thymeleaf-3-0-9-JUST-PUBLISHED-td4030728.html"&gt;team have just announced Thymeleaf 3.0.9&lt;/a&gt; with improved hit ratios in the &lt;code&gt;StandardCache&lt;/code&gt;, improved restricted expression evaluation mode to support better security, and a few bug fixes for Spring Framework 5 integration.&lt;/li&gt;
+  &lt;li&gt;Pivotal&amp;rsquo;s very own Toshiaki Maki? put together a &lt;em&gt;great&lt;/em&gt; Japanese-language post on using &lt;a href="https://t.co/v9xDg9hs3e?amp=1"&gt;the Pivotal Cloud Foundry metrics forwarder service&lt;/a&gt; to forward metrics from a Spring Boot application to the Pivotal Cloud Foundry Metrics service.&lt;/li&gt;
+  &lt;li&gt;I can&amp;rsquo;t recommend enough &lt;a href="https://www.youtube.com/watch?feature=youtu.be&amp;v=C51hPntRYGY&amp;app=desktop"&gt;this talk&lt;/a&gt; (from &lt;a href="http://twitter.com/SpringDays"&gt;Spring Days Atlanta&lt;/a&gt;) called &amp;ldquo;Spring Didn&amp;rsquo;t Invent It!&amp;rdquo; by &lt;a href="http://twitter.com/lk_moore"&gt;Laura Moore&lt;/a&gt;. I only wish she was able to go on for another few hours! So glad this talk exists.&lt;/li&gt;
+  &lt;li&gt;I join other architects Chris Richardson, Daniel Bryant,&lt;br/&gt;Glenn Engstrand, and Alex Silva for &lt;a href="https://www.infoq.com/articles/vp-microservices-orchestration-choreography"&gt;this InfoQ virtual panel on service orchestration vs. choreography&lt;/a&gt;. It was a lot of fun and I hope you enjoy the discussion.&lt;/li&gt;
+  &lt;li&gt;InfoQ&amp;rsquo;s Amit K Gupta did a nice writeup of the &lt;a href="https://www.infoq.com/news/2017/10/sts-released"&gt;new features in Spring Tool Suite 3.9.1&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;This isn&amp;rsquo;t strictly to do with Spring, but I always enjoy the discussion and introduction of new features in the Java language. This post, by Brian Goetz, is both a wonderful read and an insightful look at &lt;a href="http://cr.openjdk.java.net/~briangoetz/amber/datum.html"&gt;how &amp;ldquo;data classes&amp;rdquo; would work in a future release of Java&lt;/a&gt;. Hat tip to my friend and fellow Java fan Billy Korando for sharing this.&lt;/li&gt;
+  &lt;li&gt;I loved this &lt;a href="https://github.com/sdeleuze/spring-kotlin-functional/tree/boot"&gt;sample project by Spring Framework and Kotlin&lt;/a&gt; ninja Sebastien Deleuze demonstrating some of the APIs in Spring Boot and their Kotlin usage.&lt;/li&gt;
+  &lt;li&gt;the Baeldung blog has a great look at &lt;a href="http://www.baeldung.com/micrometer"&gt;the Micrometer metrics-publishing library&lt;/a&gt;. Micrometer is a Pivotal project that serves as the metrics-backbone for Spring Boot 2.0&amp;rsquo;s Actuator support.&lt;/li&gt;
+  &lt;li&gt;There&amp;rsquo;s a new version of the &lt;a href="http://plugins.netbeans.org/plugin/67888/nb-springboot"&gt;fantastic NetBeans Spring Boot plugin, version 1.6.1&lt;/a&gt;, that supports new hints and quick fixes. It will warn you of use of &lt;code&gt;@ConfigurationProperties&lt;/code&gt; without the presence of &lt;code&gt;spring-boot-configuration-processor&lt;/code&gt;, removal of deprecated or unknown properties, and updates to Spring Boot 1.5.8, among many other things.&lt;/li&gt;
+  &lt;li&gt;You can now &lt;a href="https://twitter.com/snicoll/status/925453128996130816"&gt;use Spring Shell and Spring Cloud Contract&lt;/a&gt; on the Spring Initializr.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 2.0.0 M6 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/06/spring-boot-2-0-0-m6-available-now" />
@@ -1682,411 +1852,5 @@ dependencies {&#xD;
     <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to get fast-feedback &lt;em&gt;and&lt;/em&gt; do integration testing with Spring Cloud Contract. In this video, we&amp;rsquo;ll focus on HTTP-based services.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Ki54FB2B25U" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Batch 4.0.0.M5 is now available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/24/spring-batch-4-0-0-m5-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Michael Minella</name>
-    </author>
-    <id>tag:spring.io,2017-10-24:3073</id>
-    <updated>2017-10-24T22:52:00Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce that Spring Batch 4.0.0.M5 is now available via Github and the Pivotal download repository. This release represents the fifth milestone for the Spring Batch 4.0 release. Many thanks to all that contributed to this release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s new?&lt;/h2&gt;
-&lt;p&gt;This milestone continues the work laid out in the previous 4.0.0 milestones. Specific updates include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dependency updates&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;FunctionItemProcessor&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Continued updates to documentation&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#dependency-updates" class="anchor" name="dependency-updates"&gt;&lt;/a&gt;Dependency updates&lt;/h2&gt;
-&lt;p&gt;As the dependency graph of Spring Boot 2 evolves, we have been updating our dependencies to be in line with them. This round includes updates to pull in the GA release of Spring Framework 5 as well as Spring Data Kay. Spring Integration 5.0.0.M7 was also pulled in for this release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#code-functionitemprocessor-code" class="anchor" name="code-functionitemprocessor-code"&gt;&lt;/a&gt;&lt;code&gt;FunctionItemProcessor&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;With Java 8 and the introduction of functional interfaces (from the &lt;code&gt;java.util.function&lt;/code&gt; package), it makes sense to review how those interfaces map into Spring Batch. The three key interfaces consist of the &lt;code&gt;Supplier&lt;/code&gt;, &lt;code&gt;Function&lt;/code&gt;, and &lt;code&gt;Consumer&lt;/code&gt;. This release provides an &lt;code&gt;ItemProcessor&lt;/code&gt; and related capabilities to enable the use of a &lt;code&gt;Function&lt;/code&gt; as an &lt;code&gt;ItemProcessor&lt;/code&gt;. An example may look something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;...&#xD;
-@Bean&#xD;
-public Function&amp;lt;String, String&amp;gt; upperCaseFunction() {&#xD;
-	return o -&amp;gt; o.toUpperCase();&#xD;
-}&#xD;
-&#xD;
-@Bean&#xD;
-public Step step1() {&#xD;
-	return this.stepBuilderFactory.get(&amp;quot;step1&amp;quot;)&#xD;
-				.&amp;lt;String, String&amp;gt;chunk(10)&#xD;
-				.reader(reader())&#xD;
-				.processor(upperCaseFunction())&#xD;
-				.writer(writer())&#xD;
-				.build();&#xD;
-}&#xD;
-...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note that in the previous example, the actual Function implementation has zero Spring Batch dependencies. I can create a processor implementation that does not actually implement &lt;code&gt;ItemProcessor&lt;/code&gt; and use it as a processor within my step[1].&lt;/p&gt;
-&lt;p&gt;Between now and GA for Spring Batch, we&amp;rsquo;ll begin to look at the other functional interfaces and their applicibility to Spring Batch.&lt;/p&gt;&lt;h2&gt;&lt;a href="#updates-to-documentation" class="anchor" name="updates-to-documentation"&gt;&lt;/a&gt;Updates to documentation&lt;/h2&gt;
-&lt;p&gt;The Spring Batch documentation hasn&amp;rsquo;t had a major overhaul since java configuration became the norm. This release begins the transition of the documentation to address that. You&amp;rsquo;ll see at the top of the following pages a toggle between Java and XML. That toggle will indicate how the examples within that page are configured (via Java based configuration or XML based configuration respectively). The pages this is currently implemented on are:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Spring Batch Introduction&lt;/li&gt;
-  &lt;li&gt;The Domain of Batch&lt;/li&gt;
-  &lt;li&gt;Configuring and Running a Job&lt;/li&gt;
-  &lt;li&gt;Configuring a Step&lt;/li&gt;
-  &lt;li&gt;Readers and Writers&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Before our next release we&amp;rsquo;ll finish this migration to allow for ever example within the Spring Batch reference documentation to be illustrated both via Java configuration as well as XML configuration.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h2&gt;
-&lt;p&gt;Looking ahead we&amp;rsquo;ll be wrapping up the documentation updates. We&amp;rsquo;ll also be looking at how the other functional interfaces fit into Spring Batch. Finally we&amp;rsquo;ll pick up the rest of the Spring Framework ecosystem&amp;rsquo;s latest dependencies in preparation for the GA release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-happened-to-spring-batch-4-0-0-m4" class="anchor" name="what-happened-to-spring-batch-4-0-0-m4"&gt;&lt;/a&gt;What happened to Spring Batch 4.0.0.M4?&lt;/h2&gt;
-&lt;p&gt;Spring Batch 4.0.0.M4 was released last Friday with an error in it and is not recommend for general consumption. 4.0.0.M5 is the latest milestone recommended to be consumed.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-do-you-think" class="anchor" name="what-do-you-think"&gt;&lt;/a&gt;What do you think?&lt;/h2&gt;
-&lt;p&gt;We look forward to your feedback on these new features in &lt;a href="https://jira.spring.io/browse/BATCH/"&gt;Jira&lt;/a&gt;, &lt;a href="https://stackoverflow.com/tags/spring-batch"&gt;StackOverflow&lt;/a&gt;, or to me directly via Twitter &lt;a href="https://twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://projects.spring.io/spring-batch/"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-batch/4.0.x/reference/html/index.html"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[1] Note: We are aware of the &lt;code&gt;ItemProcessorAdapter&lt;/code&gt; that existed and that it provided another way to accomplish using a service not implementing &lt;code&gt;ItemProcessor&lt;/code&gt; as an &lt;code&gt;ItemProcessor&lt;/code&gt;.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 5.0.1 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/24/spring-framework-5-0-1-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Juergen Hoeller</name>
-    </author>
-    <id>tag:spring.io,2017-10-24:3071</id>
-    <updated>2017-10-24T18:55:00Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring community,&lt;/p&gt;
-&lt;p&gt;It is my pleasure to announce that Spring Framework &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10000&amp;version=16318"&gt;5.0.1&lt;/a&gt; &lt;a href="http://projects.spring.io/spring-framework"&gt;is available now&lt;/a&gt;, as the first maintenance release in our Spring Framework 5.0 line.&lt;/p&gt;
-&lt;p&gt;In addition to addressing various user-reported bugs, we&amp;rsquo;ve applied minor refactorings to clean up unintended leftovers from the 5.0 GA release, e.g. for the reactive codec configurers.&lt;/p&gt;
-&lt;p&gt;This release upgrades Reactor to Bismuth SR3, based on Reactor Core 3.1.1, picking up essential fixes in Reactor Netty. Furthermore, AspectJ 1.8.12 brings some welcome performance improvements to Spring AOP&amp;rsquo;s pointcut expression evaluation at runtime.&lt;/p&gt;
-&lt;p&gt;Last but not least, we&amp;rsquo;ve restructured our documentation as a starting point for further refinements in the 5.0.x line, including a revised &lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/"&gt;documentation landing page&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;All in all, 5.0.1 is an immediate update for every Spring Framework 5.0 user. Next up is Spring Framework 5.0.2 in mid November, coming just in time for the Spring Boot 2.0 RC1 release!&lt;/p&gt;
-&lt;p&gt;Cheers,&lt;br/&gt;Juergen&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>How to test Spring Cloud Stream applications (Part I)</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/24/how-to-test-spring-cloud-stream-applications-part-i" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2017-10-23:3069</id>
-    <updated>2017-10-24T12:57:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Dear Spring Community!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As an event-driven microservices framework, Spring Cloud Stream dramatically simplifies the complexity while developing event-driven applications. The feature capabilities and its benefits are not the focus of this article (to learn more, please review the &lt;a href="https://docs.spring.io/spring-cloud-stream/docs/Ditmars.RELEASE/reference/htmlsingle"&gt;Reference Guide&lt;/a&gt;), but instead, my goal is to show you what the framework has to offer from the testing standpoint, the tools, and techniques. This article is intended to encourage the community to share feedback on the existing testing infrastructure, so any thoughts, comments, or feature requests are welcome! We strive to adapt to the inputs to provide a better development and testing experience in the future.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Well, let me start with the quote:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="quoteblock text-right"&gt;
-&lt;blockquote&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;"It is surprising then that so many integration solutions are deployed
-with little or no testing. Testing, if any, is usually done manually
-and sporadically. One of the reasons integration solutions
-are not tested thoroughly is the fact that testing asynchronous,
-message-based middleware solutions is challenging."&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;div class="paragraph text-right"&gt;
-&lt;p&gt;&lt;em&gt;- Gregor Hohpe,&lt;br&gt;
-Test-Driver Development in Enterprise Integration Projects&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;That’s right, while we are marching towards modernizing the legacy monolith workload to a cloud-native style microservices architecture, any form of testing plays a very critical role in it. More specifically, having the automated CI pipelines to run the test-suites on every single commit, iteratively, is highly recommended and in fact widely accepted as adopted practice.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;While using Spring Cloud Stream, it may not be obvious to test the simple (“micro”) business-logic, and we might overlook the integration tests between the microservices, because there is nothing more than a middleware binding is expected from the end-user - the framework automates all other boilerplate semantics! Or even if we would like to do that, there are no useful tools to quickly spin-up and tear it down. And that’s why we are here - to break the myth about the simplicity of microservices and complexity of testing them!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="what-is-spring-cloud-stream-application"&gt;&lt;a class="anchor" href="#what-is-spring-cloud-stream-application"&gt;&lt;/a&gt;What is Spring Cloud Stream application?&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The Spring Cloud Stream application is an event-driven, Spring Boot microservice based on well-known Enterprise Integration Patterns implemented by Spring Integration. Their testing tools and utilities  (&lt;code&gt;SpringRunner&lt;/code&gt; from &lt;a href="https://docs.spring.io/spring/docs/5.0.0.RELEASE/spring-framework-reference/testing.html#testing"&gt;Spring Testing Framework&lt;/a&gt;, the Spring Boot &lt;a href="https://docs.spring.io/spring-boot/docs/1.5.8.RELEASE/reference/htmlsingle/#boot-features-testing"&gt;auto-configuration&lt;/a&gt; for test environment, mocks from Spring Integration etc.) bring for us an interesting combination that our unit and integration tests are not so challenging any more. Only what we need to know what, when and how to use!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For example, the following simple Spring Cloud Stream application, a source, generates “foo” or “bar” string periodically according the semaphore state:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@SpringBootApplication
-@EnableBinding(Source.class)
-public class FooBarSource {
-
-  private AtomicBoolean semaphore = new AtomicBoolean(true);
-
-  @Bean
-  @InboundChannelAdapter(channel = Source.OUTPUT,
-                      poller = @Poller(fixedDelay = "100"))
-  public MessageSource&amp;lt;String&amp;gt; fooBarStrings() {
-     return () -&amp;gt;
-          new GenericMessage&amp;lt;&amp;gt;(
-                this.semaphore.getAndSet(!this.semaphore.get()) ? "foo" : "bar");
-  }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Or this processor to convert the incoming strings to upper case:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@SpringBootApplication
-@EnableBinding(Processor.class)
-public class ToUpperCaseProcessor {
-
-  @StreamListener(Processor.INPUT)
-  @SendTo(Processor.OUTPUT)
-  public String transform(String payload) {
-     return payload.toUpperCase();
-  }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Or finally this sink to save the incoming payload to a database:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@SpringBootApplication
-@EnableBinding(Sink.class)
-public class JdbcSink {
-
-  @Bean
-  @ServiceActivator(inputChannel = Sink.INPUT)
-  public MessageHandler logHandler(DataSource dataSource) {
-     return new JdbcMessageHandler(dataSource,
-                                 "INSERT INTO foobar (value) VALUES (:payload)");
-  }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Of course the most obvious unit test, for example, for the processor code would be:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Test
-public void testUpperCase() {
-  assertEquals("FOO", new ToUpperCaseProcessor().transform("foo"));
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;But our goal is really to test all those Spring Boot, Cloud and Integration goodies. Let’s see how to do that.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="unit-tests"&gt;&lt;a class="anchor" href="#unit-tests"&gt;&lt;/a&gt;Unit Tests&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Since Spring Cloud Stream is fully based on Spring Boot, it is obvious that our tests should be marked with &lt;code&gt;@SpringBootTest&lt;/code&gt; and all its features and utilities (including mocking and spying) are available for us. See &lt;a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html"&gt;Testing Spring Boot applications&lt;/a&gt; for more information. On the other hand Spring Cloud Stream is Spring Integration application as well. So, all the Spring Integration testing tools and utilities from &lt;a href="https://docs.spring.io/spring-integration/docs/5.0.0.M7/reference/html/testing.html"&gt;Spring Integration Test&lt;/a&gt; module can be used in Spring Cloud Stream application tests, too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In addition, Spring Cloud Stream provides support for testing your microservice applications without connecting to a messaging system. You can do that by using the &lt;code&gt;TestSupportBinder&lt;/code&gt; provided by the &lt;code&gt;spring-cloud-stream-test-support&lt;/code&gt; library, which can be added as a test dependency to the application:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependency&amp;gt;
-  &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
-  &amp;lt;artifactId&amp;gt;spring-cloud-stream-test-support&amp;lt;/artifactId&amp;gt;
-  &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
-&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;TestSupportBinder&lt;/code&gt; allows users to interact with the bound channels and inspect what messages are sent and/or received by the application. For outbound message channels, the &lt;code&gt;TestSupportBinder&lt;/code&gt; registers a single subscriber and retains the messages emitted by the application in a &lt;code&gt;MessageCollector&lt;/code&gt;. They can be retrieved during tests and assertions can be made against them.
-The user can also send messages to inbound message channels, so that the consumer application can consume the messages:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Autowired
-private Source channels;
-
-@Autowired
-private MessageCollector collector;
-
-@Test
-public void testMessages() {
-  BlockingQueue&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt; messages = collector.forChannel(channels.output());
-
-  assertThat(messages, receivesPayloadThat(is("foo")));
-  assertThat(messages, receivesPayloadThat(is("bar")));
-  assertThat(messages, receivesPayloadThat(is("foo")));
-  assertThat(messages, receivesPayloadThat(is("bar")));
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Pay attention to the &lt;code&gt;receivesPayloadThat()&lt;/code&gt;, it is a static utility. This comes from the &lt;code&gt;MessageQueueMatcher&lt;/code&gt; and together with the &lt;code&gt;receivesMessageThat()&lt;/code&gt;, we can use it to assert with any appropriate &lt;code&gt;Matcher&lt;/code&gt; implementation from the incoming messages in the output channel of a source or processor application.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;@MockBean&lt;/code&gt; and &lt;code&gt;@SpyBean&lt;/code&gt; from Spring Boot can be useful to verify an interaction with our stream listeners:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@SpyBean
-private ToUpperCaseProcessor toUpperCaseProcessor;
-
-@Test
-public void testMessages() {
-  this.channels.input().send(new GenericMessage&amp;lt;&amp;gt;("foo"));
-
-  BlockingQueue&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt; messages = collector.forChannel(channels.output());
-
-  assertThat(messages, receivesPayloadThat(is("FOO")));
-
-  verify(this.toUpperCaseProcessor, times(1)).transform(anyString());
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Right, to send test data, there is just enough to get an &lt;code&gt;input&lt;/code&gt; &lt;code&gt;MessageChannel&lt;/code&gt; for the processor and build &lt;code&gt;Message&lt;/code&gt; object. To send some headers for testing together with the &lt;code&gt;payload&lt;/code&gt;, you can use &lt;code&gt;org.springframework.integration.support.MessageBuilder&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;Message&amp;lt;String&amp;gt; testMessage =
-     MessageBuilder.withPayload("headers")
-           .setHeader("foo", "bar")
-           .build();
-
-input.send(testMessage);
-
-Message&amp;lt;String&amp;gt; expected =
-     MessageBuilder.withPayload("HEADERS")
-           .copyHeaders(testMessage.getHeaders())
-           .build();
-
-Matcher&amp;lt;Message&amp;lt;Object&amp;gt;&amp;gt; sameExceptIgnorableHeaders =
-     (Matcher&amp;lt;Message&amp;lt;Object&amp;gt;&amp;gt;) (Matcher&amp;lt;?&amp;gt;) sameExceptIgnorableHeaders(expected);
-
-assertThat(messages, receivesMessageThat(sameExceptIgnorableHeaders));&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Testing the sink application is a bit tricky since this is typically the last step in a data pipeline solution. Here, we just send the data into the target system relying on the channel adapter for the particular protocol. For example our &lt;code&gt;JdbcSink&lt;/code&gt; application uses &lt;code&gt;JdbcMessageHandler&lt;/code&gt; from Spring Integration to insert payload of the incoming messages to a database. So, to test whether the  &lt;code&gt;JdbcSink&lt;/code&gt; works well, we need to query  the database. Fortunately, Spring Boot provides the  auto-configuration for &lt;code&gt;DataSource&lt;/code&gt; - it is as simple as making sure the intended database vendor’s driver dependency is on the classpath, e.g.:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependency&amp;gt;
-  &amp;lt;groupId&amp;gt;org.hsqldb&amp;lt;/groupId&amp;gt;
-  &amp;lt;artifactId&amp;gt;hsqldb&amp;lt;/artifactId&amp;gt;
-  &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
-&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;With that taken care by Spring Boot, an integration test that interacts with a  database becomes straightforward.
-We simply  inject &lt;code&gt;JdbcTemplate&lt;/code&gt; auto-configured by Spring Boot:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Autowired
-private Sink channels;
-
-@Autowired
-private JdbcTemplate jdbcTemplate;
-
-@Test
-public void testMessages() {
-  this.channels.input().send(new GenericMessage&amp;lt;&amp;gt;("foo"));
-  this.channels.input().send(new GenericMessage&amp;lt;&amp;gt;("bar"));
-
-  List&amp;lt;Map&amp;lt;String, Object&amp;gt;&amp;gt; data =
-                    this.jdbcTemplate.queryForList("SELECT * FROM foobar");
-
-  assertThat(data.size()).isEqualTo(2);
-  assertThat(data.get(0).get("value")).isEqualTo("foo");
-  assertThat(data.get(1).get("value")).isEqualTo("bar");
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Such an approach based on the Spring Boot Testing Framework works well for JDBC and JPA configurations. Similar approach we can apply for many other protocols including  ActiveMQ, MongoDB, Cassandra, Gemfire, Hazelcast and many others. If we can’t  have an embedded, test-scope service for our purpose, we have a choice to &lt;strong&gt;mock&lt;/strong&gt; the &lt;code&gt;MessageHandler&lt;/code&gt; for target protocol and assert an interaction with it:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@MockBean(name = "jdbcHandler")
-private MessageHandler jdbcMessageHandler;
-…
-ArgumentCaptor&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt; messageArgumentCaptor =
-     (ArgumentCaptor&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt;) (ArgumentCaptor&amp;lt;?&amp;gt;)
-                                          ArgumentCaptor.forClass(Message.class);
-
-verify(this.jdbcMessageHandler, times(2))
-                          .handleMessage(messageArgumentCaptor.capture());
-
-Message&amp;lt;?&amp;gt; message = messageArgumentCaptor.getValue();
-assertThat(message).hasFieldOrPropertyWithValue("payload", "bar");&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Another approach to verify sent messages to the sink (or out of processor) can be applied as a &lt;code&gt;ChannelInterceptor&lt;/code&gt; injection into the message channel:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;AbstractMessageChannel input = (AbstractMessageChannel) this.channels.input();
-
-final AtomicReference&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt; messageAtomicReference =
-                                   new AtomicReference&amp;lt;&amp;gt;();
-
-ChannelInterceptor assertionInterceptor = new ChannelInterceptorAdapter() {
-
-  @Override
-  public void afterSendCompletion(Message&amp;lt;?&amp;gt; message, MessageChannel channel,
-                                          boolean sent, Exception ex) {
-     messageAtomicReference.set(message);
-     super.afterSendCompletion(message, channel, sent, ex);
-  }
-
-};
-
-input.addInterceptor(assertionInterceptor);
-input.send(new GenericMessage&amp;lt;&amp;gt;("foo"));
-
-…
-Message&amp;lt;?&amp;gt; message1 = messageAtomicReference.get();
-assertThat(message1).isNotNull();
-assertThat(message1).hasFieldOrPropertyWithValue("payload", "foo");&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="summary"&gt;&lt;a class="anchor" href="#summary"&gt;&lt;/a&gt;Summary&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The entire code for the mentioned applications and, of course, tests for them are available in the Spring Cloud Stream Samples project in the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/testing"&gt;testing&lt;/a&gt; module.
-Try out the the various testing tools and techniques provided by  Spring Boot, Spring Integration and Spring Cloud Stream. Don’t hesitate to combine these tools for a more comprehensive test coverage.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The second part of this article will concentrate on the integration tests for Spring Cloud Stream applications and the event-driven interaction.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Lastly, please join my session, at &lt;a href="https://springoneplatform.io/sessions/spring-integration-5-0-whats-new"&gt;Spring One Platform&lt;/a&gt; conference this December where in my talk I will give some insight for new Testing features in Spring Integration &lt;code&gt;5.0&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - October 24th, 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/24/this-week-in-spring-october-24th-2017" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-10-24:3070</id>
-    <updated>2017-10-24T07:10:22Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Can you believe we&amp;rsquo;re already staring down the end of October 2017? This year has &lt;em&gt;flown&lt;/em&gt; by! What a rush! This week I&amp;rsquo;m home in sunny San Francisco talking to customers and giving talks. &lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll be speaking &amp;ldquo;at&amp;rdquo; the &lt;a href="_URL_"&gt;vJUG 24 online conference&lt;/a&gt;. The conference lasts 24 hours! There&amp;rsquo;s a talk every hour, from as many timezones as possible! I hope you&amp;rsquo;ll join me (and thousands of others) as we look at Reactive Spring at 04:00 GMT on Wednesday.&lt;/p&gt;
-&lt;p&gt;And, of course, I hope you&amp;rsquo;ll register and join my friend and Grails co-founder Jeff Scott Brown and me for a look &lt;a href="https://objectcomputing.com/products/grails/webinar-grails-3-spring-developers/"&gt;at Grails for Spring Developers&lt;/a&gt; on November 9th, 2017.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In last week&amp;rsquo;s installment of &lt;em&gt;Spring Tips&lt;/em&gt;, &lt;a href="https://spring.io/blog/2017/10/18/spring-tips-bootiful-jax-rs"&gt;I look at how to use JAX-RS, with the Jersey reference implementation, in a Spring Boot 2.0 application&lt;/a&gt; context.&lt;/li&gt;
-  &lt;li&gt;Spring Integration ninja Artem Bilan &lt;a href="https://spring.io/blog/2017/10/19/spring-integration-for-aws-1-1-release-candidate-1-available"&gt;has just announced Spring Integration for AWS 1.1 RC1&lt;/a&gt;. The new release includes a &lt;code&gt;KinesisMessageDrivenChannelAdapter&lt;/code&gt;, a &lt;code&gt;DynamoDbMetaDataStore&lt;/code&gt;, a Spring Cloud Stream Kinesis Binder, and much more. Check it out!&lt;/li&gt;
-  &lt;li&gt;Spring Boot 1.x does &lt;em&gt;not&lt;/em&gt; support Java 9. Spring Boot 2.0, due in December, does. That said, if you want to use Spring Boot 1.x with Java 9, you might &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-with-Java-9"&gt;appreciate this Wiki page with some gotchas on using Java 9&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Our very own Richard Seroter has put together a &lt;a href="https://content.pivotal.io/blog/velocity-as-a-service-5-ways-to-ship-like-a-software-company"&gt;great list of five ways to shop software like a software company&lt;/a&gt;, and increase velocity.&lt;/li&gt;
-  &lt;li&gt;I love this issue in Spring Framework wherein Thymeleaf lead Daniel Fernandez sheds a lot of on &lt;a href="https://jira.spring.io/browse/SPR-14981"&gt;how to use Thymeleaf in a Spring WebFlux-based application&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;You can now provision &lt;a href="https://content.pivotal.io/home-page/demand-your-on-demand-rabbitmq-clusters-now"&gt;multi-instance RabbitMQ clusters on demand&lt;/a&gt; with &lt;code&gt;cf create-serivice&lt;/code&gt; on Pivotal Cloud Foundry: hurray!&lt;/li&gt;
-  &lt;li&gt;Andreas Falk has a nice look at how to &lt;a href="https://www.youtube.com/watch?v=QlyslxoTCUA"&gt;manage secrets on Cloud Foundry with, among other things, Spring Cloud Vault&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Randhir Randhir Singh has put together &lt;a href="https://dzone.com/articles/building-data-pipelines-with-spring-cloud-data-flo"&gt;a nice look at how to build a Spring Cloud Data Flow to build real-time data integration and data processing pipelines&lt;/a&gt; by stitching together Spring Boot applications.&lt;/li&gt;
-  &lt;li&gt;I love this &lt;em&gt;All and Sundry&lt;/em&gt; blog by Biju Kunjummen &lt;a href="http://www.java-allandsundry.com/2017/10/raw-performance-numbers-spring-boot-2.html?m=1"&gt;comparing the performance of Spring Boot 1.0 vs. Spring Boot 2.0&lt;/a&gt;, which of course is based on Spring WebFlux and the Reactor Project. Spoiler alert: the async, non-blocking IO in Spring Boot 2.0 supports &lt;em&gt;many&lt;/em&gt; more demand at SLA levels.&lt;/li&gt;
-  &lt;li&gt;OK, first: this is &lt;em&gt;super&lt;/em&gt; early days, and nothing more than a prototype! But, our very own &lt;a href="https://github.com/viniciusccarvalho/spring-cloud-sockets"&gt;Vinicius Carvalho has put together a &lt;em&gt;prototype&lt;/em&gt; integration for Spring and RSocket&lt;/a&gt;. RSocket is a high performance protocol on top of the Reactive Streams types (and, in particular, it uses Reactor). It enjoys contributions from senior engineers at Facebook, Netflix, and the AEron project, among many others. All this to say, this is &lt;em&gt;really&lt;/em&gt; exciting! But early, yet! (Did I mention that?) It&amp;rsquo;s super early and &lt;em&gt;so&lt;/em&gt; I&amp;rsquo;m sure Vinicius would appreciate any feedback.&lt;/li&gt;
-  &lt;li&gt;I love this amazing example from Spring Framework, reactive Spring and Kotlin ninja S?bastien Deleuze demonstrating &lt;a href="https://github.com/sdeleuze/spring-kotlin-fullstack"&gt;how to use Kotlin for both the front end and back end of an application&lt;/a&gt;. The front-end leverages Kotlin2JS and the backend leverages Kotlin on the JVM (with Spring Boot, natch)&lt;/li&gt;
-  &lt;li&gt;I haven&amp;rsquo;t read this yet, but it does interesting: Ravi Kant Soni has written &lt;a href="https://www.amazon.com/Full-Stack-AngularJS-Java-Developers/dp/148423197X/ref=redir_mobile_desktop/131-1572141-3987769?_encoding=UTF8&amp;dpID=51XPtAmfcFL&amp;dpPl=1&amp;keywords=ravi%20kant%20soni&amp;pi=AC_SX236_SY340_FMwebp_QL65&amp;qid=1508328122&amp;ref=plSrch&amp;ref_=mp_s_a_1_1&amp;sr=8-1"&gt;a book on building Angular applications with Spring Boot&lt;/a&gt;. Check it out.&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>

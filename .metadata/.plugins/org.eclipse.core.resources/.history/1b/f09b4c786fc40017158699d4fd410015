@@ -1,0 +1,65 @@
+#@author abhinav@tgerm.com
+#Google Code Project  http://code.google.com/p/log4j-gmail-smtp-appender/
+#My Blog : http://www.tgerm.com
+
+log4j.rootLogger=ERROR, Console,R
+log4j.logger.com.tgerm=DEBUG, Console, R, EMAIL
+log4j.additivity.com.tgerm=false
+
+
+log4j.appender.Console=org.apache.log4j.ConsoleAppender
+log4j.appender.Console.layout=org.apache.log4j.PatternLayout
+log4j.appender.Console.layout.ConversionPattern=%5p [%t] (%F:%L) - %m%n
+
+log4j.appender.R=org.apache.log4j.RollingFileAppender
+log4j.appender.R.File=appender.log
+log4j.appender.R.Append=false
+log4j.appender.R.MaxFileSize=100KB
+log4j.appender.R.MaxBackupIndex=1
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=%p %t %c - %m%n
+
+log4j.appender.EMAIL=com.tgerm.log4j.appender.GmailSMTPAppender
+log4j.appender.EMAIL.SMTPHost=smtp.gmail.com
+# Turn off debugging if not required
+log4j.appender.EMAIL.SMTPDebug=true
+log4j.appender.EMAIL.From=from@gmail.com
+log4j.appender.EMAIL.To=lotockijjroman@gmail.com
+log4j.appender.EMAIL.SMTPUsername=lotockijjroman@gmail.com
+log4j.appender.EMAIL.SMTPPassword=131313aa
+log4j.appender.EMAIL.Subject=Email Notification from Gmail SMTP Appender
+log4j.appender.EMAIL.cc=cc@gmail.com
+log4j.appender.EMAIL.layout=org.apache.log4j.PatternLayout
+log4j.appender.EMAIL.layout.ConversionPattern=%p %t %c - %m%n
+log4j.appender.EMAIL.BufferSize=1
+
+
+#log4j.rootLogger=trace, stdout, R
+#
+#log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+#log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+## Pattern to output the caller's file name and line number.
+#log4j.appender.stdout.layout.ConversionPattern=%5p [%t] (%F:%L) - %m%n
+#
+#log4j.appender.R=org.apache.log4j.RollingFileAppender
+#log4j.appender.R.File=example.log
+#
+#log4j.appender.R.MaxFileSize=100KB
+## Keep one backup file
+#log4j.appender.R.MaxBackupIndex=1
+#
+#log4j.appender.R.layout=org.apache.log4j.PatternLayout
+#log4j.appender.R.layout.ConversionPattern=%p %t %c - %m%n
+#
+##CONFIGURE SMTP
+#log4j.appender.email=org.apache.log4j.net.SMTPAppender
+#log4j.appender.email.SMTPHost=mail.mydomain.com
+#log4j.appender.email.SMTPUsername=lotockijj-roman@rambler.ru
+#log4j.appender.email.SMTPPassword=131313aa
+#log4j.appender.email.From=lotockijj-roman@rambler.ru
+#log4j.appender.email.To=lotockijj-roman@ramber.ru
+#log4j.appender.email.Subject=Log of messages
+#log4j.appender.email.BufferSize=1
+#log4j.appender.email.EvaluatorClass=TriggerLogEvent
+#log4j.appender.email.layout=org.apache.log4j.PatternLayout
+#log4j.appender.email.layout.ConversionPattern=%m

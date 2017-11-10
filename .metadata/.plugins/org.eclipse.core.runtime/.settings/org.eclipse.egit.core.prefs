@@ -1,4 +1,5 @@
 GitRepositoriesView.GitDirectories=C\:\\Users\\\u0420\u043E\u043C\u0430\u043D \u041B\u043E\u0442\u043E\u0446\u044C\u043A\u0438\u0439\\asteroids\\.git;D\:\\\u0420\u043E\u0431\u043E\u0442\u0430\\workspace\\.git;C\:\\Users\\\u0420\u043E\u043C\u0430\u043D \u041B\u043E\u0442\u043E\u0446\u044C\u043A\u0438\u0439\\git\\GameDeckPlay\\.git;C\:\\Users\\\u0420\u043E\u043C\u0430\u043D \u041B\u043E\u0442\u043E\u0446\u044C\u043A\u0438\u0439\\git\\PlayGamePun\\.git;E\:\\tutorial\\tutorial\\.git;C\:\\Users\\\u0420\u043E\u043C\u0430\u043D \u041B\u043E\u0442\u043E\u0446\u044C\u043A\u0438\u0439\\.git;
 RepositorySearchDialogDeepSearch=true
 RepositorySearchDialogSearchPath=C\:\\Users\\\u0420\u043E\u043C\u0430\u043D \u041B\u043E\u0442\u043E\u0446\u044C\u043A\u0438\u0439
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

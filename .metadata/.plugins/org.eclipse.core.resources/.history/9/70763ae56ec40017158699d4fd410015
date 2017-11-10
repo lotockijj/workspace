@@ -1,0 +1,11 @@
+
+DEBUG main logging.Log4jExample - Hello this is a debug message
+INFO main logging.Log4jExample - Hello this is an info message
+INFO main logging.Log4jExample - Hello Roman :) :) :) 
+ERROR main logging.Log4jExample - java.io.FileNotFoundException
+TRACE main logging.Log4jExample - Trace
+DEBUG main logging.Log4jExample - Hello this is a debug message
+INFO main logging.Log4jExample - Hello this is an info message
+INFO main logging.Log4jExample - Hello Roman :) :) :) 
+ERROR main logging.Log4jExample - java.io.FileNotFoundException
+TRACE main logging.Log4jExample - Trace

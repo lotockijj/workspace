@@ -56,6 +56,17 @@ public class Minesweeper {
 		}
 		changePeriodToNull();
 	}
+	
+	private boolean withinRange(int i, int j) {
+		if(i < arr.length && j < arr[0].length && i >= 0 && j >= 0){
+			return true;
+		}
+		return false;
+	}
+
+	private String count(String str) {
+		return (str != ".") ? Integer.toString(Integer.parseInt(str) + 1) : "1";
+	}
 
 	private void changePeriodToNull() {
 		for (int i = 0; i < arr.length; i++) {
@@ -65,18 +76,7 @@ public class Minesweeper {
 			}
 		}
 	}
-
-	private String count(String str) {
-		return (str != ".") ? Integer.toString(Integer.parseInt(str) + 1) : "1";
-	}
-
-	private boolean withinRange(int i, int j) {
-		if(i < arr.length && j < arr[0].length && i >= 0 && j >= 0){
-			return true;
-		}
-		return false;
-	}
-
+	
 	public static void main(String[] args) {
 //		int n = Integer.parseInt(args[0]);
 //		int m = Integer.parseInt(args[1]);
@@ -89,7 +89,7 @@ public class Minesweeper {
 		minesweeper.printArray();
 	}
 
-	public void printArray(){
+	private void printArray(){
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
 				System.out.print(arr[i][j] + "|");

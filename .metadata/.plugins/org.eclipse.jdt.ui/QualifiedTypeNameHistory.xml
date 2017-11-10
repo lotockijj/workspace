@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="lambda.Person"/>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="lambda.Person.Sex"/>
-<fullyQualifiedTypeName name="lambda.CheckPerson"/>
-<fullyQualifiedTypeName name="lambda.Accountant"/>
-<fullyQualifiedTypeName name="com.epam.interview.QuestionSuper"/>
-<fullyQualifiedTypeName name="sparlez.MyFindArray"/>
-<fullyQualifiedTypeName name="spartez.MyMapDecoder"/>
-<fullyQualifiedTypeName name="com.sun.javafx.collections.MappingChange.Map"/>
-<fullyQualifiedTypeName name="ekkel.Circle"/>
-<fullyQualifiedTypeName name="ekkel.Square"/>
-<fullyQualifiedTypeName name="org.testng.Assert"/>
 <fullyQualifiedTypeName name="codility.Solution"/>
 <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
@@ -60,4 +47,17 @@
 <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="task2.Minesweeper"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="epam.roman.IsNotNumberException"/>
+<fullyQualifiedTypeName name="epam.roman.exception.MyClosable"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.apache.log4j.BasicConfigurator"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="org.apache.log4j.PropertyConfigurator"/>
+<fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
+<fullyQualifiedTypeName name="org.apache.log4j.chainsaw.Main"/>
+<fullyQualifiedTypeName name="sms.ipipi.IPIPISmsOverSmtpAppender"/>
 </qualifiedTypeNameHistroy>
